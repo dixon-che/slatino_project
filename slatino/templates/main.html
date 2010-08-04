@@ -1,0 +1,326 @@
+{% load i18n %}{% load news_tags %}{% load article_tags %}{% load links_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!--  Version: Multiflex-3.12 / Overview                    -->
+<!--  Date:    January 20, 2008                             -->
+<!--  Design:  www.1234.info                                -->
+<!--  License: Fully open source without restrictions.      -->
+<!--           Please keep footer credits with the words    -->
+<!--           "Design by 1234.info" Thank you!             -->
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="3600" />
+  <meta name="revisit-after" content="2 days" />
+  <meta name="robots" content="index,follow" />
+  <meta name="publisher" content="dixon" />
+  <meta name="copyright" content="DC & WW" />
+  <meta name="author" content="Design: 1234.info / Modified: Your Name" />
+  <meta name="distribution" content="{% trans 'Slatino' %}" />
+  <meta name="description" content="{% block meta_description %}{% trans 'All about Slatino, portal of Slatino' %}{% endblock %}" />
+  <meta name="keywords" content="{% trans 'SLATINO, Slatino, pgt Slatino' %}{% block meta_keywords %}{% endblock %}" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css %}/css/layout4_setup.css{% endblock %}" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css_text %}/css/layout4_text.css{% endblock %}" />
+  <link rel="stylesheet" type="text/css" href="/css/base.css" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <title>{% trans "Slatino" %}{% block title %}{% endblock %}</title>
+  {% block tags %}{% endblock %}
+</head>
+
+<!-- Global IE fix to avoid layout crash when single word size wider than column width -->
+<!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
+
+<body>
+<!-- stat24 clickMap -->
+{% comment %}
+<script type="text/javascript" src="http://ua5.hit.stat24.com/xy.js?id=cohATQ9fKxzyhXHP8CZx8XZJ3wfZOMepp6f2lZkeKf7.f7/align=center/type=absolute"> </script>
+<script type='text/javascript'><!--
+var st24Date=(new Date()).getTime();
+var st24Src='http://ua5.hit.stat24.com/_'+st24Date;
+st24Src+='/script.js?id=';
+st24Src+='pyZKr7M5B39IC6kg1hehNbbtDkDkskMhmHMsfFkXrPv.n7/l=11';
+var st24Tg='<'+'scr'+'ipt type="text/javascript" src="';
+document.writeln(st24Tg+st24Src+'"></'+'scr'+'ipt>');
+//--></script>
+{% endcomment %}
+<!--LiveInternet counter-->
+<script type="text/javascript">
+<!--
+document.write("<img src='http://counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' width=1 height=1 alt=''>")
+//-->
+</script>
+<!--/LiveInternet-->
+  <!-- Main Page Container -->
+  <div class="page-container">
+
+   <!-- For alternative headers START PASTE here -->
+
+    <!-- A. HEADER -->
+    <div class="header">
+
+      <!-- A.1 HEADER TOP -->
+      <div class="header-top">
+
+        <!-- Sitelogo and sitename -->
+        <a class="sitelogo" href="/" title="{% trans 'Go to Start page' %}"></a>
+        <div class="sitename">
+          <h1><a href="/" title="{% trans 'Go to Start page' %}">{% trans 'Slatino' %}</a></h1>
+          <h2>{% trans 'Slatino portal' %}</h2>
+        </div>
+
+        <!-- Navigation Level 0 -->
+        <div class="nav0">
+            <form action="/i18n/setlang/" method="post" name="i18n">
+            <ul>
+                <input name="next" type="hidden" value="#" />
+                <input name="language" type="hidden" value="" />
+                <li><A href="javascript: setlang('uk')"><img src="/img/flag_ua.png" alt="ukr" /></A></li>
+                <li><A href="javascript: setlang('ru')"><img src="/img/flag_ru.png" alt="ru" /></A></li>
+                <li><A href="javascript: setlang('en')"><img src="/img/flag_en.png" alt="en" /></A></li>
+            </ul>
+            </form>
+            <SCRIPT language="JavaScript1.1">
+            function setlang(lang)
+            {
+                document.i18n.language.value = lang;
+                document.i18n.submit();
+            }
+            </SCRIPT>
+        </div>
+
+        <!-- Navigation Level 1 -->
+        <div class="nav1">
+          <ul>
+            {% comment %}
+            <li><a href="/" title="{% trans 'Go to Start page' %}">{% trans 'Home' %}</a></li>
+            <li><a href="/about" title="{% trans 'Get to know who we are' %}">{% trans 'About' %}</a></li>
+            <li><a href="/contact_form" title="{% trans 'Get in touch with us' %}">{% trans 'Contact' %}</a></li>
+            <li><a href="/sitemap" title="{% trans 'Get an overview of website' %}">{% trans 'Sitemap' %}</a></li>
+            {% endcomment %}
+          </ul>
+        </div>
+      </div>
+
+      <!-- A.2 HEADER MIDDLE -->
+      <div class="header-middle">
+
+        <!-- Site message -->
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'Events &bull; People &bull; History' %}</h1>
+          <h2>{% trans 'The information on a life of settlement Slatino' %}<br /> <br /> </h2>
+          {% comment %}
+          <h3><a href="/about">&rsaquo;&rsaquo;&nbsp;{% trans 'More details' %}</a></h3>
+          {% endcomment %}
+        </div>
+        {% endblock %}
+      </div>
+
+      <!-- A.3 HEADER BOTTOM -->
+      <div class="header-bottom">
+        {% block navigation_header %}
+        <!-- Navigation Level 2 (Drop-down menus) -->
+        <div class="nav2">
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/">{% trans 'Home' %}</a></li>
+          </ul>
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/news/last/">{% trans 'News' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="{% url article-last %}">{% trans 'Articles' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="{% url article-list %}">{% trans 'All Articles' %}</a></li>
+                  <li><a href="{% url article-last %}">{% trans 'Last Articles' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/links/">{% trans 'Links' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--                <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>-->
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+        </div>
+        {% endblock %}
+	  </div>
+
+      <!-- A.4 HEADER BREADCRUMBS -->
+
+      <!-- Breadcrumbs -->
+      <div class="header-breadcrumbs">
+        {% block breadcrumbs %}
+        <ul>
+          <li>{% trans 'Home' %}</li>
+        </ul>
+        {% endblock %}
+
+        <!-- Search form -->
+<!--        <div class="searchform">
+          <form action="#" method="get" class="form">
+            <fieldset>
+              <input value=" Search..." name="field" class="field" />
+              <input type="submit" value="GO!" name="button" class="button" />
+            </fieldset>
+          </form>
+        </div>-->
+      </div>
+    </div>
+
+    <!-- For alternative headers END PASTE here -->
+
+    <!-- B. MAIN -->
+    <div class="main">
+
+      <!-- B.1 MAIN NAVIGATION -->
+      <div class="main-navigation">
+
+        <!-- Navigation Level 3 -->
+        <div class="round-border-topright"></div>
+        <h1 class="first">{% block navigation_title %}{% trans 'Tags list' %}{% endblock %}</h1>
+
+        <!-- Navigation with grid style -->
+        <dl class="nav3-grid">
+          {% block navigation %}
+<!--          <dt><a href="#">таг</a></dt>
+          <dt><a href="#">таг2</a></dt>
+            <dd><a href="#">таг21</a></dd>
+            <dd><a href="#">таг22</a></dd>
+            <dd><a href="#">таг23</a></dd>
+          <dt><a href="#">таг3</a></dt>-->
+          {% endblock %}
+        </dl>
+
+        <!-- Template infos -->
+        {% block under_nav %}
+        {% pull_latest_news 4 %}
+        {% pull_latest_articles 4 %}
+        {% endblock %}
+        <h1>{% trans "Weather in Slatino" %}</h1>
+        <p>
+            <a href="http://weather.in.ua/"
+            onClick="this.href='http://weather.in.ua/ua/har%27kovskaja/24086'"><img
+            src="http://{% trans 'informer.weather.in.ua/ru' %}/3/24086.png"
+            alt="{% trans "Weather in Slatino" %}" title="{% trans "Weather in Slatino" %}" /></a>
+        </p>
+        <!--Логотип статистики-->
+        <h1> </h1>
+        {% comment %}
+        <p>
+        <a href='http://www.stat24.meta.ua' target='_blank'>
+        <img border='0' src='http://stat24.meta.ua/img/counter/13.gif' /></a>
+        </p>
+        {% endcomment %}
+        <p>
+        <!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+target=_blank><img src="http://counter.yadro.ru/logo?52.3"
+title="{% trans 'LiveInternet: The number of viewings and visitors for 24 hours is shown' %}"
+alt="" border=0 width=88 height=31></a><!--/LiveInternet-->
+{% comment %}
+<!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+target=_blank><img src="http://counter.yadro.ru/logo?27.3"
+title="{% trans 'LiveInternet: The number of viewings and visitors is shown' %}"
+alt="" border=0 width=88 height=120></a><!--/LiveInternet-->
+{% endcomment %}
+        </p>
+      </div>
+
+      <!-- B.2 MAIN CONTENT -->
+      <div class="main-content">
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">Слатинской портал создан!</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        <div class="column1-unit">
+          <h1>Начало создания</h1>
+          <h3>Dixon & WW</h3>
+          <p>Вначале была идея! Идея - а не создать ли нам сайт для нашего любимого поселка?</p>
+        </div>
+        <hr class="clear-contentunit" />
+        {% incontent_latest_news 3 %}
+        {% incontent_latest_articles 3 %}
+        {% incontent_latest_links 3 %}
+        {% endblock %}
+      </div>
+
+      <!-- B.3 SUBCONTENT -->
+      {% block subcontent %}
+      <div class="main-subcontent">
+        {% block subcontent_top %}
+        <!-- Subcontent unit -->
+        {% endblock %}
+
+
+        <!-- Subcontent unit -->
+        <div class="subcontent-unit-border-green">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+            <h1 class="green">Наши извинения</h1>
+          <p> Сайт создан на общественных началах. И можно сказать работает в тестовом режиме, постоянно дорабатывается и расширяется. Идей у нас много - не хватает времени на реализацию. Если Вы заметили ошибку на сайте или у Вас есть оригинальная идея для воплощения ее на сайте - просим писать на
+          <a href="mailto:ww82@bk.ru">почту</a> форма контакта будет позже :)</p>
+        </div>
+
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+	  {% pull_latest_links 4 %}
+        </div>
+    <!-- for tag -->
+    <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+	  {% pull_latest_links 4 %}
+        </div>
+        
+        {% block subcontent_bottom %}
+        <!-- Subcontent unit -->
+        {% endblock %}
+      </div>
+      {% endblock %}
+      
+   
+
+
+    </div>
+
+    <!-- C. FOOTER AREA -->
+
+    <div class="footer">
+      <p>{% trans 'Copyright &copy; 2008 DC & WW | All Rights Reserved' %}</p>
+      <p class="credits">{% trans 'Design by' %} <a href="http://1234.info/" title="{% trans 'Designer Homepage' %}">1234.info</a> | {% trans 'Modified by' %} <a href="http://slatino.in.ua/" title="Dixon">Dixon</a> | {% trans 'Powered by' %} <a href="http://djangoproject.com/" title="Django">Django</a> | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code">XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">CSS 2.0</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+

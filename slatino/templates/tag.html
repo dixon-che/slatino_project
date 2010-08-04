@@ -1,0 +1,63 @@
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}
+{# !!!FIXME Edit constant words in designe #}
+        {% block tags %}{{ form.media }}{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/links/">{% trans 'Links' %}</a></li>
+          <li>{{ tag }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'Information about Slatino from Internet' %}</h1>
+          <h2>{{ tag }}</h2>
+        </div>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{% trans 'List of links with information about Slatino' %}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        {% for link in tag.links_set.all %}
+        <div class="column1-unit">
+          <h1><a href="{{ link.get_absolute_url }}">{{ link.title }}</a></h1>
+          <h3>{{ link.pub_date }} </h3>
+          <h3>publisher:{{ link.publisher}}</h3>
+          <p>{{ link.description|safe|truncatewords:20 }}</p>
+          
+          <p>{% for tag in link.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+          
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% for news in tag.news_set.all %}
+        <div class="column1-unit">
+          <h1><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></h1>
+          <h3>{{ news.pub_date }}</h3>
+          <p>{{ news.description|safe|truncatewords:20 }}</p>
+          <p>{% for tag in news.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}
+
+        {% block subcontent_top %}
+        <!-- Subcontent unit -->
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+          <h1>{% trans 'Month clicker' %}</h1>
+          <p>{% trans 'Month clicker table' %}</p>
+        </div>
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+          <h1>{% trans 'Tags' %}</h1>
+          </p> {% for tag in all_tags %}
+                    {{ tags.value }}
+               {% endfor %}</p>
+        </div>
+        {% endblock %}

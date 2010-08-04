@@ -1,0 +1,184 @@
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-09 02:13-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: default_settings.py:34
+msgid "English"
+msgstr ""
+
+#: default_settings.py:35
+msgid "Russion"
+msgstr "Русский"
+
+#: default_settings.py:36
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: Links/views.py:11
+msgid "All links"
+msgstr "Все ссылки"
+
+#: templates/main.html:20 templates/main.html.py:26 templates/main.html:71
+#: templates/Links/one.html:14
+msgid "Slatino"
+msgstr "Слатино"
+
+#: templates/main.html:21
+msgid "All about Slatino, portal of Slatino"
+msgstr "Все о Слатино, Слатинской портал"
+
+#: templates/main.html:22
+msgid "SLATINO, Slatino, pgt Slatino"
+msgstr "СЛАТИНО, Слатино, п.г.т. Слатино, п. Слатино"
+
+#: templates/main.html:69 templates/main.html.py:71 templates/main.html:99
+msgid "Go to Start page"
+msgstr "В начало"
+
+#: templates/main.html:72
+#, fuzzy
+msgid "Slatino portal"
+msgstr "Слатино"
+
+#: templates/main.html:99 templates/main.html.py:131 templates/main.html:167
+#: templates/Links/list.html:4 templates/Links/one.html:6
+#: templates/News/list.html:4 templates/News/one.html:6
+msgid "Home"
+msgstr "На главную"
+
+#: templates/main.html:100
+msgid "Get to know who we are"
+msgstr "Узнать нас поближе"
+
+#: templates/main.html:100
+msgid "About"
+msgstr "О проекте"
+
+#: templates/main.html:101
+msgid "Get in touch with us"
+msgstr "Хочу помочь!"
+
+#: templates/main.html:101
+msgid "Contact"
+msgstr "Контакты"
+
+#: templates/main.html:102
+msgid "Get an overview of website"
+msgstr "Обзор сайта"
+
+#: templates/main.html:102
+msgid "Sitemap"
+msgstr "Навигатор"
+
+#: templates/main.html:114
+msgid "Events &bull; People &bull; History"
+msgstr "События &bull; Люди &bull; История"
+
+#: templates/main.html:115
+msgid "The information on a life of settlement Slatino"
+msgstr "Информация о жизни поселка Слатино"
+
+#: templates/main.html:117
+msgid "More details"
+msgstr "..больше"
+
+#: templates/main.html:136 templates/News/box_news.html:2
+#: templates/News/incontent_news.html:3 templates/News/list.html:5
+#: templates/News/one.html:7
+msgid "News"
+msgstr "Новости"
+
+#: templates/main.html:139 templates/main.html.py:151
+msgid "All News"
+msgstr "Все новости"
+
+#: templates/main.html:140 templates/main.html.py:152
+msgid "Last News"
+msgstr "Свежие новости"
+
+#: templates/main.html:148 templates/Links/box_links.html:2
+#: templates/Links/incontent_links.html:4 templates/Links/list.html:5
+#: templates/Links/one.html:7 templates/Links/one.html.py:21
+msgid "Links"
+msgstr "Ссылки"
+
+#: templates/main.html:193
+msgid "Tags list"
+msgstr "Список категорий"
+
+#: templates/main.html:212 templates/main.html.py:217
+msgid "Weather in Slatino"
+msgstr "Слатино: погода"
+
+#: templates/main.html:216
+msgid "informer.weather.in.ua/ru"
+msgstr "informer.weather.in.ua/ru"
+
+#: templates/main.html:230
+msgid "LiveInternet: The number of viewings and visitors for 24 hours is shown"
+msgstr "LiveInternet: число просмотров и посетителей за 24 часа"
+
+#: templates/main.html:235
+msgid "LiveInternet: The number of viewings and visitors is shown"
+msgstr "LiveInternet: число просмотров и посетителей"
+
+#: templates/main.html:285
+msgid "Copyright &copy; 2008 DC & WW | All Rights Reserved"
+msgstr "Copyright &copy; 2008 DC & WW | Все права защищены"
+
+#: templates/main.html:286
+msgid "Design by"
+msgstr "Дизайн"
+
+#: templates/main.html:286
+msgid "Designer Homepage"
+msgstr "http://1234.info/"
+
+#: templates/main.html:286
+msgid "Modified by"
+msgstr "Модифицировано"
+
+#: templates/main.html:286
+msgid "Powered by"
+msgstr ""
+
+#: templates/Links/list.html:12
+msgid "Information about Slatino from Internet"
+msgstr "Информация о Слатино в сети"
+
+#: templates/Links/list.html:19
+msgid "List of links with information about Slatino"
+msgstr "Список ссылок с информацией о Слатино"
+
+#: templates/Links/list.html:38 templates/News/list.html:38
+msgid "Month clicker"
+msgstr ""
+
+#: templates/Links/list.html:39 templates/News/list.html:39
+msgid "Month clicker table"
+msgstr ""
+
+#: templates/News/list.html:12
+#, fuzzy
+msgid "List News Slatino"
+msgstr "Свежие новости"
+
+#: templates/News/list.html:19
+#, fuzzy
+msgid "List News"
+msgstr "Свежие новости"

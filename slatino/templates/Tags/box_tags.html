@@ -1,0 +1,7 @@
+{% load i18n %}{% block tags %}{{ form.media }}{% endblock %}{% load tagsfield_tags %}
+<h1>{% trans 'Tags' %}</h1>
+<p>
+  {% for tag in tag.value.all %}
+  <a href="{{ tag|tag_url }}">{{ tag }}</a>
+  {% if forloop.last %}{% else %} | {% endif %}{% endfor %}
+</p>

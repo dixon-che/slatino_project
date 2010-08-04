@@ -1,0 +1,13 @@
+{% load i18n %}{% block tags %}{{ form.media }}{% endblock %}{% load tagsfield_tags %}
+
+        <div class="column1-unit">
+        <h1>{% trans 'Links' %}</h1>
+        {% for link in all_links %}
+          <h1><a href="{{ link.get_absolute_url }}">{{ link.title }}</a></h1>
+          <h3>{{ link.pub_date }}</h3>
+          <p>{{ link.description|safe|truncatewords:20 }}</p>
+          {% for tag in link.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}
+            
+        {% endfor %}
+        <hr class="clear-contentunit" />
+        </div>

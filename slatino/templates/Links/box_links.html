@@ -1,0 +1,8 @@
+{% load i18n %}
+<h1>{% trans 'Links' %}</h1>
+<p>
+  {% for link in all_links %}
+  
+  <h3><a href="{{ link.get_absolute_url }}">{{ link.title }}</a></h3>
+  {% endfor %}
+</p>

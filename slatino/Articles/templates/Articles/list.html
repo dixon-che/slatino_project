@@ -1,0 +1,32 @@
+{% extends "main.html" %}{% load i18n %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="{% url article-last %}">{% trans 'Articles' %}</a></li>
+          <li>{{ title }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'List Articles Slatino' %}</h1>
+          <h2>{{ title }}</h2>
+        </div>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{{ title }}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        {% for article in articles %}
+        <div class="column1-unit">
+          <h1><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h1>
+          <h3>{{ article.pub_date }}</h3>
+          <p>{{ article.description|striptags|safe|truncatewords:20 }}</p>
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}
