@@ -1,0 +1,15 @@
+# slatino_project require django-1.2.1 version
+# to install slatino_project locally:
+
+cd slatino
+cp example_settings.py settings.py
+# edit settings.py if you need
+
+cd ..
+mkdir libs
+cd libs
+
+git clone git@github.com:dixon-che/dcdjutils.git # or git://github.com/dixon-che/dcdjutils.git
+git clone git@github.com:dixon-che/tagsfield.git # or git://github.com/dixon-che/tagsfield.git
+
+# If you have other version of django installed in your system, install here (libs) django-1.2.1
