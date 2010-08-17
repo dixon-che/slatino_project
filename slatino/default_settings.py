@@ -104,6 +104,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'slatino.News',
     'slatino.Links',
+    'slatino.Personalee',
     'slatino.Articles',
     'tagsfield',
 

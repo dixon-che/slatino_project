@@ -1,4 +1,4 @@
-{% load i18n %}{% load news_tags %}{% load article_tags %}{% load links_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load i18n %}{% load news_tags %}{% load article_tags %}{% load links_tags %}{% load personalee_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <!--  Version: Multiflex-3.12 / Overview                    -->
@@ -156,12 +156,24 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul>
-
+ 
           <!-- Navigation item -->
           <ul>
             <li><a href="/links/">{% trans 'Links' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
-<!--                <ul>
+<!--            <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>-->
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+          
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/personalee/">{% trans 'personalee' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--            <ul>
                   <li><a href="/news/">{% trans 'All News' %}</a></li>
                   <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
                 </ul>-->

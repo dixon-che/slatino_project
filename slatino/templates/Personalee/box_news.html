@@ -1,0 +1,6 @@
+{% load i18n %}
+        <h1>{% trans 'Personalee' %}</h1>
+{% for personalee in all_personalee %}
+        <h3><a href="{{ personalee.get_absolute_url }}">{{ personalee.name }}</a></h3>
+        <p>{{ personalee.description|striptags|truncatewords:10  }}</p>
+{% endfor %}

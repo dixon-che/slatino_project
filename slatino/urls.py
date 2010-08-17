@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     (r'^news/', include('slatino.News.urls')),
     (r'^article/', include('dcdjutils.Articles.urls')),
     (r'^links/', include('slatino.Links.urls')),
+    (r'^personalee/', include('slatino.Personalee.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
 
@@ -27,6 +28,7 @@ if MEDIA_APACHE_DIRECT == False:
         (r'^(emotions/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(news_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(article_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+        (r'^(personalee_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(articles-media/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "dcdjutils/Articles/"}),
         (r'^(tagsfield/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "tagsfield/media/"}),
 )

@@ -1,0 +1,45 @@
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}
+        {% block tags %}{{ form.media }}{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/personalee/">{% trans 'Personalee' %}</a></li>
+          <li>{{ page.name }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'List Personalee Slatino' %}</h1>
+          <h2>{{ page.name }}</h2>
+        </div>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{% trans 'List Personalee' %}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        {% for personalee in all_personalee %}
+        <div class="column1-unit">
+          <h1><a href="{{ personalee.get_absolute_url }}">{{ personalee.name }}</a></h1>
+          <P>{% trans 'God_rogd__:' %}{{ personalee.god_rogd }}</P>
+		  <P>{% trans 'Phone_____:' %}{{ personalee.phone }}</P>
+          <p>{% trans 'Description_:' %}{{ personalee.description|safe|truncatewords:20 }}</p>
+          <p>{% trans 'Tag_______:' %}{% for tag in personalee.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+		  <h3>{{ personalee.date }}</h3>
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}
+
+        {% block subcontent_top %}
+        <!-- Subcontent unit -->
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+          <h1>{% trans 'Month clicker' %}</h1>
+          <p>{% trans 'Month clicker table' %}</p>
+        </div>
+        {% endblock %}
