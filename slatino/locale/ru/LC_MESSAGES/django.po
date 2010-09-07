@@ -1,4 +1,3 @@
-
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
@@ -9,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-09 02:13-0500\n"
+"POT-Creation-Date: 2010-09-07 09:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +16,89 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: default_settings.py:34
+#: default_settings.py:36
 msgid "English"
-msgstr ""
+msgstr "Англиский"
 
-#: default_settings.py:35
+#: default_settings.py:37
 msgid "Russion"
 msgstr "Русский"
 
-#: default_settings.py:36
+#: default_settings.py:38
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: Links/views.py:11
+#: Articles/models.py:18
+msgid "Date published"
+msgstr ""
+
+#: Articles/models.py:19
+msgid "Order"
+msgstr "Порядок"
+
+#: Articles/models.py:24 Articles/models.py:68
+msgid "Article"
+msgstr ""
+
+#: Articles/models.py:25 Articles/models.py:69
+#: Articles/templates/Articles/box.html:2
+#: Articles/templates/Articles/incontent.html:3
+#: Articles/templates/Articles/list.html:5
+#: Articles/templates/Articles/one.html:8 templates/main.html:150
+msgid "Articles"
+msgstr ""
+
+#: Articles/views.py:15 templates/main.html:154
+#, fuzzy
+msgid "Last Articles"
+msgstr "Свежие новости"
+
+#: Articles/views.py:34
+#, fuzzy
+msgid "List Articles"
+msgstr "Свежие новости"
+
+#: Articles/templates/Articles/list.html:4
+#: Articles/templates/Articles/one.html:7 templates/main.html:101
+#: templates/main.html.py:133 templates/main.html:193 templates/tag.html:6
+#: templates/Links/list.html:5 templates/Links/one.html:6
+#: templates/News/list.html:5 templates/News/one.html:7
+#: templates/Personalee/list.html:5 templates/Personalee/one.html:7
+msgid "Home"
+msgstr "На главную"
+
+#: Articles/templates/Articles/list.html:12
+#, fuzzy
+msgid "List Articles Slatino"
+msgstr "Свежие новости"
+
+#: Articles/templates/Articles/one.html:15
+#, fuzzy
+msgid "Article Slatino"
+msgstr "Слатино"
+
+#: Articles/templates/Articles/past_image.html:12
+msgid "Past image"
+msgstr ""
+
+#: Articles/templates/Articles/past_image.html:13
+msgid "Upload images"
+msgstr ""
+
+#: Links/views.py:13
 msgid "All links"
 msgstr "Все ссылки"
 
-#: templates/main.html:20 templates/main.html.py:26 templates/main.html:71
+#: News/views.py:24
+#, fuzzy
+msgid "Last news"
+msgstr "Свежие новости"
+
+#: Personalee/views.py:23
+msgid "Last personalee"
+msgstr ""
+
+#: templates/main.html:20 templates/main.html.py:27 templates/main.html:73
 #: templates/Links/one.html:14
 msgid "Slatino"
 msgstr "Слатино"
@@ -46,139 +111,181 @@ msgstr "Все о Слатино, Слатинской портал"
 msgid "SLATINO, Slatino, pgt Slatino"
 msgstr "СЛАТИНО, Слатино, п.г.т. Слатино, п. Слатино"
 
-#: templates/main.html:69 templates/main.html.py:71 templates/main.html:99
+#: templates/main.html:71 templates/main.html.py:73 templates/main.html:101
 msgid "Go to Start page"
 msgstr "В начало"
 
-#: templates/main.html:72
+#: templates/main.html:74
 #, fuzzy
 msgid "Slatino portal"
 msgstr "Слатино"
 
-#: templates/main.html:99 templates/main.html.py:131 templates/main.html:167
-#: templates/Links/list.html:4 templates/Links/one.html:6
-#: templates/News/list.html:4 templates/News/one.html:6
-msgid "Home"
-msgstr "На главную"
-
-#: templates/main.html:100
+#: templates/main.html:102
 msgid "Get to know who we are"
 msgstr "Узнать нас поближе"
 
-#: templates/main.html:100
+#: templates/main.html:102
 msgid "About"
 msgstr "О проекте"
 
-#: templates/main.html:101
+#: templates/main.html:103
 msgid "Get in touch with us"
 msgstr "Хочу помочь!"
 
-#: templates/main.html:101
+#: templates/main.html:103
 msgid "Contact"
 msgstr "Контакты"
 
-#: templates/main.html:102
+#: templates/main.html:104
 msgid "Get an overview of website"
 msgstr "Обзор сайта"
 
-#: templates/main.html:102
+#: templates/main.html:104
 msgid "Sitemap"
 msgstr "Навигатор"
 
-#: templates/main.html:114
+#: templates/main.html:116
 msgid "Events &bull; People &bull; History"
 msgstr "События &bull; Люди &bull; История"
 
-#: templates/main.html:115
+#: templates/main.html:117
 msgid "The information on a life of settlement Slatino"
 msgstr "Информация о жизни поселка Слатино"
 
-#: templates/main.html:117
+#: templates/main.html:119
 msgid "More details"
 msgstr "..больше"
 
-#: templates/main.html:136 templates/News/box_news.html:2
-#: templates/News/incontent_news.html:3 templates/News/list.html:5
-#: templates/News/one.html:7
+#: templates/main.html:138 templates/News/box_news.html:2
+#: templates/News/incontent_news.html:3 templates/News/list.html:6
+#: templates/News/one.html:8
 msgid "News"
 msgstr "Новости"
 
-#: templates/main.html:139 templates/main.html.py:151
+#: templates/main.html:141 templates/main.html.py:165 templates/main.html:177
 msgid "All News"
 msgstr "Все новости"
 
-#: templates/main.html:140 templates/main.html.py:152
+#: templates/main.html:142 templates/main.html.py:166 templates/main.html:178
 msgid "Last News"
 msgstr "Свежие новости"
 
-#: templates/main.html:148 templates/Links/box_links.html:2
-#: templates/Links/incontent_links.html:4 templates/Links/list.html:5
-#: templates/Links/one.html:7 templates/Links/one.html.py:21
+#: templates/main.html:153
+#, fuzzy
+msgid "All Articles"
+msgstr "Все новости"
+
+#: templates/main.html:162 templates/tag.html:7
+#: templates/Links/box_links.html:2 templates/Links/incontent_links.html:4
+#: templates/Links/list.html:6 templates/Links/one.html:7
+#: templates/Links/one.html.py:21
 msgid "Links"
 msgstr "Ссылки"
 
-#: templates/main.html:193
+#: templates/main.html:174
+msgid "personalee"
+msgstr ""
+
+#: templates/main.html:219
 msgid "Tags list"
 msgstr "Список категорий"
 
-#: templates/main.html:212 templates/main.html.py:217
+#: templates/main.html:238 templates/main.html.py:243
 msgid "Weather in Slatino"
 msgstr "Слатино: погода"
 
-#: templates/main.html:216
+#: templates/main.html:242
 msgid "informer.weather.in.ua/ru"
 msgstr "informer.weather.in.ua/ru"
 
-#: templates/main.html:230
+#: templates/main.html:256
 msgid "LiveInternet: The number of viewings and visitors for 24 hours is shown"
 msgstr "LiveInternet: число просмотров и посетителей за 24 часа"
 
-#: templates/main.html:235
+#: templates/main.html:261
 msgid "LiveInternet: The number of viewings and visitors is shown"
 msgstr "LiveInternet: число просмотров и посетителей"
 
-#: templates/main.html:285
+#: templates/main.html:329
 msgid "Copyright &copy; 2008 DC & WW | All Rights Reserved"
 msgstr "Copyright &copy; 2008 DC & WW | Все права защищены"
 
-#: templates/main.html:286
+#: templates/main.html:330
 msgid "Design by"
 msgstr "Дизайн"
 
-#: templates/main.html:286
+#: templates/main.html:330
 msgid "Designer Homepage"
 msgstr "http://1234.info/"
 
-#: templates/main.html:286
+#: templates/main.html:330
 msgid "Modified by"
 msgstr "Модифицировано"
 
-#: templates/main.html:286
+#: templates/main.html:330
 msgid "Powered by"
 msgstr ""
 
-#: templates/Links/list.html:12
+#: templates/tag.html:14 templates/Links/list.html:13
 msgid "Information about Slatino from Internet"
 msgstr "Информация о Слатино в сети"
 
-#: templates/Links/list.html:19
+#: templates/tag.html:21 templates/Links/list.html:20
 msgid "List of links with information about Slatino"
 msgstr "Список ссылок с информацией о Слатино"
 
-#: templates/Links/list.html:38 templates/News/list.html:38
+#: templates/tag.html:53 templates/Links/list.html:41
+#: templates/News/list.html:40 templates/Personalee/list.html:42
 msgid "Month clicker"
 msgstr ""
 
-#: templates/Links/list.html:39 templates/News/list.html:39
+#: templates/tag.html:54 templates/Links/list.html:42
+#: templates/News/list.html:41 templates/Personalee/list.html:43
 msgid "Month clicker table"
 msgstr ""
 
-#: templates/News/list.html:12
+#: templates/tag.html:58 templates/Tags/box_tags.html:2
+#, fuzzy
+msgid "Tags"
+msgstr "Список категорий"
+
+#: templates/News/list.html:13
 #, fuzzy
 msgid "List News Slatino"
 msgstr "Свежие новости"
 
-#: templates/News/list.html:19
+#: templates/News/list.html:20
 #, fuzzy
 msgid "List News"
 msgstr "Свежие новости"
+
+#: templates/Personalee/box_news.html:2
+#: templates/Personalee/incontent_news.html:3 templates/Personalee/list.html:6
+#: templates/Personalee/one.html:8
+msgid "Personalee"
+msgstr ""
+
+#: templates/Personalee/list.html:13
+#, fuzzy
+msgid "List Personalee Slatino"
+msgstr "Свежие новости"
+
+#: templates/Personalee/list.html:20
+msgid "List Personalee"
+msgstr ""
+
+#: templates/Personalee/list.html:28
+msgid "God_rogd__:"
+msgstr ""
+
+#: templates/Personalee/list.html:29
+msgid "Phone_____:"
+msgstr ""
+
+#: templates/Personalee/list.html:30
+msgid "Description_:"
+msgstr ""
+
+#: templates/Personalee/list.html:31
+msgid "Tag_______:"
+msgstr ""
