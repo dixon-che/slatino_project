@@ -12,12 +12,16 @@ urlpatterns = patterns('',
     (r'^news/', include('slatino.News.urls')),
     (r'^article/', include('dcdjutils.Articles.urls')),
     (r'^links/', include('slatino.Links.urls')),
+    (r'^gallery/', include('slatino.Gallery.urls')),
     (r'^personalee/', include('slatino.Personalee.urls')),
+    (r'^institute/', include('slatino.Institute.urls')),
+    (r'^telephone/', include('slatino.Telephone.urls')),
+    (r'^transport/', include('slatino.Transport.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/',include(admin.site.urls)),
 )
 
 
@@ -29,7 +33,10 @@ if MEDIA_APACHE_DIRECT == False:
         (r'^(emotions/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(news_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(article_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+        (r'^(gallery_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+        (r'^(institute_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(personalee_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(articles-media/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "dcdjutils/Articles/"}),
         (r'^tagsfield/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(LIB_PATH, "tagsfield/media/")}),
 )
+

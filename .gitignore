@@ -2,3 +2,7 @@ libs/*
 .svn
 *.pyc
 *~
+slatino/htdocs/personalee_images/*
+slatino/htdocs/news_images/*
+slatino/htdocs/gallery_images/*
+slatino/htdocs/institute_images/*

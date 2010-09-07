@@ -1,4 +1,4 @@
-{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}{% load thnumbnail %}
         {% block tags %}{{ form.media }}{% endblock %}
         {% block breadcrumbs %}
         <ul>
@@ -25,11 +25,8 @@
         {% for personalee in all_personalee %}
         <div class="column1-unit">
           <h1><a href="{{ personalee.get_absolute_url }}">{{ personalee.name }}</a></h1>
-          <P>{% trans 'God_rogd__:' %}{{ personalee.god_rogd }}</P>
-		  <P>{% trans 'Phone_____:' %}{{ personalee.phone }}</P>
-          <p>{% trans 'Description_:' %}{{ personalee.description|safe|truncatewords:20 }}</p>
+          <p><a href="{{ personalee.get_personalee_image_url }}" target="_blank"><img src="{{ personalee.personalee_image|thumbnail }}" </a></p>
           <p>{% trans 'Tag_______:' %}{% for tag in personalee.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
-		  <h3>{{ personalee.date }}</h3>
         </div>
         <hr class="clear-contentunit" />
         {% endfor %}

@@ -15,7 +15,7 @@
   <meta name="revisit-after" content="2 days" />
   <meta name="robots" content="index,follow" />
   <meta name="publisher" content="dixon" />
-  <meta name="copyright" content="DC & WW" />
+  <meta name="copyright" content="DC & WW & Dor" />
   <meta name="author" content="Design: 1234.info / Modified: Your Name" />
   <meta name="distribution" content="{% trans 'Slatino' %}" />
   <meta name="description" content="{% block meta_description %}{% trans 'All about Slatino, portal of Slatino' %}{% endblock %}" />
@@ -133,33 +133,10 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
             <li><a href="/">{% trans 'Home' %}</a></li>
           </ul>
 
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="/news/last/">{% trans 'News' %}<!--[if IE 7]><!--></a><!--<![endif]-->
-              <!--[if lte IE 6]><table><tr><td><![endif]-->
-                <ul>
-                  <li><a href="/news/">{% trans 'All News' %}</a></li>
-                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
-                </ul>
-              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-            </li>
-          </ul>
 
-          <!-- Navigation item -->
+	  <!-- Navigation item -->
           <ul>
-            <li><a href="{% url article-last %}">{% trans 'Articles' %}<!--[if IE 7]><!--></a><!--<![endif]-->
-              <!--[if lte IE 6]><table><tr><td><![endif]-->
-                <ul>
-                  <li><a href="{% url article-list %}">{% trans 'All Articles' %}</a></li>
-                  <li><a href="{% url article-last %}">{% trans 'Last Articles' %}</a></li>
-                </ul>
-              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-            </li>
-          </ul>
- 
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="/links/">{% trans 'Links' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="/institute/">{% trans 'institute' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
 <!--            <ul>
                   <li><a href="/news/">{% trans 'All News' %}</a></li>
@@ -180,6 +157,84 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul>
+  
+		   <!-- Navigation item -->
+          <ul>
+            <li><a href="/gallery/">{% trans 'gallery' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--            <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>-->
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+		  
+			  
+		  <!-- Navigation item -->
+          <ul>
+            <li><a href="/telephone/">{% trans 'telephone' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="/news/">{% trans 'Business Telephones' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Home Phone' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Mobile Phones' %}</a></li>
+                  <li><a href="/telephone">{% trans 'Emergency Phones' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+		  
+		  <!-- Navigation item -->
+          <ul>
+            <li><a href="/transport/">{% trans 'transport' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="/news/">{% trans 'Bus' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Traine' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/news/last/">{% trans 'News' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="{% url article-last %}">{% trans 'Articles' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="{% url article-list %}">{% trans 'All Articles' %}</a></li>
+                  <li><a href="{% url article-last %}">{% trans 'Last Articles' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="/links/">{% trans 'Links' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--            <ul>
+                  <li><a href="/news/">{% trans 'All News' %}</a></li>
+                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
+                </ul>-->
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+		
         </div>
         {% endblock %}
 	  </div>
