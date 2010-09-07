@@ -38,6 +38,8 @@ LANGUAGES = (
     ('uk', _('Ukrainian')),
 )
 
+#DEFAULT_CHARSET = 'utf-8'
+
 DEFAULT_LANG = 'ru'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -51,7 +53,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ROOT_PATH + 'htdocs/'
+MEDIA_ROOT = ROOT_PATH + 'htdocs'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -104,8 +106,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'slatino.News',
     'slatino.Links',
+    'slatino.Gallery',
     'slatino.Personalee',
+    'slatino.Institute',
+    'slatino.Telephone',
     'slatino.Articles',
+    'slatino.Transport',
     'tagsfield',
 
 )
