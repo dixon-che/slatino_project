@@ -1,3 +1,4 @@
+import os
 from django.conf.urls.defaults import *
 from settings import *
 from django.shortcuts import render_to_response, get_object_or_404
@@ -30,5 +31,5 @@ if MEDIA_APACHE_DIRECT == False:
         (r'^(article_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(personalee_images/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
         (r'^(articles-media/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "dcdjutils/Articles/"}),
-        (r'^(tagsfield/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "tagsfield/media/"}),
+        (r'^tagsfield/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(LIB_PATH, "tagsfield/media/")}),
 )
