@@ -1,0 +1,41 @@
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}
+        {% block tags %}{{ form.media }}{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/telephone/">{% trans 'Telephone' %}</a></li>
+          <li>{{ heading.personalee.name }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'List Telephone Slatino' %}</h1>
+          <h2>{{ Phone.personalee }}</h2>
+        </div>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{% trans 'List Telephone' %}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+		{% for phone in all_phone %}
+        <div class="column1-unit">
+          <h1><a href="{{ personalee.get_absolute_url }}">{{ phone.personalee }}</a></h1><h3>{{ phone.phone }}({{ phone.status }})</h3>
+          <p>{% for tag in phone.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}
+
+        {% block subcontent_top %}
+        <!-- Subcontent unit -->
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+          <h1>{% trans 'Month clicker' %}</h1>
+          <p>{% trans 'Month clicker table' %}</p>
+        </div>
+        {% endblock %}

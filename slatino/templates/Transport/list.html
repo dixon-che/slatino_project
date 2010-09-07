@@ -1,0 +1,43 @@
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}
+        {% block tags %}{{ form.media }}{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/transport/">{% trans 'Transport' %}</a></li>
+          <li>{{ page.title }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>{% trans 'List Transport Slatino' %}</h1>
+          <h2>{{ page.title }}</h2>
+        </div>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{% trans 'List Transport' %}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        {% for transport in all_transport %}
+        <div class="column1-unit">
+          <h1><a href="{{transport.get_absolute_url }}">{{ transport.vid }}</a></h1>
+          <p>{{ transport.napravlenie }}</p>
+		  <p>{{ transport.description }}</p>
+          <p>{% for tag in transport.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}
+
+        {% block subcontent_top %}
+        <!-- Subcontent unit -->
+        <div class="subcontent-unit-border">
+          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
+          <h1>{% trans 'Month clicker' %}</h1>
+          <p>{% trans 'Month clicker table' %}</p>
+        </div>
+        {% endblock %}

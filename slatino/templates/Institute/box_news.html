@@ -1,0 +1,6 @@
+{% load i18n %}
+        <h1>{% trans 'Institute' %}</h1>
+{% for institute in all_institute %}
+        <h3><a href="{{ institute.get_absolute_url }}">{{ institute.title }}</a></h3>
+        <p>{{ institute.description|striptags|truncatewords:100  }}</p>
+{% endfor %}

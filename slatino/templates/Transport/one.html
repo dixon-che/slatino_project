@@ -1,0 +1,39 @@
+{% extends "main.html" %}{% load i18n %}{% load thnumbnail %}
+{% block tags %}{{ form.media }}{% endblock %}{% load tagsfield_tags %}
+  {% block css %}/css/layout2_setup.css{% endblock %}
+  {% block css_text %}/css/layout2_text.css{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/transport/">{% trans 'Transport' %}</a></li>
+          <li>{{ transport.vid }}</li>
+        </ul>
+        {% endblock %}
+
+        {% block header_message %}
+        <div class="sitemessage">
+          <h1>Слатино Транспорт</h1>
+          <h2>{{  transport.vid }}</h2>
+        </div>
+        {% endblock %}
+
+        {% block content_title %}
+        <!-- Pagetitle -->
+        <h1 class="pagetitle">Расписание и цены</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        <h1>Время отправления и прибытия</h1>
+		
+	{% for raspisanie in all_raspisanie %}
+		
+        <div class="column1-unit">
+          <h3>{{ raspisanie.otpravlenie }}-{{ raspisanie.pribitie }}</h3>
+        </div>
+        {% endfor %}
+        <hr class="clear-contentunit" />
+        {% endblock %}
+
+      {% block subcontent %}
+      {% endblock %}
