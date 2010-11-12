@@ -16,11 +16,11 @@ class News(models.Model):
     tags = fields.TagsField(Tag)
 
     class Meta:
-        verbose_name = "News"
-        verbose_name_plural = "News"
+        verbose_name = _("News")
+        verbose_name_plural = _("News")
 
     def __unicode__(self):
         return self.title
 
     def get_absolute_url(self):
-        return "/news/%d/" % self.id
+        return reverse('news-show', args=[self.id])

@@ -120,3 +120,9 @@ ARTICLE_LAST_COUNT = 5
 ARTICLE_PER_PAGE = 10
 
 TAGS_URL = "/tag/%s/"
+
+POST_TYPES = (
+    ('article', _('Article')),
+    ('news', _('News')),
+    ('blogpost', _('Blogpost')),
+)
