@@ -2,6 +2,8 @@ libs/*
 .svn
 *.pyc
 *~
+slatino/slatino_test
+slatino/settings.py
 slatino/htdocs/personalee_images/*
 slatino/htdocs/news_images/*
 slatino/htdocs/gallery_images/*

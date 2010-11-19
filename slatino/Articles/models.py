@@ -14,7 +14,7 @@ from tagsfield import fields
 class Article(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField()
-    #post_type = models.CharField(max_length=20), choices=settings.POST_TYPES)
+    post_type = models.CharField(max_length=20, choices=settings.POST_TYPES, default='article')
     publisher = models.ForeignKey(User)
     pub_date = models.DateTimeField(_(u'Date published'))
     order = models.IntegerField(_(u'Order'), default=50)
