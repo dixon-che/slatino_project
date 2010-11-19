@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 
-from dcdjutils.Articles.models import Article, ArticlePhoto
+from slatino.Articles.models import Article, ArticlePhoto
 
 article_last_count = settings.ARTICLE_LAST_COUNT or 5
 article_per_page = settings.ARTICLE_PER_PAGE or 10

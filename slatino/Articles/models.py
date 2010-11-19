@@ -49,7 +49,12 @@ class Article(models.Model):
         return self.data.description
     description = property(_get_description)
 
+    def get_url(self):
+        print reverse('article-view', kwargs={'article_slug': self.slug})
+        return reverse('article-view', args=[self.slug])
+
     def get_absolute_url(self):
+        print reverse('article-view', args=[self.slug])
         return reverse('article-view', args=[self.slug])
 
     def get_images(self):
