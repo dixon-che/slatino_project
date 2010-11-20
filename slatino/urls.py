@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     (r'^$', "slatino.views.index"),
     (r'^robots\.txt$', "slatino.views.robots"),
     (r'^news/', include('slatino.News.urls')),
-    (r'^article/', include('dcdjutils.Articles.urls')),
+    (r'^article/', include('slatino.Articles.urls')),
     #(r'^links/', include('slatino.Links.urls')),
     (r'^gallery/', include('slatino.Gallery.urls')),
     (r'^personalee/', include('slatino.Personalee.urls')),
@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/',include(admin.site.urls)),
+    (r'^admin/', include(admin.site.urls)),
 )
 
 
@@ -39,4 +39,3 @@ if MEDIA_APACHE_DIRECT == False:
         (r'^(articles-media/.*)$', 'django.views.static.serve', {'document_root': SITE_PATH + "dcdjutils/Articles/"}),
         (r'^tagsfield/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(LIB_PATH, "tagsfield/media/")}),
 )
-

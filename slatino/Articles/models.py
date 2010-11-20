@@ -14,7 +14,7 @@ from tagsfield import fields
 class Article(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField()
-    #post_type = models.CharField(max_length=20), choices=settings.POST_TYPES)
+    post_type = models.CharField(max_length=20, choices=settings.POST_TYPES, default='article')
     publisher = models.ForeignKey(User)
     pub_date = models.DateTimeField(_(u'Date published'))
     order = models.IntegerField(_(u'Order'), default=50)
@@ -49,7 +49,12 @@ class Article(models.Model):
         return self.data.description
     description = property(_get_description)
 
+    def get_url(self):
+        print reverse('article-view', kwargs={'article_slug': self.slug})
+        return reverse('article-view', args=[self.slug])
+
     def get_absolute_url(self):
+        print reverse('article-view', args=[self.slug])
         return reverse('article-view', args=[self.slug])
 
     def get_images(self):
