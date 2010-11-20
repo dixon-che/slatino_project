@@ -104,6 +104,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.admin',
+    'django.contrib.sites',
     'slatino.News',
     'slatino.Links',
     'slatino.Gallery',
@@ -113,11 +114,13 @@ INSTALLED_APPS = (
     'slatino.Articles',
     'slatino.Transport',
     'tagsfield',
-
+    'registration',
 )
 
 ARTICLE_LAST_COUNT = 5
 ARTICLE_PER_PAGE = 10
+
+ACCOUNT_ACTIVATION_DAYS = 1
 
 TAGS_URL = "/tag/%s/"
 
