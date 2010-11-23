@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     (r'^transport/', include('slatino.Transport.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
+    (r'^accounts/', include('registration.urls')),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),

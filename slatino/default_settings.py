@@ -13,6 +13,13 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+AUTH_USER_EMAIL_UNIQUE = True
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+
 DEFAULT_FROM_EMAIL = "noreply@slatino.in.ua"
 
 DATABASE_ENGINE = 'postgresql_psycopg2'      # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -43,7 +50,7 @@ LANGUAGES = (
 DEFAULT_LANG = 'ru'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ru-RU'
 
 SITE_ID = 1
 
