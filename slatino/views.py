@@ -17,3 +17,4 @@ def robots(request):
 Disallow: /admin
 Host: slatino.in.ua'''
     return HttpResponse(text)
+
