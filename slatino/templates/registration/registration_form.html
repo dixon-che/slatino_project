@@ -1,4 +1,4 @@
-{% extends "main.html" %}
+{% extends "main.html" %}{% load i18n %}
 
 {% block title %}-Regitration form{% endblock title %}
 
@@ -11,7 +11,7 @@
 {% csrf_token %}
 <dl>
 {% for field in form %}
-    <dt><font size="3">{{ field.label_tag }}</font></dt>
+    <dt><font size="2">{{ field.label_tag }}</font></dt>
     <dd>{{ field }}
     {% if field.errors %}<div><font color="red">{{ field.errors }}</font></div>{% endif %}
     </dd>

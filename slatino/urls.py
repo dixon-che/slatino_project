@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
     #url(r'^register/$', 'registration.views.register', {'form': RegistrationFormUniqueEmail}, name='registration_register'),
     #url('', include('registration.urls')),
-    (r'^accounts/', include('registration.urls')),
+    (r'^accounts/', include('registration.backends.default.urls')),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
