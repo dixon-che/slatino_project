@@ -38,7 +38,7 @@ msgstr "Порядок"
 
 #: Articles/models.py:24 Articles/models.py:68
 msgid "Article"
-msgstr ""
+msgstr "Статья"
 
 #: Articles/models.py:25 Articles/models.py:69
 #: Articles/templates/Articles/box.html:2
@@ -46,7 +46,7 @@ msgstr ""
 #: Articles/templates/Articles/list.html:5
 #: Articles/templates/Articles/one.html:8 templates/main.html:150
 msgid "Articles"
-msgstr ""
+msgstr "Статьи"
 
 #: Articles/views.py:15 templates/main.html:154
 #, fuzzy
@@ -289,3 +289,7 @@ msgstr ""
 #: templates/Personalee/list.html:31
 msgid "Tag_______:"
 msgstr ""
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Регистрация"

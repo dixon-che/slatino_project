@@ -2,7 +2,7 @@ import os
 from django.conf.urls.defaults import *
 from settings import *
 from django.shortcuts import render_to_response, get_object_or_404
-
+from registration.forms import RegistrationFormUniqueEmail
 from django.contrib import admin
 admin.autodiscover()
 
@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     (r'^transport/', include('slatino.Transport.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^tag/(?P<slug>\w+)/$', 'slatino.views.tag'),
-    #url(r'^register/$', 'registration.views.register', {'form': RegistrationFormUniqueEmail}, name='registration_register'),
+    url(r'^accounts/register/$', 'registration.views.register', {'form_class': RegistrationFormUniqueEmail, 'backend': 'registration.backends.default.DefaultBackend'}, name='registration_register'),
     #url('', include('registration.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
 

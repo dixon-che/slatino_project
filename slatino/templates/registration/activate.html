@@ -1,14 +1,14 @@
 {% extends "main.html" %}
 
-{% block title %}-Activation form{% endblock %}</title>
+{% block title %}-Activation form{% endblock %}
 
 {% block content_title %}
-<h1 class="pagetitle">Activation!</h1>
+    <h1 class="pagetitle">Activate!</h1>
 {% endblock %}
 
 {% block content_main %}
 Привет, {{ account }}!<br/>
 Ваша учетная запись активирована. <a href="{% url auth_login %}">Заходите</a> на сайт.
-<br/><br/>
+<br/>
 {% endblock %}
 
