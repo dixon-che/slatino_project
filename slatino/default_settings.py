@@ -122,7 +122,10 @@ INSTALLED_APPS = (
     'slatino.Transport',
     'tagsfield',
     'registration',
+    'profile',
 )
+
+AUTH_PROFILE_MODULE = 'profile.UserProfile'
 
 ARTICLE_LAST_COUNT = 5
 ARTICLE_PER_PAGE = 10

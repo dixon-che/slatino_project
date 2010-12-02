@@ -97,12 +97,23 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <!-- Navigation Level 1 -->
         <div class="nav1">
           <ul>
-            {% comment %}
+{% comment %}
             <li><a href="/" title="{% trans 'Go to Start page' %}">{% trans 'Home' %}</a></li>
             <li><a href="/about" title="{% trans 'Get to know who we are' %}">{% trans 'About' %}</a></li>
             <li><a href="/contact_form" title="{% trans 'Get in touch with us' %}">{% trans 'Contact' %}</a></li>
             <li><a href="/sitemap" title="{% trans 'Get an overview of website' %}">{% trans 'Sitemap' %}</a></li>
-            {% endcomment %}
+{% endcomment %}
+          </ul>
+        </div>
+        <div class="nav1 log">
+          <ul>
+            {% if user.is_authenticated %}
+              <li><a href="/profiles/create/">{{ user.username }}</a></li>
+              <li><a href="{% url auth_logout %}">Sign Out</a></li>
+            {% else %}
+              <li><a href="/accounts/login/">Login</a></li>
+              <li><a href="/accounts/register/">Registration</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>

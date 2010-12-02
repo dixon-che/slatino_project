@@ -1,0 +1,31 @@
+{% extends "main.html" %}{% load i18n %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content_title %}
+<h1 class="pagetitle">Create contact info for {{ user }}</h1>
+{% endblock %}
+
+{% block content_main %}
+  <div id="contenttext">
+
+    <div class="bodytext" style="padding:12px;" align="justify">
+
+<form method="POST" action="">
+{% csrf_token %}
+    
+    {% for field in form %}
+        {% if field.errors %}
+            <font color="red">{{ field.errors }}</font>
+        {% endif %}
+        <div class="field">      
+            <label for="id_subject">{{ field.label_tag }}</label>
+            {{ field }}
+        </div>
+    {% endfor %}
+
+    <input type="submit" name="submit" value="Update" id="submit">
+</form>
+</div></div>
+
+{% endblock %}

@@ -8,8 +8,8 @@
 
 {% block content_main %}
 {% if user.is_authenticated %}
-Что такое, {{ user.username }}? Вы же уже авторизованы.
-Впрочем, всегда можно <a href="{% url auth_logout %}">выйти</a>.<br/><br/>
+{{ user.username }}, you are already logged.
+However, you can always <a href="{% url auth_logout %}">logout</a>.<br/><br/>
 {% else %}
 
 {% if form.non_field_errors %}

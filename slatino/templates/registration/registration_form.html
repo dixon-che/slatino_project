@@ -12,9 +12,10 @@
 <dl>
 {% for field in form %}
     <dt><font size="2">{{ field.label_tag }}</font></dt>
-    <dd>{{ field }}
-    {% if field.errors %}<div><font color="red">{{ field.errors }}</font></div>{% endif %}
-    </dd>
+      <dd>{{ field }}</dd>
+      {% if field.errors %}
+      <dd><font color="red">{{ field.errors }}</font></dd>
+      {% endif %}
 {% endfor %}
 </dl>
 <font color="red">{{ form.non_field_errors }}</font>

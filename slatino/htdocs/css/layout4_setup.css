@@ -42,18 +42,20 @@
 .sitename a {text-decoration:none; color:rgb(125,125,125);}
 .sitename a:hover {text-decoration:none; color:rgb(50,50,50);}
 
-.nav0 {width:350px; position:absolute; z-index:2; margin:25px 0 0 0; margin-left:550px !important/*Non-IE6*/; margin-left:553px /*IE6*/;}
+.nav0 {width:350px; position:absolute; z-index:2; margin:10px 0 0 0; margin-left:550px !important/*Non-IE6*/; margin-left:553px /*IE6*/;}
 .nav0 ul {float:right; padding:0 20px 0 0;}
 .nav0 li {display:inline; list-style:none;}
 .nav0 li a {padding:0 0 0 3px;}
 .nav0 a:hover {text-decoration:none;}
 .nav0 a img {height:14px; border:none;}
 
-.nav1 {width:350px; position:absolute; z-index:3; margin:45px 0 0 550px;}
+.nav1 {width:350px; position:absolute; z-index:3; margin:35px 0 0 550px;}
 .nav1 ul {float:right; padding:0 15px 0 0; font-weight:bold;}
 .nav1 li {display:inline; list-style:none;}
 .nav1 li a {display:block; float:left; padding:2px 5px 2px 5px; color:rgb(125,125,125) ; text-decoration:none; font-size:120%;}
 .nav1 a:hover {text-decoration:none; color:rgb(50,50,50);}
+
+.log {margin-top:55px;}
 
 .sitemessage {width:400px; height:120px; position:absolute; z-index:1; margin:20px 0 0 480px; color:rgb(234,239,247); /*overflow:visible !important /*Activate if Firefox print problems*/; overflow:hidden /*IE6*/;}
 .sitemessage h1 {width:400px; text-align:right; font-size:230%;}

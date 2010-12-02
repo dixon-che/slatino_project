@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+{% block title %}My page{% endblock title %}
+
+
+{%  block content %}
+
+{% comment %}
+<div class="bodytext" style="padding:90px 30px;" align="justify">
+
+<h1>Screenshots list</h1>
+<table width="100%">
+  {% for item in my_screenshots %}
+  <tr>
+    <td>
+      <a href="{{ item.hash_url }}"><img src='/{{ item.get_thumbnail_url }}' style='border:0' /></a>
+    </td>
+    <td>
+      <a href="{{ item.hash_url }}">{{ item.name }}</a>
+    </td>
+    <td>
+      {{ item.datetime }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endcomment %}
+
+{% endblock content %}

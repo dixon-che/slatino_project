@@ -1,4 +1,5 @@
-Регистрация на сайте
-Для активации вашего аккаунта необходимо перейти по ссылке:
+Site registration
+You need follow link below to activate your account:
 {{ site }}/accounts/activate/{{ activation_key }}/
-Спасибо!
+You must complete your activation within {{ expiration_days }} days.
+Thank you!
