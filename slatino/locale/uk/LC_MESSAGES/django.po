@@ -289,3 +289,19 @@ msgstr ""
 #: templates/Personalee/list.html:31
 msgid "Tag_______:"
 msgstr ""
+
+#: registration/forms.py:96
+msgid "This email address is already in use. Please supply a different email address."
+msgstr "Ця адреса електронної пошти вже використовується. Будь ласка, введіть іншу адресу."
+
+#: supercaptcha/settings.py:39
+msgid "The code you entered is wrong."
+msgstr "Ви невірно ввели код"
+
+#: forms.py:10
+msgid "No robots here"
+msgstr "Захист від роботів"
+
+#: default_settings.py:143
+msgid "Refresh code"
+msgstr "Поновити код"

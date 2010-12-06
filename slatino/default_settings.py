@@ -1,4 +1,5 @@
 import os
+from django.utils.translation import ugettext as _
 
 ROOT_PATH = os.path.dirname(__file__) + '/'
 SITE_PATH = os.path.normpath(os.path.join(ROOT_PATH, '../')) + '/'
@@ -139,3 +140,8 @@ POST_TYPES = (
     ('news', _('News')),
     ('blogpost', _('Blogpost')),
 )
+
+CAPTCHA_REFRESH_LINK_TEXT = _("Refresh code")
+CAPTCHA_SIZE = (80, 18)
+CAPTCHA_REFRESH = True
+

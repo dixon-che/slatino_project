@@ -9,18 +9,19 @@
 {% block content_main %}
 
 <div>
+<font size="2">
   <table>
-    <ul>
-      <li>First name: {{ profile.first_name }}</li>
-      <li>Last name: {{ profile.last_name }}</li>
-      <li>Date of birth: {{ profile.date_of_birth }}</li>
-      <li>Sex: {{ profile.sex }}</li>
-      <li>Occupation: {{ profile.occupation }}</li>
-      <li>About: {{ profile.about }}</li>
-      <li>Last Login: {{ profile.user.last_login|date:"F j, Y" }}</li>
-      <li>Member since: {{ profile.user.date_joined|date:"F j, Y" }}</li>
-    </ul>
+    <tr><td>Photo:</td> <td><img src="{{ profile.photo.url }}" width="150" height="200"></td></tr>
+    <tr><td>First name:</td> <td>{{ profile.first_name }}</td></tr>
+    <tr><td>Last name:</td> <td>{{ profile.last_name }}</td></tr>
+    <tr><td>Date of birth:</td> <td>{{ profile.date_of_birth }}</td></tr>
+    <tr><td>Sex:</td> <td>{{ profile.sex }}</td></tr>
+    <tr><td>Occupation:</td> <td>{{ profile.occupation }}</td></tr>
+    <tr><td>About:</td> <td>{{ profile.about }}</td></tr>
+    <tr><td>Last Login:</td> <td>{{ profile.user.last_login|date:"F j, Y" }}</td></tr>
+    <tr><td>Member since:</td> <td>{{ profile.user.date_joined|date:"F j, Y" }}</td></tr>
   </table>
+</font>
 </div> 
 
 {% endblock %}

@@ -293,3 +293,15 @@ msgstr ""
 #: templates/registration/registration_form.html:6
 msgid "Registration"
 msgstr "Регистрация"
+
+#: supercaptcha/settings.py:39
+msgid "The code you entered is wrong."
+msgstr "Вы ввели неверный код"
+
+#: forms.py:10
+msgid "No robots here"
+msgstr "Защита от роботов"
+
+#: default_settings.py:143
+msgid "Refresh code"
+msgstr "Обновить код"
