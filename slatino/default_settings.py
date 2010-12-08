@@ -119,7 +119,7 @@ INSTALLED_APPS = (
     'slatino.Personalee',
     'slatino.Institute',
     'slatino.Telephone',
-    'slatino.Articles',
+    'slatino.Publications',
     'slatino.Transport',
     'tagsfield',
     'registration',
@@ -128,8 +128,8 @@ INSTALLED_APPS = (
 
 AUTH_PROFILE_MODULE = 'profile.UserProfile'
 
-ARTICLE_LAST_COUNT = 5
-ARTICLE_PER_PAGE = 10
+PUBLICATION_LAST_COUNT = 5
+PUBLICATION_PER_PAGE = 10
 
 ACCOUNT_ACTIVATION_DAYS = 1
 

@@ -5,13 +5,14 @@ from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
 
-from dcdjutils.Articles.utils import get_cache_file_url
-
+#from dcdjutils.Articles.utils import get_cache_file_url
+from slatino.Publications.utils import get_cache_file_url
+from News.models import News
 from tagsfield.models import Tag
 from tagsfield import fields
 
 
-class Article(models.Model):
+class Publication(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField()
     post_type = models.CharField(max_length=20, choices=settings.POST_TYPES, default='article')
@@ -22,22 +23,22 @@ class Article(models.Model):
     tags = fields.TagsField(Tag)
 
     class Meta:
-        verbose_name = _(u"Article")
-        verbose_name_plural = _(u"Articles")
+        verbose_name = _(u"Publication")
+        verbose_name_plural = _(u"Publications")
 
     def __unicode__(self):
         return self.name
 
     def _get_data(self):
-        articledescriptions = self.articledescription_set.filter(lang=translation.get_language(), published=True)
-        if articledescriptions:
-            return articledescriptions[0]
-        articledescriptions = self.articledescription_set.filter(lang=settings.DEFAULT_LANG, published=True)
-        if articledescriptions:
-            return articledescriptions[0]
-        articledescriptions = self.articledescription_set.filter(published=True)
-        if articledescriptions:
-            return articledescriptions[0]
+        publicationdescriptions = self.publicationdescription_set.filter(lang=translation.get_language(), published=True)
+        if publicationdescriptions:
+            return publicationdescriptions[0]
+        publicationdescriptions = self.publicationdescription_set.filter(lang=settings.DEFAULT_LANG, published=True)
+        if publicationdescriptions:
+            return publicationdescriptions[0]
+        publicationdescriptions = self.publicationdescription_set.filter(published=True)
+        if publicationdescriptions:
+            return publicationdescriptions[0]
 
     data = property(_get_data)
 
@@ -50,19 +51,19 @@ class Article(models.Model):
     description = property(_get_description)
 
     def get_url(self):
-        print reverse('article-view', kwargs={'article_slug': self.slug})
-        return reverse('article-view', args=[self.slug])
+        print reverse('publication-view', kwargs={'publication_slug': self.slug})
+        return reverse('publication-view', args=[self.slug])
 
     def get_absolute_url(self):
-        print reverse('article-view', args=[self.slug])
-        return reverse('article-view', args=[self.slug])
+        print reverse('publication-view', args=[self.slug])
+        return reverse('publication-view', args=[self.slug])
 
     def get_images(self):
-        return  ArticlePhoto.objects.filter(article=self)
+        return  PublicationPhoto.objects.filter(publication=self)
 
 
-class ArticleDescription(models.Model):
-    base = models.ForeignKey(Article)
+class PublicationDescription(models.Model):
+    base = models.ForeignKey(Publication)
     title = models.CharField(max_length=255)
     description = models.TextField()
     lang = models.CharField(choices=settings.LANGUAGES, max_length=5)
@@ -72,22 +73,22 @@ class ArticleDescription(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = _(u"Article")
-        verbose_name_plural = _(u"Articles")
+        verbose_name = _(u"Publication")
+        verbose_name_plural = _(u"Publications")
 
         unique_together = (("base", "lang"), )
 
 
-class ArticlePhoto(models.Model):
-    article = models.ForeignKey(Article)
-    image = models.ImageField(upload_to="article_images/")
+class PublicationPhoto(models.Model):
+    publication = models.ForeignKey(Publication)
+    image = models.ImageField(upload_to="publication_images/")
     stamp = models.DateTimeField(auto_now=True)
 
     def get_url_with_id(self):
-        return reverse('article-image-view', self.id)
+        return reverse('publication-image-view', self.id)
 
     def thumbnail_size(self):
         return 300
 
     def thumbnail_url(self, size):
-        return get_cache_file_url(self, "article_images/thumbnails", size)
+        return get_cache_file_url(self, "publication_images/thumbnails", size)

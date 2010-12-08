@@ -1,0 +1,10 @@
+{% load i18n %}
+        <div class="column1-unit">
+        <h1>{% trans 'Articles' %}</h1>
+        {% for publication in publications %}
+          <h1><a href="{{ publication.get_absolute_url }}">{{ publication.title }}</a></h1>
+          <h3>{{ publication.pub_date }}</h3>
+          <p>{{ publication.description|striptags|safe|truncatewords:20 }}</p>
+        {% endfor %}
+        <hr class="clear-contentunit" />
+        </div>

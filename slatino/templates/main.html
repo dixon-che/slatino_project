@@ -1,4 +1,4 @@
-{% load i18n %}{% load news_tags %}{% load article_tags %}{% load links_tags %}{% load personalee_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load i18n %}{% load news_tags %}{% load publication_tags %}{% load links_tags %}{% load personalee_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <!--  Version: Multiflex-3.12 / Overview                    -->
@@ -108,11 +108,11 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <div class="nav1 log">
           <ul>
             {% if user.is_authenticated %}
-              <li><a href="/profiles/create/">{{ user.username }}</a></li>
+              <li><a href="{% url profiles_create_profile %}">{{ user.username }}</a></li>
               <li><a href="{% url auth_logout %}">Sign Out</a></li>
             {% else %}
-              <li><a href="/accounts/login/">Login</a></li>
-              <li><a href="/accounts/register/">Registration</a></li>
+              <li><a href="{% url auth_login %}">Login</a></li>
+              <li><a href="{% url registration_register %}">Registration</a></li>
             {% endif %}
           </ul>
         </div>
@@ -139,7 +139,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <!-- Navigation Level 2 (Drop-down menus) -->
         <div class="nav2">
 
-{% comment %}
+
           <!-- Navigation item -->
           <ul>
             <li><a href="/">{% trans 'Home' %}</a></li>
@@ -157,7 +157,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul> 
-          
+{% comment %}          
           <!-- Navigation item -->
           <ul>
             <li><a href="/personalee/">{% trans 'personalee' %}<!--[if IE 7]><!--></a><!--<![endif]-->
@@ -208,7 +208,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul>
-{% endcomment %}
+
 
           <!-- Navigation item -->
           <ul>
@@ -221,15 +221,15 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul>
-
+{% endcomment %}
 
           <!-- Navigation item -->
           <ul>
-            <li><a href="{% url article-last %}">{% trans 'Articles' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="{% url publication-last %}">{% trans 'Information' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
                 <ul>
-                  <li><a href="{% url article-list %}">{% trans 'All Articles' %}</a></li>
-                  <li><a href="{% url article-last %}">{% trans 'Last Articles' %}</a></li>
+                  <li><a href="{% url news %}">{% trans 'News' %}</a></li>
+                  <li><a href="{% url article %}">{% trans 'Articles' %}</a></li>
                 </ul>
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
@@ -300,7 +300,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <!-- Template infos -->
         {% block under_nav %}
         {% pull_latest_news 4 %}
-        {% pull_latest_articles 4 %}
+        {% pull_latest_publications 4 %}
         {% endblock %}
         <h1>{% trans "Weather in Slatino" %}</h1>
         <p>
@@ -348,7 +348,7 @@ alt="" border=0 width=88 height=120></a><!--/LiveInternet-->
         </div>
         <hr class="clear-contentunit" />
         {% incontent_latest_news 3 %}
-        {% incontent_latest_articles 3 %}
+        {% incontent_latest_publications %}
         {% incontent_latest_links 3 %}
         {% endblock %}
       </div>
@@ -393,6 +393,7 @@ alt="" border=0 width=88 height=120></a><!--/LiveInternet-->
     <!-- C. FOOTER AREA -->
 
     <div class="footer">
+
       <p>{% trans 'Copyright &copy; 2008 DC & WW | All Rights Reserved' %}</p>
       <p class="credits">{% trans 'Design by' %} <a href="http://1234.info/" title="{% trans 'Designer Homepage' %}">1234.info</a> | {% trans 'Modified by' %} <a href="http://slatino.in.ua/" title="Dixon">Dixon</a> | {% trans 'Powered by' %} <a href="http://djangoproject.com/" title="Django">Django</a> | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code">XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">CSS 2.0</a></p>
     </div>

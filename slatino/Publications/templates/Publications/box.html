@@ -1,0 +1,6 @@
+{% load i18n %}
+        <h1>{% trans 'Articles' %}</h1>
+{% for publication in publications %}
+        <h3><a href="{{ publication.get_absolute_url }}">{{ publication.title }}</a></h3>
+        <p>{{ publication.description|striptags|truncatewords:10  }}</p>
+{% endfor %}

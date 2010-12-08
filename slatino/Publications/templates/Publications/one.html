@@ -5,29 +5,29 @@
         {% block breadcrumbs %}
         <ul>
           <li><a href="/">{% trans 'Home' %}</a></li>
-          <li><a href="{% url article-last %}">{% trans 'Articles' %}</a></li>
-          <li>{{ article.title }}</li>
+          <li><a href="{% url publication-last %}">{% trans 'Publications' %}</a></li>
+          <li>{{ publication.title }}</li>
         </ul>
         {% endblock %}
 
         {% block header_message %}
         <div class="sitemessage">
-          <h1>{% trans 'Article Slatino' %}</h1>
-          <h2>{{ article.title }}</h2>
+          <h1>{% trans 'Publication Slatino' %}</h1>
+          <h2>{{ publication.title }}</h2>
         </div>
         {% endblock %}
 
         {% block content_title %}
         <!-- Pagetitle -->
-        <h1 class="pagetitle">{{ article.title }}</h1>
+        <h1 class="pagetitle">{{ publication.title }}</h1>
         {% endblock %}
 
         {% block content_main %}
         <!-- Content unit - One column -->
         <div class="column1-unit">
-          <h1>{{ article.title }}</h1>
-          <h3>{{ article.pub_date }}</h3>
-          {{ article.description|safe }}
+          <h1>{{ publication.title }}</h1>
+          <h3>{{ publication.pub_date }}</h3>
+          {{ publication.description|safe }}
         </div>
         <hr class="clear-contentunit" />
 
