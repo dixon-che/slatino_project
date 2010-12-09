@@ -4,14 +4,14 @@
         <ul>
           <li><a href="/">{% trans 'Home' %}</a></li>
           <li><a href="/personalee/">{% trans 'Personalee' %}</a></li>
-          <li>{{ page.name }}</li>
+          <li>{{ page.last_name }}</li>
         </ul>
         {% endblock %}
 
         {% block header_message %}
         <div class="sitemessage">
           <h1>{% trans 'List Personalee Slatino' %}</h1>
-          <h2>{{ page.name }}</h2>
+          <h2>{{ page.last_name }}</h2>
         </div>
         {% endblock %}
 
@@ -23,15 +23,18 @@
         {% block content_main %}
         <!-- Content unit - One column -->
         {% for personalee in all_personalee %}
-        <div class="column1-unit">
-          <h1><a href="{{ personalee.get_absolute_url }}">{{ personalee.name }}</a></h1>
+        <div class="column1-unit list">
+          <p><a href="{{ personalee.get_absolute_url }}">{{ personalee.last_name }} {{ personalee.first_name }}</a></p>
+{% comment %}
           <p><a href="{{ personalee.get_personalee_image_url }}" target="_blank"><img src="{{ personalee.personalee_image|thumbnail }}" </a></p>
           <p>{% trans 'Tag_______:' %}{% for tag in personalee.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+{% endcomment %}
         </div>
         <hr class="clear-contentunit" />
         {% endfor %}
         {% endblock %}
 
+{% comment %}
         {% block subcontent_top %}
         <!-- Subcontent unit -->
         <div class="subcontent-unit-border">
@@ -40,3 +43,4 @@
           <p>{% trans 'Month clicker table' %}</p>
         </div>
         {% endblock %}
+{% endcomment %}

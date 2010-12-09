@@ -95,16 +95,16 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         </div>
 
         <!-- Navigation Level 1 -->
+{% comment %}
         <div class="nav1">
           <ul>
-{% comment %}
             <li><a href="/" title="{% trans 'Go to Start page' %}">{% trans 'Home' %}</a></li>
             <li><a href="/about" title="{% trans 'Get to know who we are' %}">{% trans 'About' %}</a></li>
             <li><a href="/contact_form" title="{% trans 'Get in touch with us' %}">{% trans 'Contact' %}</a></li>
             <li><a href="/sitemap" title="{% trans 'Get an overview of website' %}">{% trans 'Sitemap' %}</a></li>
-{% endcomment %}
           </ul>
         </div>
+{% endcomment %}
         <div class="nav1 log">
           <ul>
             {% if user.is_authenticated %}
@@ -148,7 +148,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
 	  <!-- Navigation item -->
           <ul>
-            <li><a href="/institute/">{% trans 'institute' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="{% url institute-list %}">{% trans 'Institute' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
 <!--            <ul>
                   <li><a href="/news/">{% trans 'All News' %}</a></li>
@@ -283,24 +283,23 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
         <!-- Navigation Level 3 -->
         <div class="round-border-topright"></div>
-        <h1 class="first">{% block navigation_title %}{% trans 'Tags list' %}{% endblock %}</h1>
-
+        <h1 class="first">{% block navigation_title %}{% trans 'Slatino' %}{% endblock %}</h1>
+{% comment %}
         <!-- Navigation with grid style -->
         <dl class="nav3-grid">
           {% block navigation %}
-<!--          <dt><a href="#">таг</a></dt>
+          <dt><a href="#">таг</a></dt>
           <dt><a href="#">таг2</a></dt>
             <dd><a href="#">таг21</a></dd>
             <dd><a href="#">таг22</a></dd>
             <dd><a href="#">таг23</a></dd>
-          <dt><a href="#">таг3</a></dt>-->
+          <dt><a href="#">таг3</a></dt>
           {% endblock %}
         </dl>
-
+{% endcomment %}
         <!-- Template infos -->
         {% block under_nav %}
-        {% pull_latest_news 4 %}
-        {% pull_latest_publications 4 %}
+        
         {% endblock %}
         <h1>{% trans "Weather in Slatino" %}</h1>
         <p>
@@ -346,10 +345,11 @@ alt="" border=0 width=88 height=120></a><!--/LiveInternet-->
           <h3>Dixon & WW</h3>
           <p>Вначале была идея! Идея - а не создать ли нам сайт для нашего любимого поселка?</p>
         </div>
-        <hr class="clear-contentunit" />
+{% comment %}        <hr class="clear-contentunit" />
         {% incontent_latest_news 3 %}
-        {% incontent_latest_publications %}
+        {% incontent_latest_publications 3 %}
         {% incontent_latest_links 3 %}
+{% endcomment %}
         {% endblock %}
       </div>
 
@@ -371,13 +371,9 @@ alt="" border=0 width=88 height=120></a><!--/LiveInternet-->
 
         <div class="subcontent-unit-border">
           <div class="round-border-topleft"></div><div class="round-border-topright"></div>
-	  {% pull_latest_links 4 %}
+	  {% pull_latest_publications 'news' 4 %}
         </div>
-    <!-- for tag -->
-    <div class="subcontent-unit-border">
-          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
-	  {% pull_latest_links 4 %}
-        </div>
+
         
         {% block subcontent_bottom %}
         <!-- Subcontent unit -->

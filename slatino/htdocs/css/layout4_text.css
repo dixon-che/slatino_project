@@ -74,7 +74,7 @@
 .main-content h4 {margin:1.5em 0 1.0em 0; color:rgb(80,80,80); font-family:"trebuchet ms",arial,sans-serif; font-weight:normal; font-size:170%;}
 .main-content h5 {margin:1.5em 0 1.0em 0; color:rgb(80,80,80); font-family:"trebuchet ms",arial,sans-serif; font-size:140%;}
 .main-content h6 {margin:1.2em 0 0.2em 0; color:rgb(80,80,80); font-weight:bold; font-size:120%;}
-.main-content p {margin:0 0 1.0em 0; line-height:1.5em; font-size:120%;}
+.main-content p {margin:0; line-height:1.5em; font-size:120%;}
 .main-content p.center {text-align:center;}
 .main-content p.right {text-align:right;}
 .main-content p.details {clear:both; margin:-0.25em 0 1.0em 0; line-height:1.0em; font-size:110%;}

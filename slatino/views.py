@@ -6,7 +6,7 @@ from tagsfield.models import Tag
 
 def index(request):
     return render_to_response("main.html", 
-                             context_instance=RequestContext(request,{"main": "main"}))
+                             context_instance=RequestContext(request, {"main": "main"}))
 
 
 def tag(request, slug):

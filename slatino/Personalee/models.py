@@ -8,13 +8,15 @@ from tagsfield import fields
 
 
 class Personalee(models.Model):
-    name = models.CharField(max_length=155)
-    god_rogd = models.CharField(max_length=55)
-    phone= models.CharField(max_length=55)
-    description = models.TextField()
-    date = models.DateTimeField('date published')
-    publisher = models.ForeignKey(User)
-    personalee_image = models.ImageField(upload_to="personalee_images")
+    photo = models.ImageField(upload_to="personalee_images", blank=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=40)
+    date_of_birth = models.DateField(blank=True, null=True)
+    sex = models.CharField(choices=(('Male', 'Male'), ('Female', 'Female')), blank=True, null=True, max_length=6)
+    occupation = models.CharField(max_length=50, blank=True)
+    about = models.TextField(max_length=500, help_text="(Some words about yourself.)", blank=True)
+    phone= models.CharField(max_length=55, blank=True)
+    #date = models.DateTimeField('date published')
     tags = fields.TagsField(Tag)
 
     class Meta:
@@ -22,7 +24,7 @@ class Personalee(models.Model):
         verbose_name_plural = "Personalees"
 
     def __unicode__(self):
-        return self.name
+        return u'%s %s' % (self.last_name, self.first_name)
 
     def get_absolute_url(self):
         return "/personalee/%d/" % self.id

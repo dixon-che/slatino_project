@@ -55,7 +55,7 @@
 .nav1 li a {display:block; float:left; padding:2px 5px 2px 5px; color:rgb(125,125,125) ; text-decoration:none; font-size:120%;}
 .nav1 a:hover {text-decoration:none; color:rgb(50,50,50);}
 
-.log {margin-top:55px;}
+.log {margin:55px 0 0 550px;}
 
 .sitemessage {width:400px; height:120px; position:absolute; z-index:1; margin:20px 0 0 480px; color:rgb(234,239,247); /*overflow:visible !important /*Activate if Firefox print problems*/; overflow:hidden /*IE6*/;}
 .sitemessage h1 {width:400px; text-align:right; font-size:230%;}
@@ -112,7 +112,7 @@
 .column3-unit-left {float:left; width:120px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/;}
 .column3-unit-middle {float:left; width:120px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/; margin-left:40px;}
 .column3-unit-right {float:right; width:120px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/;}
-
+.list {margin-bottom:0px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/;}
 /* MAIN SUBCONTENT */
 .subcontent-unit-border {width:183px; margin:0 0 2.0em 0; padding:0 0 5px 0; border:solid 1px rgb(190,190,190); background:rgb(235,235,235);}
 .subcontent-unit-border-green {width:183px; margin:0 0 2.5em 0; padding:0 0 10px 0; border:solid 1px rgb(160,214,81); background-color:rgb(217,239,185);}

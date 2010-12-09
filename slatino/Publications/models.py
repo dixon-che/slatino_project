@@ -51,16 +51,19 @@ class Publication(models.Model):
     description = property(_get_description)
 
     def get_url(self):
-        print reverse('publication-view', kwargs={'publication_slug': self.slug})
+        #print reverse('publication-view', kwargs={'publication_slug': self.slug})
         return reverse('publication-view', args=[self.slug])
 
     def get_absolute_url(self):
-        print reverse('publication-view', args=[self.slug])
+        #print reverse('publication-view', args=[self.slug])
         return reverse('publication-view', args=[self.slug])
 
     def get_images(self):
         return  PublicationPhoto.objects.filter(publication=self)
 
+    def get_verbose_post_type(self):
+        post_type_dict = dict(settings.POST_TYPES)
+        return post_type_dict[self.post_type]
 
 class PublicationDescription(models.Model):
     base = models.ForeignKey(Publication)
