@@ -27,7 +27,7 @@
 
 /* HEADER */
 .header {width:900px; font-family:"trebuchet ms",arial,sans-serif;}
-.header-top {width:900px; height:80px; background:rgb(240,240,240) url(../img/bg_head_top.jpg); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
+.header-top {width:900px; height:80px; background:rgb(240,240,240) url(../img/bg_head_middle.jpg); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .header-middle {width:900px; height:150px; background:rgb(160,214,81) url(../img/bg_head_middle.jpg); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .header-bottom {width:900px;}
 .header-breadcrumbs {clear:both; width:900px; padding:1.0em 0 1.5em 0; background:rgb(255,255,255) url(../img/bg_head_breadcrumbs.jpg) repeat-y;}
@@ -38,8 +38,8 @@
 .sitelogo {width:60px; height:40px; position:absolute; z-index:1; margin:22px 0 0 20px; background:url(../img/bg_head_top_logo.jpg); }
 .sitename {width:300px; height:45px; position:absolute; z-index:1; margin:20px 0 0 90px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .sitename h1 {font-size:240%;}
-.sitename h2 {margin:-4px 0 0 0; color:rgb(125,125,125); font-size:120%;}
-.sitename a {text-decoration:none; color:rgb(125,125,125);}
+.sitename h2 {margin:-4px 0 0 0; color:rgb(234,239,247); font-size:120%;}
+.sitename a {text-decoration:none; color:rgb(234,239,247);}
 .sitename a:hover {text-decoration:none; color:rgb(50,50,50);}
 
 .nav0 {width:350px; position:absolute; z-index:2; margin:10px 0 0 0; margin-left:550px !important/*Non-IE6*/; margin-left:553px /*IE6*/;}
@@ -56,6 +56,7 @@
 .nav1 a:hover {text-decoration:none; color:rgb(50,50,50);}
 
 .log {margin:55px 0 0 550px;}
+.string {position:absolute; width:900px; margin-top:75px;}
 
 .sitemessage {width:400px; height:120px; position:absolute; z-index:1; margin:20px 0 0 480px; color:rgb(234,239,247); /*overflow:visible !important /*Activate if Firefox print problems*/; overflow:hidden /*IE6*/;}
 .sitemessage h1 {width:400px; text-align:right; font-size:230%;}

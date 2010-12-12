@@ -117,7 +117,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
           </ul>
         </div>
       </div>
-
+{% comment %}
       <!-- A.2 HEADER MIDDLE -->
       <div class="header-middle">
 
@@ -126,13 +126,13 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <div class="sitemessage">
           <h1>{% trans 'Events &bull; People &bull; History' %}</h1>
           <h2>{% trans 'The information on a life of settlement Slatino' %}<br /> <br /> </h2>
-          {% comment %}
+          
           <h3><a href="/about">&rsaquo;&rsaquo;&nbsp;{% trans 'More details' %}</a></h3>
-          {% endcomment %}
+          
         </div>
         {% endblock %}
       </div>
-
+{% endcomment %}
       <!-- A.3 HEADER BOTTOM -->
       <div class="header-bottom">
         {% block navigation_header %}
@@ -150,17 +150,18 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
           <ul>
             <li><a href="{% url institute-list %}">{% trans 'Institute' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
-<!--            <ul>
-                  <li><a href="/news/">{% trans 'All News' %}</a></li>
-                  <li><a href="/news/last/">{% trans 'Last News' %}</a></li>
-                </ul>-->
+                <ul>
+                  {% for institute in all_institute %}
+                  <li><a href="{% url institute-show institute.id %}">{{ institute.name }}</a></li>
+                  {% endfor %}
+                </ul>
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul> 
 {% comment %}          
           <!-- Navigation item -->
           <ul>
-            <li><a href="/personalee/">{% trans 'personalee' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="{% url personalee-list %}">{% trans 'Personality' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
 <!--            <ul>
                   <li><a href="/news/">{% trans 'All News' %}</a></li>

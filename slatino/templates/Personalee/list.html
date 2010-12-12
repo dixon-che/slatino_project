@@ -24,7 +24,12 @@
         <!-- Content unit - One column -->
         {% for personalee in all_personalee %}
         <div class="column1-unit list">
-          <p><a href="{{ personalee.get_absolute_url }}">{{ personalee.last_name }} {{ personalee.first_name }}</a></p>
+          <p>
+          {% if personalee.photo %}<img src="{{ personalee.photo|thumbnail }}" width="45" height="60" class="right">{% endif %}
+          <a href="{{ personalee.get_absolute_url }}">{{ personalee.last_name }} {{ personalee.first_name }}</a><br>
+          {% trans 'Occupation' %}: {{ personalee.occupation }}
+          </p>
+
 {% comment %}
           <p><a href="{{ personalee.get_personalee_image_url }}" target="_blank"><img src="{{ personalee.personalee_image|thumbnail }}" </a></p>
           <p>{% trans 'Tag_______:' %}{% for tag in personalee.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
@@ -33,14 +38,3 @@
         <hr class="clear-contentunit" />
         {% endfor %}
         {% endblock %}
-
-{% comment %}
-        {% block subcontent_top %}
-        <!-- Subcontent unit -->
-        <div class="subcontent-unit-border">
-          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
-          <h1>{% trans 'Month clicker' %}</h1>
-          <p>{% trans 'Month clicker table' %}</p>
-        </div>
-        {% endblock %}
-{% endcomment %}

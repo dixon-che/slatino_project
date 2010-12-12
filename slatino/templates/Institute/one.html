@@ -10,13 +10,6 @@
         </ul>
         {% endblock %}
 
-        {% block header_message %}
-        <div class="sitemessage">
-          <h1>Слатино</h1>
-          <h2>{{ institute.name }}</h2>
-        </div>
-        {% endblock %}
-
         {% block content_title %}
         <!-- Pagetitle -->
         <h1 class="pagetitle">{{ institute.name }}</h1>
@@ -24,16 +17,26 @@
 
         {% block content_main %}
         <!-- Content unit - One column -->
-		{% for room in institute.room_set.all %}
+        
+        <div class="column2-unit-left"><b>{% trans 'Info' %}</b>: {{ institute.about|safe }}<br></div>
+        <div class="column2-unit-right"><p><img src="{{ institute.institute_image|thumbnail }}"><br>
+        <b>{% trans 'Working time' %}</b>: {{ institute.work_time }}<br>
+        <b>{% trans 'Email adress' %}</b>: {{ institute.mail_adres }}<br>
+        <b>{% trans 'Phone' %}</b>: {{ institute.phone }}<br>
+        <b>{% trans 'Adress' %}</b>: {{ institute.adres|safe }}<br></p></div>
+
+{% comment %}
+	{% for room in institute.room_set.all %}
         <div class="column1-unit">
-          <p>Кабинет №____: {{ room.number_room }}</p>
-		  <p>{{ room.doljnost }}________: {{ room.chel }}</p>
-		  <p>Приёмные дни__: {{ room.work_day }}</p>
-		  <p>Рабочее время_: {{ room.work_time }}</p>
-		  <p>Телефоны_____: {{ room.phone }}</p>    
+          <p>Room №: {{ room.number_room }}</p>
+	  <p>{{ room.doljnost }}: {{ room.chel }}</p>
+          <p>Visiting days: {{ room.work_day }}</p>
+	  <p>Working time: {{ room.work_time }}</p>
+	  <p>Phone №: {{ room.phone }}</p>    
         </div>
         <hr class="clear-contentunit" />
         {% endfor %}
+{% endcomment %}
         {% endblock %}
 
       {% block subcontent %}
