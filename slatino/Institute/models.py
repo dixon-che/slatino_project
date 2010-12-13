@@ -14,10 +14,11 @@ class Institute(models.Model):
     pub_date = models.DateTimeField('date published')
     publisher = models.ForeignKey(User)
     institute_image = models.ImageField(upload_to="institute_images")
-    template = models.FilePathField(path=settings.ROOT_PATH + "templates", default = "templates/institute_template.html")
+    template = models.FilePathField(path=settings.ROOT_PATH + "templates", default = "templates/institute_template.html", blank=True)
     about = models.TextField(max_length=500, blank=True)
     mail_adres = models.EmailField(blank=True)
-    phone= models.CharField(max_length=55, blank=True)
+    phone = models.CharField(max_length=55, blank=True)
+    links = models.TextField(max_length=500, blank=True)
     tags = fields.TagsField(Tag)
 
     class Meta:

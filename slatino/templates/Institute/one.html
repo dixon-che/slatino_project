@@ -18,7 +18,7 @@
         {% block content_main %}
         <!-- Content unit - One column -->
         
-        <div class="column2-unit-left"><b>{% trans 'Info' %}</b>: {{ institute.about|safe }}<br></div>
+        <div class="column2-unit-left"><b>{% trans 'Info' %}</b>: {{ institute.about|safe }}<br>{{ institute.links|safe }}</div>
         <div class="column2-unit-right"><p><img src="{{ institute.institute_image|thumbnail }}"><br>
         <b>{% trans 'Working time' %}</b>: {{ institute.work_time }}<br>
         <b>{% trans 'Email adress' %}</b>: {{ institute.mail_adres }}<br>
