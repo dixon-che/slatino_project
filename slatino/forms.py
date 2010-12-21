@@ -10,4 +10,4 @@ attrs_dict = { 'class': 'required' }
 class CustomRegistration(RegistrationFormUniqueEmail):
 
     captcha = CaptchaField(label=_(u'No robots here'))
-    #username =  RegistrationForm.usernameField(initial='Your name')
+    #username = forms.RegexField(initial='Your name')

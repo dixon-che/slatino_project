@@ -20,7 +20,7 @@ class PublicationAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('/tiny_mce/tiny_mce.js',
-              '/articles-media/dcarticletextarea.js',
+              '/Publication-media/dcarticletextarea.js',
               )
 
 

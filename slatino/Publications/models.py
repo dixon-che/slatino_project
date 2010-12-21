@@ -84,7 +84,7 @@ class PublicationDescription(models.Model):
 
 class PublicationPhoto(models.Model):
     publication = models.ForeignKey(Publication)
-    image = models.ImageField(upload_to="publication_images/")
+    image = models.ImageField(upload_to="publication_images")
     stamp = models.DateTimeField(auto_now=True)
 
     def get_url_with_id(self):

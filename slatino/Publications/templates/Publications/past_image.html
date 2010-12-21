@@ -3,16 +3,22 @@
 <head>
 	<title>Title</title>
 	<script type="text/javascript" src="/tiny_mce/tiny_mce_popup.js"></script>
-	<script type="text/javascript" src="/articles-media/dcpastimage.js"></script>
+	<script type="text/javascript" src="/Publication-media/dcpastimage.js"></script>
 	<base target="_self" />
 
 </head>
 <body style="display: none">
 	<div align="center">
 		<div class="title">{% trans "Past image" %}<br /><br /></div>
-        <a href="/admin/Articles/articlephoto/add/">{% trans "Upload images" %}</a><br />
-{% for image in article.get_images %}
-<a href="javascript:PastImageDialog.insert('{% url article-image-view image.id %}', {{ image.thumbnail_size }});"><img src="{% url article-image-view-thumb image.id "150" %}" border="0" /></a><br />
+
+<form enctype="multipart/form-data" method="POST" action="">
+{{ form.as_p }}
+<input type="submit" name="submit" value="Upload" id="submit">
+</form>
+
+{% for image in publication.get_images %}
+
+<a href="javascript:PastImageDialog.insert('{% url publication-image-view image.id %}', {{ image.thumbnail_size }});"><img src="{% url publication-image-view-thumb image.id "150" %}" border="0" /></a><br />
 {% endfor %}
 
 

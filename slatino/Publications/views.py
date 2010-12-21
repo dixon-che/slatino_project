@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.http import Http404, HttpResponse, HttpResponseRedirect
+from django.forms import ModelForm
 
 from slatino.Publications.models import Publication, PublicationPhoto
 
@@ -46,10 +47,23 @@ def publication_view(request, publication_slug):
     return render_to_response("Publications/one.html", RequestContext(request,
                               dict(publication=publication)))
 
+class PublicationPhotoForm(ModelForm):
+    class Meta:
+        model = PublicationPhoto
+        fields = ('image', )
 
 def past_image(request, publication_id):
-    publication = get_object_or_404(Publication, id=publication_id, post_type='article')
-    return render_to_response("Publications/past_image.html", RequestContext(request, dict(publication=publication)))
+    if request.method == 'POST':
+        form = PublicationPhotoForm(request.POST, request.FILES)
+        if form.is_valid():
+            photo_inst = form.save(commit=False)
+            photo_inst.publication_id = publication_id
+            photo_inst.save()
+            #return HttpResponseRedirect('')
+    else:
+        form = PublicationPhotoForm()
+    publication = get_object_or_404(Publication, id=publication_id)
+    return render_to_response("Publications/past_image.html", RequestContext(request, dict(publication=publication, form=form)))
 
 
 def image_view(request, image_id, size=None):
@@ -59,3 +73,4 @@ def image_view(request, image_id, size=None):
         return  HttpResponseRedirect(image.image.url)
 
     return  HttpResponseRedirect(image.thumbnail_url(size))
+

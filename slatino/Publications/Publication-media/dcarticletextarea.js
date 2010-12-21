@@ -9,7 +9,7 @@ tinymce.create('tinymce.plugins.PastImagePlugin', {
 		if (dc_base_id){
 			ed.addCommand('dcPastImageCmd', function() {
 				ed.windowManager.open({
-					file : '/article/' + dc_base_id + '/past_image/',
+					file : '/publication/' + dc_base_id + '/past_image/',
                     title : 'Past image',
                     width : 640,
                     height : 480,
@@ -18,7 +18,7 @@ tinymce.create('tinymce.plugins.PastImagePlugin', {
                 });
             ed.addButton('dcpastimagebuttom', {
                 title : 'Past Image',
-                image : '/articles-media/image.gif',
+                image : '/Publication-media/image.gif',
                 cmd : 'dcPastImageCmd'
                 });
             }
@@ -40,7 +40,7 @@ tinyMCE.init({
     width : "640",
     mode : "textareas",
     theme : "advanced",
-    plugins : "table,save,advhr,advimage,advlink,dcemotions,-dcpastimage,iespell,insertdatetime,zoom,flash,searchreplace,print,contextmenu",
+    plugins : "table,save,advhr,advimage,advlink,dcemotions,-dcpastimage,iespell,insertdatetime,searchreplace,print,contextmenu",
     theme_advanced_toolbar_location : "top",
     theme_advanced_toolbar_align : "left",
     theme_advanced_statusbar_location : "bottom",
@@ -49,7 +49,7 @@ tinyMCE.init({
     theme_advanced_resize_horizontal : false,
     theme_advanced_buttons1 : "cut,copy,paste,separator,undo,redo,separator,search,replace,separator,code,separator,cleanup,separator,bold,italic,underline,strikethrough,separator,forecolor,backcolor,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,help",
     theme_advanced_buttons2 : "removeformat,formatselect,fontselect,fontsizeselect,separator,bullist,numlist,outdent,indent,separator,link,unlink,anchor,separator,dcpastimagebuttom,dcemotions",
-    theme_advanced_buttons3 : "sub,sup,separator,image,insertdate,inserttime,separator,tablecontrols,separator,hr,advhr,visualaid,separator,charmap,iespell,flash,separator,print",
+    theme_advanced_buttons3 : "sub,sup,separator,image,insertdate,inserttime,separator,tablecontrols,separator,hr,advhr,visualaid,separator,charmap,iespell,separator,print",
     convert_urls : false,
     relative_urls : false,
     plugin_insertdate_dateFormat : "%m/%d/%Y",

@@ -34,7 +34,7 @@ def in_cache(full_filename, src_modtime):
 def get_cache_file_url(image_object, thumbnail_dir, size):
     file_suff = thumbnail_dir + '/' + str(image_object.id) + '_' + str(size) + '.jpg'
   
-    result_file = settings.MEDIA_ROOT + file_suff
+    result_file = settings.MEDIA_ROOT + '/' + file_suff
 
     result_file_url = settings.MEDIA_URL + file_suff
     
