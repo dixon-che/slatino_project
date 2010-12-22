@@ -124,12 +124,12 @@ INSTALLED_APPS = (
     'slatino.Telephone',
     'slatino.Publications',
     'slatino.Transport',
+    'slatino.profile',
     'tagsfield',
     'registration',
-    'profile',
 )
 
-AUTH_PROFILE_MODULE = 'slatino.profile.UserProfile'
+AUTH_PROFILE_MODULE = 'slatino.profile.models.UserProfile'
 
 PUBLICATION_LAST_COUNT = 5
 PUBLICATION_PER_PAGE = 10
