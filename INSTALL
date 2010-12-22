@@ -10,6 +10,10 @@ mkdir libs
 cd libs
 
 git clone git@github.com:dixon-che/dcdjutils.git # or git://github.com/dixon-che/dcdjutils.git
-git clone git@github.com:dixon-che/tagsfield.git # or git://github.com/dixon-che/tagsfield.git
+git clone git@github.com:dixon-che/tagsfield.``git # or git://github.com/dixon-che/tagsfield.git
+hg clone https://bitbucket.org/ubernostrum/django-registration
+hg clone https://bitbucket.org/ubernostrum/django-profiles
+hg clone https://bitbucket.org/barbuza/supercaptcha
+
 
 # If you have other version of django installed in your system, install here (libs) django-1.2.1
