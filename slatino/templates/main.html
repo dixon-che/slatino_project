@@ -20,10 +20,10 @@
   <meta name="distribution" content="{% trans 'Slatino' %}" />
   <meta name="description" content="{% block meta_description %}{% trans 'All about Slatino, portal of Slatino' %}{% endblock %}" />
   <meta name="keywords" content="{% trans 'SLATINO, Slatino, pgt Slatino' %}{% block meta_keywords %}{% endblock %}" />
-  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css %}/css/layout4_setup.css{% endblock %}" />
-  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css_text %}/css/layout4_text.css{% endblock %}" />
-  <link rel="stylesheet" type="text/css" href="/css/base.css" />
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css %}{{ MEDIA_URL }}css/layout4_setup.css{% endblock %}" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css_text %}{{ MEDIA_URL }}css/layout4_text.css{% endblock %}" />
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/base.css" />
+  <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}img/favicon.ico" />
   <title>{% trans "Slatino" %}{% block title %}{% endblock %}</title>
   {% block tags %}{% endblock %}
 </head>
