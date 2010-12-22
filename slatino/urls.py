@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     (r'^profiles/', include('profiles.urls')),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/', include(admin.site.urls)),
+    (r'^admin/', include('admin.site.urls')),
     (r'^i18n/', include('django.conf.urls.i18n')),
 )
 
