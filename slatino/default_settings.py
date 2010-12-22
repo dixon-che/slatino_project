@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     'profile',
 )
 
-AUTH_PROFILE_MODULE = 'profile.UserProfile'
+AUTH_PROFILE_MODULE = 'slatino.profile.UserProfile'
 
 PUBLICATION_LAST_COUNT = 5
 PUBLICATION_PER_PAGE = 10
@@ -147,4 +147,3 @@ POST_TYPES = (
 CAPTCHA_REFRESH_LINK_TEXT = _("Refresh code")
 CAPTCHA_SIZE = (80, 18)
 CAPTCHA_REFRESH = True
-
