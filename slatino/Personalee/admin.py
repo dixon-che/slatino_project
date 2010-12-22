@@ -1,4 +1,4 @@
-from Personalee.models import Personalee
+from slatino.Personalee.models import Personalee
 from django.contrib import admin
 
 #class PersonaleeAdmin(admin.ModelAdmin):

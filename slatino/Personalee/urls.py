@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('slatino.Personalee.views',
     url(r'^$', 'personalee_list', name='personalee-list'),
