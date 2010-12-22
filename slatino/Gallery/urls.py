@@ -12,9 +12,9 @@ urlpatterns = patterns('django.views.generic',
         kwargs={
             'queryset': Item.objects.all(),
             'template_name': 'Gallery/items_list.html',
-            'allow_empty': True
+            'allow_empty': True,
         },
-        name='item_list'
+        name='item_list',
     ),
     url(r'^items/(?P<object_id>\d+)/$', 'list_detail.object_detail',
         kwargs={
@@ -23,7 +23,7 @@ urlpatterns = patterns('django.views.generic',
         },
         name='item_detail'
     ),
-    url(r'^photos/(?P<object_id>\d+)/$', 'list_detail.object_detail', 
+    url(r'^photos/(?P<object_id>\d+)/$', 'list_detail.object_detail',
         kwargs={
             'queryset': Photo.objects.all(),
             'template_name': 'Gallery/photos_detail.html'
@@ -35,4 +35,4 @@ urlpatterns = patterns('django.views.generic',
 urlpatterns += patterns('',
         (r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
-	)
+)
