@@ -19,8 +19,8 @@ class PublicationAdmin(admin.ModelAdmin):
     inlines = [PublicationInlineDescription, ]
 
     class Media:
-        js = ('/tiny_mce/tiny_mce.js',
-              '/Publication-media/dcarticletextarea.js',
+        js = (settings.MEDIA_URL + 'tiny_mce/tiny_mce.js',
+              settings.MEDIA_URL + 'Publication-media/dcarticletextarea.js',
               )
 
 
