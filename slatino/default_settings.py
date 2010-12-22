@@ -1,5 +1,4 @@
 import os
-from django.utils.translation import ugettext as _
 
 ROOT_PATH = os.path.dirname(__file__) + '/'
 SITE_PATH = os.path.normpath(os.path.join(ROOT_PATH, '../')) + '/'
