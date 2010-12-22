@@ -5,9 +5,7 @@ from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
 
-#from dcdjutils.Articles.utils import get_cache_file_url
 from slatino.Publications.utils import get_cache_file_url
-from News.models import News
 from tagsfield.models import Tag
 from tagsfield import fields
 
