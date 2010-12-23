@@ -1,4 +1,4 @@
-from slatino.Institute.models import Institute
+from slatino.apps.Institute.models import Institute
 
 
 def personalee_processor(request):

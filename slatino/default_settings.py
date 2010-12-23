@@ -116,20 +116,19 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.admin',
     'django.contrib.sites',
-    'slatino.News',
-    'slatino.Links',
-    'slatino.Gallery',
-    'slatino.Personalee',
-    'slatino.Institute',
-    'slatino.Telephone',
-    'slatino.Publications',
-    'slatino.Transport',
-    'slatino.profile',
+    'slatino.apps.Links',
+    'slatino.apps.Gallery',
+    'slatino.apps.Personalee',
+    'slatino.apps.Institute',
+    'slatino.apps.Telephone',
+    'slatino.apps.Publications',
+    'slatino.apps.Transport',
+    'slatino.apps.Profile',
     'tagsfield',
     'registration',
 )
 
-AUTH_PROFILE_MODULE = 'slatino.profile.models.UserProfile'
+AUTH_PROFILE_MODULE = 'slatino.apps.Profile.models.UserProfile'
 
 PUBLICATION_LAST_COUNT = 5
 PUBLICATION_PER_PAGE = 10
