@@ -4,7 +4,7 @@ libs/*
 *~
 slatino/slatino_test
 slatino/settings.py
-slatino/htdocs/personalee_images/*
-slatino/htdocs/news_images/*
-slatino/htdocs/gallery_images/*
-slatino/htdocs/institute_images/*
+media/personalee_images/*
+media/news_images/*
+media/gallery_images/*
+media/institute_images/*
