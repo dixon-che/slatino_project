@@ -12,9 +12,9 @@ def thumbnail(file, size='300x300'):
     x, y = [int(x) for x in size.split('x')]
     # defining the filename and the miniature filename
 
-    basename, format = filename.rsplit('.', 1)
-    folder, name = basename.rsplit('/',1)
-    miniature = '/' + folder + '/thumbnail/' + name + '_' + size + '.' +  format
+    basename, file_format = filename.rsplit('.', 1)
+    folder, name = basename.rsplit('/', 1)
+    miniature = settings.MEDIA_URL + folder + '/thumbnail/' + name + '_' + size + '.' + file_format
     #miniature_nomedia = miniature[len(settings.MEDIA_URL):]
     #file_nomedia = file[len(settings.MEDIA_URL):]
 
