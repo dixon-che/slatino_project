@@ -1,6 +1,6 @@
 {% extends "main.html" %}{% load i18n %}{% block tags %}{{ form.media }}{% endblock %}{% load tagsfield_tags %}
-  {% block css %}/css/layout2_setup.css{% endblock %}
-  {% block css_text %}/css/layout2_text.css{% endblock %}
+  {% block css %}{{ MEDIA_URL }}css/layout2_setup.css{% endblock %}
+  {% block css_text %}{{ MEDIA_URL }}css/layout2_text.css{% endblock %}
         {% block breadcrumbs %}
         <ul>
           <li><a href="/">{% trans 'Home' %}</a></li>
