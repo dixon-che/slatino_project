@@ -11,7 +11,7 @@
 <div>
 <font size="2">
   <table>
-    <tr><td>Photo:</td> <td><img src="{{ profile.photo.url }}" width="150" height="200"></td></tr>
+    <tr><td></td> <td>{% if profile.photo %}<img src="{{ profile.photo.url }}" width="150" height="200"></td></tr>{% endif %}
     <tr><td>First name:</td> <td>{{ profile.first_name }}</td></tr>
     <tr><td>Last name:</td> <td>{{ profile.last_name }}</td></tr>
     <tr><td>Date of birth:</td> <td>{{ profile.date_of_birth }}</td></tr>

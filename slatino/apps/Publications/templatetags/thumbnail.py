@@ -12,15 +12,15 @@ def thumbnail(file, size='300x300'):
     x, y = [int(x) for x in size.split('x')]
     # defining the filename and the miniature filename
 
-    basename, format = filename.rsplit('.', 1)
-    folder, name = basename.rsplit('/',1)
-    miniature = '/' + folder + '/thumbnail/' + name + '_' + size + '.' +  format
+    basename, file_format = filename.rsplit('.', 1)
+    folder, name = basename.rsplit('/', 1)
+    miniature = folder + '/thumbnail/' + name + '_' + size + '.' + file_format
     #miniature_nomedia = miniature[len(settings.MEDIA_URL):]
     #file_nomedia = file[len(settings.MEDIA_URL):]
 
     filename = settings.MEDIA_ROOT + "/" + filename
-    miniature_filename = settings.MEDIA_ROOT + miniature
-    miniature_url = miniature
+    miniature_filename = settings.MEDIA_ROOT + "/" + miniature
+    miniature_url = settings.MEDIA_URL + miniature
     if os.path.exists(miniature_filename) and os.path.getmtime(filename)>os.path.getmtime(miniature_filename):
         os.unlink(miniature_filename)
     # if the image wasn't already resized, resize it

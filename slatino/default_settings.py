@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     'registration',
 )
 
-AUTH_PROFILE_MODULE = 'slatino.apps.Profile.models.UserProfile'
+AUTH_PROFILE_MODULE = 'Profile.UserProfile'
 
 PUBLICATION_LAST_COUNT = 5
 PUBLICATION_PER_PAGE = 10

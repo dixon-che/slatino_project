@@ -1,6 +1,0 @@
-{% load i18n %}
-        <h1>{% trans 'News' %}</h1>
-{% for news in all_news %}
-        <h3><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></h3>
-        <p>{{ news.description|striptags|truncatewords:10  }}</p>
-{% endfor %}
