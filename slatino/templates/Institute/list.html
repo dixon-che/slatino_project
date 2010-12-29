@@ -21,17 +21,9 @@
           <p>{% trans 'Adress:' %}{{ institute.adres|safe }}</p>
           <p>{% trans 'Working time:' %}{{ institute.work_time }}</p>
           <p>{% for tag in institute.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
-          <p><a href="{{ institute.get_institute_image_url }}" target="_blank"><img src="{{ institute.institute_image|thumbnail }}" /></p>
+          <p><a href="{{ institute.get_institute_image_url }}" target="_blank"><img src="{{ institute.institute_image|thumbnail }}" /></a></p>
         </div>
         <hr class="clear-contentunit" />
         {% endfor %}
         {% endblock %}
 
-        {% block subcontent_top %}
-        <!-- Subcontent unit -->
-        <div class="subcontent-unit-border">
-          <div class="round-border-topleft"></div><div class="round-border-topright"></div>
-          <h1>{% trans 'Month clicker' %}</h1>
-          <p>{% trans 'Month clicker table' %}</p>
-        </div>
-        {% endblock %}
