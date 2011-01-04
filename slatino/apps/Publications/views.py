@@ -59,7 +59,6 @@ def past_image(request, publication_id):
             photo_inst = form.save(commit=False)
             photo_inst.publication_id = publication_id
             photo_inst.save()
-            #return HttpResponseRedirect('')
     else:
         form = PublicationPhotoForm()
     publication = get_object_or_404(Publication, id=publication_id)

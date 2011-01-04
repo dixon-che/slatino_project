@@ -25,7 +25,7 @@
         {% for personalee in all_personalee %}
         <div class="column1-unit list">
           <p>
-          {% if personalee.photo %}<img src="{{ personalee.photo|thumbnail }}" width="45" height="60" class="right">{% endif %}
+          {% if personalee.photo %}<img src="{{ personalee.photo|thumbnail }}" class="right">{% endif %}
           <a href="{{ personalee.get_absolute_url }}">{{ personalee.last_name }} {{ personalee.first_name }}</a><br>
           {% trans 'Occupation' %}: {{ personalee.occupation }}
           </p>

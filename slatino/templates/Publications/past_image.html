@@ -18,7 +18,7 @@
 
 {% for image in publication.get_images %}
 
-<a href="javascript:PastImageDialog.insert('{% url publication-image-view image.id %}', {{ image.thumbnail_size }});"><img src="{% url publication-image-view-thumb image.id "150" %}" border="0" /></a><br />
+<a href="javascript:PastImageDialog.insert('{% url publication-image-view image.id %}', {{ image.thumbnail_size }});"><img src="{% url publication-image-view-thumb image.id '150' %}" border="0" /></a><br />
 {% endfor %}
 
 
