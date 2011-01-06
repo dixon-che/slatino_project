@@ -110,6 +110,7 @@
 .column3-unit-left {float:left; width:186px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/}
 .column3-unit-middle {float:left; width:186px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/; margin-left:40px;}
 .column3-unit-right {float:right; width:186px; margin-bottom:10px !important /*Non-IE6*/; margin-bottom:5px /*IE6*/;}
+.column4-unit-right {float:right; width:154px; margin:10px 0 0 20px !important /*Non-IE6*/; margin:5px 0 0 10px /*IE6*/;}
 
 /********************/
 /*  FOOTER SECTION  */

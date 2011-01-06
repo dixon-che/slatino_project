@@ -25,10 +25,12 @@
         {% block content_main %}
         <!-- Content unit - One column -->
         <div class="column1-unit">
-          {% if personalee.photo %}<p><img src="{{ personalee.photo|thumbnail:'200x200' }}"></p>{% endif %}
-          {% if personalee.occupation %}<p><b>{% trans 'Occupation' %}</b>: {{ personalee.occupation }}</p>{% endif %}
-          {% if personalee.phone %}<p><b>{% trans 'Phone' %}</b>: {{ personalee.phone }}</p>{% endif %}
-          {% if personalee.about %}<p><b>{% trans 'Information' %}</b>: {{ personalee.about }}</p>{% endif %}
+          <div class="column4-unit-right">
+            {% if personalee.photo %}<img src="{{ personalee.photo|thumbnail:'150x200' }}">{% endif %}
+            {% if personalee.phone %}<p><b>{% trans 'Phone' %}</b>: {{ personalee.phone }}</p>{% endif %}
+          </div>
+          {% if personalee.occupation %}<p>{{ personalee.occupation }}</p>{% endif %}
+          {% if personalee.about %}<p>{{ personalee.about|safe }}</p>{% endif %}
         </div>
         <hr class="clear-contentunit" />
 

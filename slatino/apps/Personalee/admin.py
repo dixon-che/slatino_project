@@ -2,7 +2,7 @@ from slatino.apps.Personalee.models import Personalee
 from django.contrib import admin
 
 class PersonaleeAdmin(admin.ModelAdmin):
-    list_display=('id', 'first_name', 'date_of_birth', 'occupation', 'phone', 'about')
+    list_display=('id', 'last_name', 'first_name', 'date_of_birth', 'occupation', 'phone')
 
     class Media:
         js = ('/tiny_mce/tiny_mce.js',

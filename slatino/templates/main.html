@@ -20,18 +20,30 @@
   <meta name="distribution" content="{% trans 'Slatino' %}" />
   <meta name="description" content="{% block meta_description %}{% trans 'All about Slatino, portal of Slatino' %}{% endblock %}" />
   <meta name="keywords" content="{% trans 'SLATINO, Slatino, pgt Slatino' %}{% block meta_keywords %}{% endblock %}" />
+  <script type="text/javascript">
+    var MEDIA_URL = '{{ MEDIA_URL }}';
+  </script>
   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css %}{{ MEDIA_URL }}css/layout4_setup.css{% endblock %}" />
   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="{% block css_text %}{{ MEDIA_URL }}css/layout4_text.css{% endblock %}" />
   <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/base.css" />
   <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}img/favicon.ico" />
   <title>{% trans "Slatino" %}{% block title %}{% endblock %}</title>
   {% block tags %}{% endblock %}
+  <script type="text/javascript" src="{{ MEDIA_URL }}jquery-lightbox-0.5/js/jquery.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}jquery-lightbox-0.5/js/jquery.lightbox-0.5.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}jquery-lightbox-0.5/css/jquery.lightbox-0.5.css" media="screen" />
+
 </head>
 
 <!-- Global IE fix to avoid layout crash when single word size wider than column width -->
 <!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
 
 <body>
+  <script type="text/javascript">
+    $(function() {
+      $('a[@rel*=lightbox]').lightBox();
+    });
+  </script>
 <!-- stat24 clickMap -->
 {% comment %}
 <script type="text/javascript" src="http://ua5.hit.stat24.com/xy.js?id=cohATQ9fKxzyhXHP8CZx8XZJ3wfZOMepp6f2lZkeKf7.f7/align=center/type=absolute"> </script>

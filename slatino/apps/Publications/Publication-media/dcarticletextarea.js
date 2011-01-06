@@ -40,6 +40,11 @@ tinyMCE.init({
     width : "640",
     mode : "textareas",
     theme : "advanced",
+    //forced_root_block : false,
+    //force_br_newlines : true,
+    //force_p_newlines : false,
+    //cleanup : false,
+    //valid_elements : "a[rel]",
     plugins : "table,save,advhr,advimage,advlink,dcemotions,-dcpastimage,iespell,insertdatetime,searchreplace,print,contextmenu",
     theme_advanced_toolbar_location : "top",
     theme_advanced_toolbar_align : "left",
@@ -54,5 +59,5 @@ tinyMCE.init({
     relative_urls : false,
     plugin_insertdate_dateFormat : "%m/%d/%Y",
     plugin_insertdate_timeFormat : "%H:%M:%S",
-    extended_valid_elements : "a[name|href|title|onclick|target],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]"
+    extended_valid_elements : "a[name|href|title|onclick|target|rel],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]"
 });

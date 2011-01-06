@@ -16,7 +16,7 @@
         <!-- Content unit - One column -->
         {% for publication in publications %}
         <div class="column1-unit">
-          <h1><a href="{{ publication.get_url }}">{{ publication }}</a></h1>
+          <h1><a href="{{ publication.get_url }}">{{ publication.title }}</a></h1>
           <h3>{{ publication.pub_date }}</h3>
           <p>{{ publication.description|striptags|safe|truncatewords:20 }}</p>
         </div>
