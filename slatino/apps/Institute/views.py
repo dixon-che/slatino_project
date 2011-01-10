@@ -3,7 +3,7 @@ from django.http import Http404, HttpResponse
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 
-from slatino.apps.Institute.models import Institute, Room
+from slatino.apps.Institute.models import Institute, Occupation
 from string import join
 
 def institute_list(request):
@@ -13,9 +13,9 @@ def institute_list(request):
                                                                               "page": page}))
 
 def institute_show(request, institute_id):
-    all_room = Room.objects.all()
+    all_occupation = Occupation.objects.all()
     institute = get_object_or_404(Institute, id=institute_id)
-    return render_to_response("Institute/one.html", RequestContext(request, {"institute": institute, "all_room": all_room}))
+    return render_to_response("Institute/one.html", RequestContext(request, {"institute": institute, "all_occupation": all_occupation}))
 
 
 def institute_show_spec(request, slug):

@@ -1,10 +1,48 @@
+import re
+
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.core.validators import EMPTY_VALUES
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
+from django.forms import ValidationError
+from django.forms.fields import CharField as formCharField
+from django.utils.encoding import smart_unicode
 from django.conf import settings
 from tagsfield.models import Tag
 from tagsfield import fields
+
+from slatino.apps.Personalee.models import Personalee
+
+
+class UAPhoneNumberField(formCharField):
+    default_error_messages = {
+        'invalid': _('Phone numbers must be in +380XXXXXXXXX format.'),
+    }
+
+    def clean(self, value):
+        super(UAPhoneNumberField, self).clean(value)
+        if value in EMPTY_VALUES:
+            return u''
+        m = re.search('(?<=\+380)\d{9}', smart_unicode(value))
+        if m:
+	    value = m.group(0)
+            return u'+380%s' % value
+        raise ValidationError(self.error_messages['invalid'])
+
+
+class PhoneNumberField(models.CharField):
+
+    description = _("Phone number")
+
+    def __init__(self, *args, **kwargs):
+        kwargs['max_length'] = 13
+        super(PhoneNumberField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        defaults = {'form_class': UAPhoneNumberField}
+        defaults.update(kwargs)
+        return super(PhoneNumberField, self).formfield(**defaults)
 
 
 class Institute(models.Model):
@@ -31,23 +69,28 @@ class Institute(models.Model):
     def get_absolute_url(self):
         return "/institute/%d/" % self.id
 		
-class Room(models.Model):
+class Occupation(models.Model):
     institute = models.ForeignKey(Institute)
-    number_room = models.IntegerField()
-    chel = models.CharField(max_length=255)
-    doljnost = models.CharField(max_length=255)
+    personalee = models.ManyToManyField(Personalee, through='OccupationPeriod', related_name='occupations')
+    name = models.CharField(max_length=255)
     work_time = models.CharField(max_length=255)
-    work_day = models.CharField(max_length=255)
-    phone = models.CharField(max_length=255)
-    pub_date = models.DateTimeField('date published')
-    publisher = models.ForeignKey(User)
+    work_days = models.CharField(max_length=255)
+    phone = PhoneNumberField()
 
     class Meta:
-        verbose_name = "Room"
-        verbose_name_plural = "Rooms"
+        verbose_name = "Occupation"
+        verbose_name_plural = "Occupations"
 
     def __unicode__(self):
-        return self.chel
+        return self.name
 
-    def get_absolute_url(self):
-        return "/room/%d/" % self.id
+#    def get_absolute_url(self):
+#        return "/room/%d/" % self.id
+
+class OccupationPeriod(models.Model):
+    occupation = models.ForeignKey(Occupation)
+    personalee = models.ForeignKey(Personalee)
+    date_start = models.DateField()
+    date_end = models.DateField(blank=True, null=True)
+
+
