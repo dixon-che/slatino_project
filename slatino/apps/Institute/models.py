@@ -49,14 +49,13 @@ class Institute(models.Model):
     name = models.CharField(max_length=255)
     work_time = models.CharField(max_length=255)
     adres = models.TextField()
-    pub_date = models.DateTimeField('date published')
-    publisher = models.ForeignKey(User)
     institute_image = models.ImageField(upload_to="institute_images")
     template = models.FilePathField(path=settings.ROOT_PATH + "templates", default = "templates/institute_template.html", blank=True)
     about = models.TextField(max_length=500, blank=True)
     mail_adres = models.EmailField(blank=True)
     phone = models.CharField(max_length=55, blank=True)
     links = models.TextField(max_length=500, blank=True)
+    published = models.BooleanField(default=False)
     tags = fields.TagsField(Tag)
 
     class Meta:
@@ -83,9 +82,6 @@ class Occupation(models.Model):
 
     def __unicode__(self):
         return self.name
-
-#    def get_absolute_url(self):
-#        return "/room/%d/" % self.id
 
 class OccupationPeriod(models.Model):
     occupation = models.ForeignKey(Occupation)

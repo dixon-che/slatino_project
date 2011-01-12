@@ -18,3 +18,10 @@ CREATE TABLE "Institute_occupationperiod" (
 CREATE INDEX "Institute_occupation_25a0dd70" ON "Institute_occupation" ("institute_id");
 CREATE INDEX "Institute_occupationperiod_6ea0cf59" ON "Institute_occupationperiod" ("occupation_id");
 CREATE INDEX "Institute_occupationperiod_2981be58" ON "Institute_occupationperiod" ("personalee_id");
+
+ALTER TABLE "Institute_institute" DROP COLUMN 'pub_date';
+ALTER TABLE "Institute_institute" DROP COLUMN 'publisher';
+
+ALTER TABLE "Institute_institute" ADD COLUMN 'published' bool NOT NULL DEFAULT 1;
+
+DROP TABLE "Institute_Room";

@@ -25,18 +25,6 @@
         <b>{% trans 'Phone' %}</b>: {{ institute.phone }}<br>
         <b>{% trans 'Adress' %}</b>: {{ institute.adres|safe }}<br></p></div>
 
-{% comment %}
-	{% for room in institute.room_set.all %}
-        <div class="column1-unit">
-          <p>Room №: {{ room.number_room }}</p>
-	  <p>{{ room.doljnost }}: {{ room.chel }}</p>
-          <p>Visiting days: {{ room.work_day }}</p>
-	  <p>Working time: {{ room.work_time }}</p>
-	  <p>Phone №: {{ room.phone }}</p>    
-        </div>
-        <hr class="clear-contentunit" />
-        {% endfor %}
-{% endcomment %}
         {% endblock %}
 
       {% block subcontent %}
