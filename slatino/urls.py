@@ -46,4 +46,5 @@ if MEDIA_APACHE_DIRECT == False:
         (r'^(Publication-media/.*)$', 'django.views.static.serve', {'document_root': ROOT_PATH + "apps/Publications/"}),
         (r'^tagsfield/(.*)$', 'django.views.static.serve', {'document_root': os.path.join(LIB_PATH, "tagsfield/media/")}),
         (r'^(jquery-lightbox-0.5/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+        (r'^(widgets/.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
 )
