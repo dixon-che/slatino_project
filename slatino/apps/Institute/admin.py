@@ -20,7 +20,7 @@ class InstituteAdmin(admin.ModelAdmin):
 admin.site.register(Institute, InstituteAdmin)
 
 class OccupationAdmin(admin.ModelAdmin):
-    list_display=('id', 'name', 'institute')
+    list_display=('id', 'institute', 'name')
     inlines = [InlineOccupationPeriod, ]
 
 admin.site.register(Occupation, OccupationAdmin)

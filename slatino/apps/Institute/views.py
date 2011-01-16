@@ -7,7 +7,7 @@ from slatino.apps.Institute.models import Institute, Occupation
 from string import join
 
 def institute_list(request):
-    all_institute = Institute.objects.filter(published=True)
+    all_institute = Institute.objects.all()
     page = {'title':"All institute"}
     return render_to_response("Institute/list.html", RequestContext(request, {"all_institute": all_institute, "page": page}))
 
