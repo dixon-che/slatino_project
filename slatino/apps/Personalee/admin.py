@@ -12,7 +12,7 @@ class InlineOccupationPeriod(admin.TabularInline):
 
 class PersonaleeAdmin(admin.ModelAdmin):
     list_display=('id', 'last_name', 'first_name', 'date_of_birth', 'occupation', 'phone')
-    inlines = [InlineOccupationPeriod, ]
+#    inlines = [InlineOccupationPeriod, ]
     formfield_overrides = {
         models.DateField: {'widget': CustomAdminDateWidget},
     }

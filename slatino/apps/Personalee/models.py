@@ -25,3 +25,7 @@ class Personalee(models.Model):
 
     def get_absolute_url(self):
         return "/personalee/%d/" % self.id
+
+    def get_occupations_list(self):
+	return self.occupationperiod_set.all().order_by('date_start')
+

@@ -1,0 +1,44 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_modify adminmedia %}
+
+
+{% block after_field_sets %}
+<div class="inline-group" id="occupationperiod_set-group">
+  <div class="tabular inline-related last-related">
+<fieldset class="module">
+   <h2>Occupation periods</h2>
+   <table>
+     <tr>
+       <th class="required">Institute</th>
+       <th class="required">Occupation</th>
+       <th class="required">Date start</th>
+       <th>Date end</th>
+     <th>Edit</th>
+     </tr>
+{% for occupationperiod in original.get_occupations_list %}
+      <tr class="{% cycle "row1" "row2" %} dynamic-occupationperiod_set" id="occupationperiod_set-0">
+        </td>
+          <td class="institute">
+            {{ occupationperiod.occupation.institute }}
+          </td>
+          <td class="occupation">
+            {{ occupationperiod.occupation }}
+          </td>
+          <td class="date_start">
+            {{ occupationperiod.date_start }}
+          </td>
+          <td class="date_end">
+            {{ occupationperiod.date_end }}
+          </td>
+          <td class="edit">
+            <input type="submit" name="submit" value="Edit">
+          </td>
+        </tr>
+{% endfor %}
+     <tr class="add-row"><td colspan="5"><a href="javascript:void(0)">Add another Occupation Period</a></td></tr>
+   </table>
+</fieldset>
+  </div>
+</div>
+{% endblock %}
+
