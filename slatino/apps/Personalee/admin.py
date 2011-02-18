@@ -3,6 +3,7 @@ from django.contrib import admin
 from slatino.apps.Institute.models import OccupationPeriod
 from slatino.utils.widgets import CustomAdminDateWidget
 from django.db import models
+from django.conf import settings
 
 class InlineOccupationPeriod(admin.TabularInline):
     model = OccupationPeriod
@@ -19,6 +20,6 @@ class PersonaleeAdmin(admin.ModelAdmin):
 
     class Media:
         js = ('/tiny_mce/tiny_mce.js',
-              '/tiny_mce/textarea.js',
+              settings.MEDIA_URL + 'Publication-media/dcarticletextarea.js',
              )
 admin.site.register(Personalee, PersonaleeAdmin)
