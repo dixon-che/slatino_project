@@ -1,4 +1,4 @@
-from slatino.apps.Personalee.models import Personalee
+from slatino.apps.Persons.models import Person
 from django.contrib import admin
 from slatino.apps.Institute.models import OccupationPeriod
 from slatino.utils.widgets import CustomAdminDateWidget
@@ -13,7 +13,7 @@ class InlineOccupationPeriod(admin.TabularInline):
     }
 
 
-class PersonaleeAdmin(admin.ModelAdmin):
+class PersonAdmin(admin.ModelAdmin):
     list_display = ('id', 'last_name', 'first_name', 'date_of_birth', 'occupation', 'phone')
 #    inlines = [InlineOccupationPeriod, ]
     formfield_overrides = {
@@ -24,4 +24,4 @@ class PersonaleeAdmin(admin.ModelAdmin):
         js = ('/tiny_mce/tiny_mce.js',
               settings.MEDIA_URL + 'Publication-media/dcarticletextarea.js',
              )
-admin.site.register(Personalee, PersonaleeAdmin)
+admin.site.register(Person, PersonAdmin)

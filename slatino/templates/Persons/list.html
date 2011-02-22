@@ -1,0 +1,33 @@
+{% extends "main.html" %}{% load i18n %}{% load tagsfield_tags %}{% load thumbnail %}
+        {% block tags %}{{ form.media }}{% endblock %}
+        {% block breadcrumbs %}
+        <ul>
+          <li><a href="/">{% trans 'Home' %}</a></li>
+          <li><a href="/person/">{% trans 'Person' %}</a></li>
+          <li>{{ page.last_name }}</li>
+        </ul>
+        {% endblock %}
+
+        <!-- Pagetitle -->
+        {% block content_title %}
+        <h1 class="pagetitle">{% trans 'Persons list' %}</h1>
+        {% endblock %}
+
+        {% block content_main %}
+        <!-- Content unit - One column -->
+        {% for person in all_person %}
+        <div class="column1-unit list">
+          <p>
+          {% if person.photo %}<img class="right" src="{{ person.photo|thumbnail:'45x60' }}">{% endif %}
+          <a href="{{ person.get_absolute_url }}">{{ person.last_name }} {{ person.first_name }}</a><br>
+          {% trans 'Occupation' %}: {{ person.occupation }}
+          </p>
+
+{% comment %}
+          <p><a href="{{ person.get_person_image_url }}" target="_blank"><img src="{{ person.person_image|thumbnail }}" </a></p>
+          <p>{% trans 'Tag_______:' %}{% for tag in person.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
+{% endcomment %}
+        </div>
+        <hr class="clear-contentunit" />
+        {% endfor %}
+        {% endblock %}

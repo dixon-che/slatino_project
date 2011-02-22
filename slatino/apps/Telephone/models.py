@@ -2,7 +2,7 @@ from django.db import models
 #from django.core.urlresolvers import reverse
 #from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
-from slatino.apps.Personalee.models import Personalee
+from slatino.apps.Persons.models import Person
 
 
 from tagsfield.models import Tag
@@ -16,7 +16,7 @@ class Phone(models.Model):
     )
     phone = models.CharField(max_length=255)
     status = models.IntegerField(choices=STATUS_CHOICES, default=2)
-    personalee = models.ForeignKey(Personalee, related_name='Personalee')
+    person = models.ForeignKey(Person, related_name='Person')
     pub_date = models.DateTimeField('date published')
     publisher = models.ForeignKey(User)
     tags = fields.TagsField(Tag)

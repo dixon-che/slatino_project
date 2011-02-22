@@ -8,7 +8,7 @@ from django.utils.encoding import smart_unicode
 from django.conf import settings
 from tagsfield.models import Tag
 from tagsfield import fields
-from slatino.apps.Personalee.models import Personalee
+from slatino.apps.Persons.models import Person
 
 
 class UAPhoneNumberField(formCharField):
@@ -67,7 +67,7 @@ class Institute(models.Model):
 
 class Occupation(models.Model):
     institute = models.ForeignKey(Institute)
-    personalee = models.ManyToManyField(Personalee, through='OccupationPeriod', related_name='occupations')
+    person = models.ManyToManyField(Person, through='OccupationPeriod', related_name='occupations')
     name = models.CharField(max_length=255)
     work_time = models.CharField(max_length=255)
     work_days = models.CharField(max_length=255)
@@ -83,6 +83,6 @@ class Occupation(models.Model):
 
 class OccupationPeriod(models.Model):
     occupation = models.ForeignKey(Occupation)
-    personalee = models.ForeignKey(Personalee)
+    person = models.ForeignKey(Person)
     date_start = models.DateField()
     date_end = models.DateField(blank=True, null=True)

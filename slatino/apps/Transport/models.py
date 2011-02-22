@@ -6,7 +6,6 @@ from tagsfield import fields
 class Transport(models.Model):
     vid = models.CharField(max_length=55)
     napravlenie = models.CharField(max_length=55)
-   # personalee = models.ForeignKey(Personalee, related_name='Personalee' )
     description = models.TextField()
     tags = fields.TagsField(Tag)
 

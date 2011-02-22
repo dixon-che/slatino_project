@@ -5,32 +5,32 @@
         {% block breadcrumbs %}
         <ul>
           <li><a href="/">{% trans 'Home' %}</a></li>
-          <li><a href="/personalee/">{% trans 'Personalee' %}</a></li>
-          <li>{{ personalee.name }}</li>
+          <li><a href="/person/">{% trans 'Person' %}</a></li>
+          <li>{{ person.last_name }} {{ person.first_name }}</li>
         </ul>
         {% endblock %}
 
         {% block header_message %}
         <div class="sitemessage">
-          <h1>Personalee</h1>
-          <h2>{{ personalee.name }}</h2>
+          <h1>Person</h1>
+          <h2>{{ person.name }}</h2>
         </div>
         {% endblock %}
 
         {% block content_title %}
         <!-- Pagetitle -->
-        <h1 class="pagetitle">{{ personalee.last_name }} {{ personalee.first_name }}</h1>
+        <h1 class="pagetitle">{{ person.last_name }} {{ person.first_name }}</h1>
         {% endblock %}
 
         {% block content_main %}
         <!-- Content unit - One column -->
         <div class="column1-unit">
           <div class="column4-unit-right">
-            {% if personalee.photo %}<img src="{{ personalee.photo|thumbnail:'150x200' }}">{% endif %}
-            {% if personalee.phone %}<p><b>{% trans 'Phone' %}</b>: {{ personalee.phone }}</p>{% endif %}
+            {% if person.photo %}<img src="{{ person.photo|thumbnail:'150x200' }}">{% endif %}
+            {% if person.phone %}<p><b>{% trans 'Phone' %}</b>: {{ person.phone }}</p>{% endif %}
           </div>
-          {% if personalee.occupation %}<p>{{ personalee.occupation }}</p>{% endif %}
-          {% if personalee.about %}<p>{{ personalee.about|safe }}</p>{% endif %}
+          {% if person.occupation %}<p>{{ person.occupation }}</p>{% endif %}
+          {% if person.about %}<p>{{ person.about|safe }}</p>{% endif %}
         </div>
         <hr class="clear-contentunit" />
 

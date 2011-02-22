@@ -3,8 +3,8 @@ from tagsfield.models import Tag
 from tagsfield import fields
 
 
-class Personalee(models.Model):
-    photo = models.ImageField(upload_to="personalee_images", blank=True)
+class Person(models.Model):
+    photo = models.ImageField(upload_to="person_images", blank=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     date_of_birth = models.DateField(blank=True, null=True)
@@ -15,14 +15,14 @@ class Personalee(models.Model):
     tags = fields.TagsField(Tag)
 
     class Meta:
-        verbose_name = "Personalee"
-        verbose_name_plural = "Personalees"
+        verbose_name = "Person"
+        verbose_name_plural = "Persons"
 
     def __unicode__(self):
         return u'%s %s' % (self.last_name, self.first_name)
 
     def get_absolute_url(self):
-        return "/personalee/%d/" % self.id
+        return "/person/%d/" % self.id
 
     def get_occupations_list(self):
         return self.occupationperiod_set.all().order_by('date_start')

@@ -4,14 +4,14 @@
         <ul>
           <li><a href="/">{% trans 'Home' %}</a></li>
           <li><a href="/telephone/">{% trans 'Telephone' %}</a></li>
-          <li>{{ heading.personalee.name }}</li>
+          <li>{{ heading.person.name }}</li>
         </ul>
         {% endblock %}
 
         {% block header_message %}
         <div class="sitemessage">
           <h1>{% trans 'List Telephone Slatino' %}</h1>
-          <h2>{{ Phone.personalee }}</h2>
+          <h2>{{ Phone.person }}</h2>
         </div>
         {% endblock %}
 
@@ -24,7 +24,7 @@
         <!-- Content unit - One column -->
 		{% for phone in all_phone %}
         <div class="column1-unit">
-          <h1><a href="{{ personalee.get_absolute_url }}">{{ phone.personalee }}</a></h1><h3>{{ phone.phone }}({{ phone.status }})</h3>
+          <h1><a href="{{ person.get_absolute_url }}">{{ phone.person }}</a></h1><h3>{{ phone.phone }}({{ phone.status }})</h3>
           <p>{% for tag in phone.tags.all %}<a href="{{ tag|tag_url }}">{{ tag }}</a>{% if forloop.last %}{% else %} | {% endif %}{% endfor %}</p>
         </div>
         <hr class="clear-contentunit" />

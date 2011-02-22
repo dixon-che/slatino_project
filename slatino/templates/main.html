@@ -1,4 +1,4 @@
-{% load i18n %}{% load news_tags %}{% load publication_tags %}{% load links_tags %}{% load personalee_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load i18n %}{% load news_tags %}{% load publication_tags %}{% load links_tags %}{% load person_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <!--  Version: Multiflex-3.12 / Overview                    -->
@@ -173,7 +173,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 {% comment %}          
           <!-- Navigation item -->
           <ul>
-            <li><a href="{% url personalee-list %}">{% trans 'Personality' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="{% url person-list %}">{% trans 'Person' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
 <!--            <ul>
                   <li><a href="/news/">{% trans 'All News' %}</a></li>

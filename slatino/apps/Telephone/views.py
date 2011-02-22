@@ -1,11 +1,11 @@
 from django.shortcuts import render_to_response, get_object_or_404
-from slatino.apps.Personalee.models import Personalee
+from slatino.apps.Persons.models import Person
 from slatino.apps.Telephone.models import Phone
 
 
 def telephone_list(request):
     all_phone = Phone.objects.all()
-    personalee = get_object_or_404(Personalee)
-    phone_list = Phone.objects.filter(personalee=personalee)
-    heading = "Personalee: %s" % personalee.name
+    person = get_object_or_404(Person)
+    phone_list = Phone.objects.filter(person=person)
+    heading = "Person: %s" % person.name
     return render_to_response("Telephone/list.html", locals())

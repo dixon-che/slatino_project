@@ -88,7 +88,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.i18n",
-    "slatino.context_processors.personalee_processor",
+    "slatino.context_processors.person_processor",
     "django.core.context_processors.media",
     )
 
@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'slatino.apps.Links',
     'slatino.apps.Gallery',
-    'slatino.apps.Personalee',
+    'slatino.apps.Persons',
     'slatino.apps.Institute',
     'slatino.apps.Telephone',
     'slatino.apps.Publications',

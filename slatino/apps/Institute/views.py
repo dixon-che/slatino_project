@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response, get_object_or_404
-#from django.http import Http404, HttpResponse
+from django.http import Http404
 from django.template import RequestContext
-#from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _
 from slatino.apps.Institute.models import Institute, Occupation
 
 
@@ -17,11 +17,11 @@ def institute_show(request, institute_id):
     return render_to_response("Institute/one.html", RequestContext(request, {"institute": institute, "all_occupation": all_occupation}))
 
 
-#def institute_show_spec(request, slug):
-#    page = {}
-#    if slug=="last":
-#        all_institute = Institute.objects.all()
-#        page['title'] = _("Last institute")
-#    else:
-#        Http404()
-#    return render_to_response("Institute/list.html", RequestContext(request, {"all_institute": all_institute, "page": page}))
+def institute_show_spec(request, slug):
+    page = {}
+    if slug == "last":
+        all_institute = Institute.objects.all()
+        page['title'] = _("Last institute")
+    else:
+        Http404()
+    return render_to_response("Institute/list.html", RequestContext(request, {"all_institute": all_institute, "page": page}))
