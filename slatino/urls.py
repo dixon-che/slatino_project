@@ -1,8 +1,6 @@
 import os
 from django.conf.urls.defaults import *
 from settings import *
-from django.shortcuts import render_to_response, get_object_or_404
-from registration.forms import RegistrationFormUniqueEmail
 from forms import CustomRegistration
 from django.contrib import admin
 admin.autodiscover()

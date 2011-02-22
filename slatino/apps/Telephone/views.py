@@ -1,8 +1,7 @@
 from django.shortcuts import render_to_response, get_object_or_404
-from django.http import Http404, HttpResponse
 from slatino.apps.Personalee.models import Personalee
-
 from slatino.apps.Telephone.models import Phone
+
 
 def telephone_list(request):
     all_phone = Phone.objects.all()

@@ -1,6 +1,6 @@
 from django.db import models
-from django.core.urlresolvers import reverse
-from django.utils.translation import ugettext_lazy as _
+#from django.core.urlresolvers import reverse
+#from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 
 from tagsfield.models import Tag
@@ -24,6 +24,3 @@ class Links(models.Model):
 
     def get_absolute_url(self):
         return "/links/%d/" % self.id
-
-
-    

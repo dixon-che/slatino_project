@@ -21,4 +21,3 @@ DATABASES = {
         'PASSWORD': ''         # Not used with sqlite3.
     }
 }
-

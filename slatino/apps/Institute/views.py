@@ -1,9 +1,8 @@
 from django.shortcuts import render_to_response, get_object_or_404
-from django.http import Http404, HttpResponse
+#from django.http import Http404, HttpResponse
 from django.template import RequestContext
-from django.utils.translation import ugettext as _
+#from django.utils.translation import ugettext as _
 from slatino.apps.Institute.models import Institute, Occupation
-from string import join
 
 
 def institute_list(request):

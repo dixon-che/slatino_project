@@ -6,11 +6,13 @@ from django.conf import settings
 class InlineOccupation(admin.TabularInline):
     model = Occupation
 
+
 class InlineOccupationPeriod(admin.TabularInline):
     model = OccupationPeriod
 
+
 class InstituteAdmin(admin.ModelAdmin):
-    list_display=('id', 'name', 'work_time', 'adres', 'published')
+    list_display = ('id', 'name', 'work_time', 'adres', 'published')
     inlines = [InlineOccupation, ]
 
     class Media:
@@ -19,9 +21,9 @@ class InstituteAdmin(admin.ModelAdmin):
               )
 admin.site.register(Institute, InstituteAdmin)
 
+
 class OccupationAdmin(admin.ModelAdmin):
-    list_display=('id', 'institute', 'name')
+    list_display = ('id', 'institute', 'name')
     inlines = [InlineOccupationPeriod, ]
 
 admin.site.register(Occupation, OccupationAdmin)
-

@@ -1,5 +1,4 @@
 from django.db import models
-
 from tagsfield.models import Tag
 from tagsfield import fields
 
@@ -12,8 +11,7 @@ class Personalee(models.Model):
     sex = models.CharField(choices=(('Male', 'Male'), ('Female', 'Female')), blank=True, null=True, max_length=6)
     occupation = models.CharField(max_length=50, blank=True)
     about = models.TextField(max_length=500, help_text="(Some words about yourself.)", blank=True)
-    phone= models.CharField(max_length=55, blank=True)
-    #date = models.DateTimeField('date published')
+    phone = models.CharField(max_length=55, blank=True)
     tags = fields.TagsField(Tag)
 
     class Meta:
@@ -27,5 +25,4 @@ class Personalee(models.Model):
         return "/personalee/%d/" % self.id
 
     def get_occupations_list(self):
-	return self.occupationperiod_set.all().order_by('date_start')
-
+        return self.occupationperiod_set.all().order_by('date_start')

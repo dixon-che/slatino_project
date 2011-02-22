@@ -39,7 +39,6 @@ DATABASES = {
 # system time zone.
 #TIME_ZONE = 'Ukraine/Kiev'
 
-
 _ = lambda s: s
 
 LANGUAGES = (

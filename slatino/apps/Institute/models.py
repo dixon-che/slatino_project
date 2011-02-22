@@ -1,17 +1,13 @@
 import re
-
 from django.db import models
-from django.core.urlresolvers import reverse
 from django.core.validators import EMPTY_VALUES
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.auth.models import User
 from django.forms import ValidationError
 from django.forms.fields import CharField as formCharField
 from django.utils.encoding import smart_unicode
 from django.conf import settings
 from tagsfield.models import Tag
 from tagsfield import fields
-
 from slatino.apps.Personalee.models import Personalee
 
 
@@ -26,7 +22,7 @@ class UAPhoneNumberField(formCharField):
             return u''
         m = re.search('(?<=\+380)\d{9}', smart_unicode(value))
         if m:
-	    value = m.group(0)
+            value = m.group(0)
             return u'+380%s' % value
         raise ValidationError(self.error_messages['invalid'])
 
@@ -50,7 +46,7 @@ class Institute(models.Model):
     work_time = models.CharField(max_length=255)
     adres = models.TextField()
     institute_image = models.ImageField(upload_to="institute_images")
-    template = models.FilePathField(path=settings.ROOT_PATH + "templates", default = "templates/institute_template.html", blank=True)
+    template = models.FilePathField(path=settings.ROOT_PATH + "templates", default="templates/institute_template.html", blank=True)
     about = models.TextField(max_length=500, blank=True)
     mail_adres = models.EmailField(blank=True)
     phone = models.CharField(max_length=55, blank=True)
@@ -67,7 +63,8 @@ class Institute(models.Model):
 
     def get_absolute_url(self):
         return "/institute/%d/" % self.id
-		
+
+
 class Occupation(models.Model):
     institute = models.ForeignKey(Institute)
     personalee = models.ManyToManyField(Personalee, through='OccupationPeriod', related_name='occupations')
@@ -83,10 +80,9 @@ class Occupation(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class OccupationPeriod(models.Model):
     occupation = models.ForeignKey(Occupation)
     personalee = models.ForeignKey(Personalee)
     date_start = models.DateField()
     date_end = models.DateField(blank=True, null=True)
-
-

@@ -5,14 +5,16 @@ from slatino.utils.widgets import CustomAdminDateWidget
 from django.db import models
 from django.conf import settings
 
+
 class InlineOccupationPeriod(admin.TabularInline):
     model = OccupationPeriod
     formfield_overrides = {
         models.DateField: {'widget': CustomAdminDateWidget},
     }
 
+
 class PersonaleeAdmin(admin.ModelAdmin):
-    list_display=('id', 'last_name', 'first_name', 'date_of_birth', 'occupation', 'phone')
+    list_display = ('id', 'last_name', 'first_name', 'date_of_birth', 'occupation', 'phone')
 #    inlines = [InlineOccupationPeriod, ]
     formfield_overrides = {
         models.DateField: {'widget': CustomAdminDateWidget},

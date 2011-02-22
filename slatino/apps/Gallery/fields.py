@@ -2,6 +2,7 @@ from django.db.models.fields.files import ImageField, ImageFieldFile
 from PIL import Image
 import os
 
+
 def _add_thumb(s):
     """
     Modifies a string (filename, URL) containing an image filename, to insert
@@ -13,11 +14,13 @@ def _add_thumb(s):
         parts[-1] = 'jpg'
     return ".".join(parts)
 
+
 class ThumbnailImageFieldFile(ImageFieldFile):
+
     def _get_thumb_path(self):
         return _add_thumb(self.path)
     thumb_path = property(_get_thumb_path)
-    
+
     def _get_thumb_url(self):
         return _add_thumb(self.url)
     thumb_url = property(_get_thumb_url)
@@ -27,8 +30,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
         img = Image.open(self.path)
         img.thumbnail(
             (self.field.thumb_width, self.field.thumb_height),
-            Image.ANTIALIAS
-        )
+            Image.ANTIALIAS)
         img.save(self.thumb_path, 'JPEG')
 
     def delete(self, save=True):
@@ -41,7 +43,7 @@ class ThumbnailImageField(ImageField):
     """
     Behaves like a regular ImageField, but stores an extra (JPEG) thumbnail
     image, providing FIELD.thumb_url and FIELD.thumb_path.
-    
+
     Accepts two additional, optional arguments: thumb_width and thumb_height,
     both defaulting to 128 (pixels). Resizing will preserve aspect ratio while
     staying inside the requested dimensions; see PIL's Image.thumbnail()

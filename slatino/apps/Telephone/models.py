@@ -1,6 +1,6 @@
 from django.db import models
-from django.core.urlresolvers import reverse
-from django.utils.translation import ugettext_lazy as _
+#from django.core.urlresolvers import reverse
+#from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from slatino.apps.Personalee.models import Personalee
 
@@ -11,8 +11,8 @@ from tagsfield import fields
 
 class Phone(models.Model):
     STATUS_CHOICES = (
-        (1, "domashniy"), 
-        (2, "slugebniy"), 
+        (1, "domashniy"),
+        (2, "slugebniy"),
     )
     phone = models.CharField(max_length=255)
     status = models.IntegerField(choices=STATUS_CHOICES, default=2)

@@ -4,7 +4,6 @@ from django.core.urlresolvers import reverse
 from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
-
 from slatino.apps.Publications.utils import get_cache_file_url
 from tagsfield.models import Tag
 from tagsfield import fields
@@ -62,6 +61,7 @@ class Publication(models.Model):
     def get_verbose_post_type(self):
         post_type_dict = dict(settings.POST_TYPES)
         return post_type_dict[self.post_type]
+
 
 class PublicationDescription(models.Model):
     base = models.ForeignKey(Publication)

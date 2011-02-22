@@ -2,7 +2,7 @@ from django.conf import settings
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
-from django.http import Http404, HttpResponse, HttpResponseRedirect
+from django.http import Http404, HttpResponseRedirect
 from django.forms import ModelForm
 
 from slatino.apps.Publications.models import Publication, PublicationPhoto
@@ -31,7 +31,7 @@ def publication_list(request, post_type):
             page = int(page)
         else:
             raise Http404
-        publications = publications[page*publication_per_page:page*publication_per_page+publication_per_page]
+        publications = publications[page * publication_per_page: page * publication_per_page + publication_per_page]
     else:
         publications = publications[:publication_per_page]
 
@@ -39,7 +39,7 @@ def publication_list(request, post_type):
         raise Http404
 
     return render_to_response("Publications/list.html", RequestContext(request,
-                              dict(publications=publications, title=_(u'List '+post_type))))
+                              dict(publications=publications, title=_(u'List ' + post_type))))
 
 
 def publication_view(request, publication_slug):
@@ -47,10 +47,13 @@ def publication_view(request, publication_slug):
     return render_to_response("Publications/one.html", RequestContext(request,
                               dict(publication=publication)))
 
+
 class PublicationPhotoForm(ModelForm):
+
     class Meta:
         model = PublicationPhoto
         fields = ('image', )
+
 
 def past_image(request, publication_id):
     if request.method == 'POST':
@@ -72,4 +75,3 @@ def image_view(request, image_id, size=None):
         return  HttpResponseRedirect(image.image.url)
 
     return  HttpResponseRedirect(image.thumbnail_url(size))
-

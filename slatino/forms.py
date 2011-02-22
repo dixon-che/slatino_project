@@ -1,13 +1,11 @@
-from django.contrib.auth.models import User
-from django import forms
 from django.utils.translation import ugettext_lazy as _
 from supercaptcha import CaptchaField
-from registration.forms import RegistrationFormUniqueEmail, RegistrationForm
+from registration.forms import RegistrationFormUniqueEmail
 
 
-attrs_dict = { 'class': 'required' }
+attrs_dict = {'class': 'required'}
+
 
 class CustomRegistration(RegistrationFormUniqueEmail):
 
     captcha = CaptchaField(label=_(u'No robots here'))
-    #username = forms.RegexField(initial='Your name')

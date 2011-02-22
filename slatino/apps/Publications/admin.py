@@ -12,7 +12,7 @@ class PublicationInlineDescription(admin.StackedInline):
 
 
 class PublicationAdmin(admin.ModelAdmin):
-    list_display=('slug', 'name', 'pub_date', 'post_type')
+    list_display = ('slug', 'name', 'pub_date', 'post_type')
     prepopulated_fields = {"slug": ("name", )}
 
     inlines = [PublicationInlineDescription, ]
@@ -24,7 +24,7 @@ class PublicationAdmin(admin.ModelAdmin):
 
 
 class PublicationPhotoAdmin(admin.ModelAdmin):
-    list_display=('id', 'publication', 'stamp')
+    list_display = ('id', 'publication', 'stamp')
 
 
 admin.site.register(PublicationPhoto, PublicationPhotoAdmin)

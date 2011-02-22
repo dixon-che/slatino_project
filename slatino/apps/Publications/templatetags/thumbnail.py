@@ -21,7 +21,7 @@ def thumbnail(file, size='300x300'):
     filename = settings.MEDIA_ROOT + "/" + filename
     miniature_filename = settings.MEDIA_ROOT + "/" + miniature
     miniature_url = settings.MEDIA_URL + miniature
-    if os.path.exists(miniature_filename) and os.path.getmtime(filename)>os.path.getmtime(miniature_filename):
+    if os.path.exists(miniature_filename) and os.path.getmtime(filename) > os.path.getmtime(miniature_filename):
         os.unlink(miniature_filename)
     # if the image wasn't already resized, resize it
     if not os.path.exists(miniature_filename):
@@ -29,6 +29,5 @@ def thumbnail(file, size='300x300'):
         image.thumbnail([x, y], Image.ANTIALIAS)
         image.save(miniature_filename, image.format)
     return miniature_url
-
 
 register.filter(thumbnail)

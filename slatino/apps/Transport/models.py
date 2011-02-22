@@ -1,8 +1,4 @@
 from django.db import models
-from django.core.urlresolvers import reverse
-from slatino.apps.Personalee.models import Personalee
-
-
 from tagsfield.models import Tag
 from tagsfield import fields
 
@@ -24,21 +20,23 @@ class Transport(models.Model):
     def get_absolute_url(self):
         return "/transport/%d/" % self.id
 
+
 class Raspisanie(models.Model):
     otpravlenie = models.CharField(max_length=55)
     pribitie = models.CharField(max_length=55)
     transport = models.ForeignKey(Transport)
-	
+
     def __unicode__(self):
         return self.otpravlenie
-		
+
     def get_absolute_url(self):
         return "/raspisanie/%d/" % self.id
-	
+
+
 class Ceni(models.Model):
     marshrut = models.CharField(max_length=255)
     cena = models.CharField(max_length=55)
     transport = models.ForeignKey(Transport)
-	
+
     def __unicode__(self):
         return self.marshrut

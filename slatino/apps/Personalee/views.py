@@ -2,7 +2,6 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
-
 from slatino.apps.Personalee.models import Personalee
 
 
@@ -19,7 +18,7 @@ def personalee_show(request, personalee_id):
 
 def personalee_show_spec(request, slug):
     page = {}
-    if slug=="last":
+    if slug == "last":
         all_personalee = Personalee.objects.all()
         page['last_name'] = _("Last personalee")
     else:
