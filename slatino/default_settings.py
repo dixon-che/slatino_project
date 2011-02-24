@@ -3,6 +3,8 @@ import os
 ROOT_PATH = os.path.dirname(__file__) + '/'
 SITE_PATH = os.path.normpath(os.path.join(ROOT_PATH, '../')) + '/'
 LIB_PATH = os.path.join(SITE_PATH, 'libs')
+print ROOT_PATH
+#print SITE_PATH
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG

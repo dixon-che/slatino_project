@@ -21,7 +21,7 @@ class PersonAdmin(admin.ModelAdmin):
     }
 
     class Media:
-        js = ('/tiny_mce/tiny_mce.js',
-              settings.MEDIA_URL + 'Publication-media/dcarticletextarea.js',
+        js = (settings.MEDIA_URL + 'tiny_mce/tiny_mce.js',
+              settings.MEDIA_URL + 'tiny_mce/persontextarea.js',
              )
 admin.site.register(Person, PersonAdmin)

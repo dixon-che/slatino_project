@@ -210,17 +210,6 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
             </li>
           </ul>
 		  
-		  <!-- Navigation item -->
-          <ul>
-            <li><a href="/transport/">{% trans 'transport' %}<!--[if IE 7]><!--></a><!--<![endif]-->
-              <!--[if lte IE 6]><table><tr><td><![endif]-->
-                <ul>
-                  <li><a href="/news/">{% trans 'Bus' %}</a></li>
-                  <li><a href="/news/last/">{% trans 'Traine' %}</a></li>
-                </ul>
-              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-            </li>
-          </ul>
 
 
           <!-- Navigation item -->
@@ -247,6 +236,19 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
           </ul>
+
+		  <!-- Navigation item -->
+          <ul>
+            <li><a href="/transport/">{% trans 'Transport' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+              <!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="publication/view/raspisanie-avtobusov/">{% trans 'Bus' %}</a></li>
+                  <li><a href="publication/view/raspisanie-elektropoezdov/">{% trans 'Train' %}</a></li>
+                </ul>
+              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </li>
+          </ul>
+
 {% comment %}
           <!-- Navigation item -->
           <ul>
