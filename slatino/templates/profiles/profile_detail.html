@@ -1,9 +1,9 @@
-{% extends "main.html" %}
+{% extends "main.html" %}{% load i18n %}
 
-{% block title %}Profile details{% endblock %}
+{% block title %} {% trans 'Profile details' %}{% endblock %}
 
 {% block content_title %}
-<h1 class="pagetitle">{{ user }} profile details</h1>
+<h1 class="pagetitle">{{ user }} {% trans 'profile details' %}</h1>
 {% endblock %}
 
 {% block content_main %}
@@ -12,14 +12,14 @@
 <font size="2">
   <table>
     <tr><td></td> <td>{% if profile.photo %}<img src="{{ profile.photo.url }}" width="150" height="200"></td></tr>{% endif %}
-    <tr><td>First name:</td> <td>{{ profile.first_name }}</td></tr>
-    <tr><td>Last name:</td> <td>{{ profile.last_name }}</td></tr>
-    <tr><td>Date of birth:</td> <td>{{ profile.date_of_birth }}</td></tr>
-    <tr><td>Sex:</td> <td>{{ profile.sex }}</td></tr>
-    <tr><td>Occupation:</td> <td>{{ profile.occupation }}</td></tr>
-    <tr><td>About:</td> <td>{{ profile.about }}</td></tr>
-    <tr><td>Last Login:</td> <td>{{ profile.user.last_login|date:"F j, Y" }}</td></tr>
-    <tr><td>Member since:</td> <td>{{ profile.user.date_joined|date:"F j, Y" }}</td></tr>
+    <tr><td>{% trans 'First name' %}:</td> <td>{{ profile.first_name }}</td></tr>
+    <tr><td>{% trans 'Last name' %}:</td> <td>{{ profile.last_name }}</td></tr>
+    <tr><td>{% trans 'Date of birth' %}:</td> <td>{{ profile.date_of_birth }}</td></tr>
+    <tr><td>{% trans 'Sex' %}:</td> <td>{{ profile.sex }}</td></tr>
+    <tr><td>{% trans 'Occupation' %}:</td> <td>{{ profile.occupation }}</td></tr>
+    <tr><td>{% trans 'About' %}:</td> <td>{{ profile.about }}</td></tr>
+    <tr><td>{% trans 'Last Login' %}:</td> <td>{{ profile.user.last_login|date:"F j, Y" }}</td></tr>
+    <tr><td>{% trans 'Member since' %}:</td> <td>{{ profile.user.date_joined|date:"F j, Y" }}</td></tr>
   </table>
 </font>
 </div> 

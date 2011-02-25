@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-07 09:22-0500\n"
+"POT-Creation-Date: 2011-02-25 08:55-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,90 +16,132 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: default_settings.py:36
+#: default_settings.py:45
 msgid "English"
 msgstr "Англиский"
 
-#: default_settings.py:37
+#: default_settings.py:46
 msgid "Russion"
 msgstr "Русский"
 
-#: default_settings.py:38
+#: default_settings.py:47
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: Articles/models.py:18
-msgid "Date published"
-msgstr ""
-
-#: Articles/models.py:19
-msgid "Order"
-msgstr "Порядок"
-
-#: Articles/models.py:24 Articles/models.py:68
+#: default_settings.py:140
 msgid "Article"
 msgstr "Статья"
 
-#: Articles/models.py:25 Articles/models.py:69
-#: Articles/templates/Articles/box.html:2
-#: Articles/templates/Articles/incontent.html:3
-#: Articles/templates/Articles/list.html:5
-#: Articles/templates/Articles/one.html:8 templates/main.html:150
-msgid "Articles"
-msgstr "Статьи"
+#: default_settings.py:141 templates/main.html:217 templates/main.html.py:233
+#: templates/Institute/incontent_news.html:3
+msgid "News"
+msgstr "Новости"
 
-#: Articles/views.py:15 templates/main.html:154
-#, fuzzy
-msgid "Last Articles"
-msgstr "Свежие новости"
-
-#: Articles/views.py:34
-#, fuzzy
-msgid "List Articles"
-msgstr "Свежие новости"
-
-#: Articles/templates/Articles/list.html:4
-#: Articles/templates/Articles/one.html:7 templates/main.html:101
-#: templates/main.html.py:133 templates/main.html:193 templates/tag.html:6
-#: templates/Links/list.html:5 templates/Links/one.html:6
-#: templates/News/list.html:5 templates/News/one.html:7
-#: templates/Personalee/list.html:5 templates/Personalee/one.html:7
-msgid "Home"
-msgstr "На главную"
-
-#: Articles/templates/Articles/list.html:12
-#, fuzzy
-msgid "List Articles Slatino"
-msgstr "Свежие новости"
-
-#: Articles/templates/Articles/one.html:15
-#, fuzzy
-msgid "Article Slatino"
-msgstr "Слатино"
-
-#: Articles/templates/Articles/past_image.html:12
-msgid "Past image"
+#: default_settings.py:142
+msgid "Blogpost"
 msgstr ""
 
-#: Articles/templates/Articles/past_image.html:13
-msgid "Upload images"
-msgstr ""
+#: default_settings.py:145
+msgid "Refresh code"
+msgstr "Обновить код"
 
-#: Links/views.py:13
+#: forms.py:11
+msgid "No robots here"
+msgstr "Защита от роботов"
+
+#: apps/Institute/models.py:16
+msgid "Phone numbers must be in +380XXXXXXXXX format."
+msgstr "Номер телефона должен быть в формате +380XXXXXXXXX"
+
+#: apps/Institute/models.py:32
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: apps/Institute/views.py:24
+#, fuzzy
+msgid "Last institute"
+msgstr "Свежие новости"
+
+#: apps/Links/views.py:10
 msgid "All links"
 msgstr "Все ссылки"
 
-#: News/views.py:24
+#: apps/Persons/views.py:23
 #, fuzzy
-msgid "Last news"
+msgid "Last person"
 msgstr "Свежие новости"
 
-#: Personalee/views.py:23
-msgid "Last personalee"
-msgstr ""
+#: apps/Profile/models.py:8
+msgid "Photo"
+msgstr "Фото"
 
-#: templates/main.html:20 templates/main.html.py:27 templates/main.html:73
-#: templates/Links/one.html:14
+#: apps/Profile/models.py:9 templates/profiles/profile_detail.html:15
+msgid "First name"
+msgstr "Имя"
+
+#: apps/Profile/models.py:10 templates/profiles/profile_detail.html:16
+msgid "Last name"
+msgstr "Фамилия"
+
+#: apps/Profile/models.py:11 templates/profiles/profile_detail.html:17
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: apps/Profile/models.py:12 templates/profiles/profile_detail.html:18
+msgid "Sex"
+msgstr "Пол"
+
+#: apps/Profile/models.py:12
+msgid "Male"
+msgstr "Мужчина"
+
+#: apps/Profile/models.py:12
+msgid "Female"
+msgstr "Женщина"
+
+#: apps/Profile/models.py:13 templates/Persons/list.html:23
+#: templates/profiles/profile_detail.html:19
+msgid "Occupation"
+msgstr "Род деятельности"
+
+#: apps/Profile/models.py:14 templates/main.html:114
+#: templates/profiles/profile_detail.html:20
+msgid "About"
+msgstr "Подробно"
+
+#: apps/Publications/models.py:17
+msgid "Date published"
+msgstr "Дата публикации"
+
+#: apps/Publications/models.py:18
+msgid "Order"
+msgstr "Порядок"
+
+#: apps/Publications/models.py:23 apps/Publications/models.py:77
+msgid "Publication"
+msgstr "Публикация"
+
+#: apps/Publications/models.py:24 apps/Publications/models.py:78
+#: templates/Publications/list.html:5 templates/Publications/one.html:8
+msgid "Publications"
+msgstr "Публикации"
+
+#: apps/Publications/views.py:17
+msgid "Last information"
+msgstr "Последняя информация"
+
+#: apps/Publications/views.py:21
+#, fuzzy, python-format
+msgid "Last %s"
+msgstr "Свежие новости"
+
+#: apps/Publications/views.py:41
+#, fuzzy
+msgid "List "
+msgstr "Свежие новости"
+
+#: templates/main.html:20 templates/main.html.py:30 templates/main.html:85
+#: templates/main.html.py:301 templates/Links/one.html:14
 msgid "Slatino"
 msgstr "Слатино"
 
@@ -111,118 +153,172 @@ msgstr "Все о Слатино, Слатинской портал"
 msgid "SLATINO, Slatino, pgt Slatino"
 msgstr "СЛАТИНО, Слатино, п.г.т. Слатино, п. Слатино"
 
-#: templates/main.html:71 templates/main.html.py:73 templates/main.html:101
+#: templates/main.html:83 templates/main.html.py:85 templates/main.html:113
 msgid "Go to Start page"
 msgstr "В начало"
 
-#: templates/main.html:74
-#, fuzzy
-msgid "Slatino portal"
+#: templates/main.html:86
+msgid "Social portal"
 msgstr "Слатино"
 
-#: templates/main.html:102
+#: templates/main.html:113 templates/main.html.py:157 templates/main.html:275
+#: templates/tag.html:6 templates/Institute/list.html:5
+#: templates/Institute/one.html:7 templates/Links/list.html:5
+#: templates/Links/one.html:6 templates/Persons/list.html:5
+#: templates/Persons/one.html:7 templates/Publications/list.html:4
+#: templates/Publications/one.html:7 templates/Telephone/list.html:5
+#: templates/Transport/list.html:5 templates/Transport/one.html:7
+msgid "Home"
+msgstr "На главную"
+
+#: templates/main.html:114
 msgid "Get to know who we are"
 msgstr "Узнать нас поближе"
 
-#: templates/main.html:102
-msgid "About"
-msgstr "О проекте"
-
-#: templates/main.html:103
+#: templates/main.html:115
 msgid "Get in touch with us"
 msgstr "Хочу помочь!"
 
-#: templates/main.html:103
+#: templates/main.html:115
 msgid "Contact"
 msgstr "Контакты"
 
-#: templates/main.html:104
+#: templates/main.html:116
 msgid "Get an overview of website"
 msgstr "Обзор сайта"
 
-#: templates/main.html:104
+#: templates/main.html:116
 msgid "Sitemap"
 msgstr "Навигатор"
 
-#: templates/main.html:116
+#: templates/main.html:124
+msgid "Sign Out"
+msgstr "Выйти"
+
+#: templates/main.html:126 templates/registration/activate.html:11
+#: templates/registration/activation_complete.html:11
+#: templates/registration/login.html:3 templates/registration/login.html:6
+msgid "Login"
+msgstr "Вход"
+
+#: templates/main.html:127 templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/main.html:139
 msgid "Events &bull; People &bull; History"
 msgstr "События &bull; Люди &bull; История"
 
-#: templates/main.html:117
+#: templates/main.html:140
 msgid "The information on a life of settlement Slatino"
 msgstr "Информация о жизни поселка Слатино"
 
-#: templates/main.html:119
+#: templates/main.html:142
 msgid "More details"
 msgstr "..больше"
 
-#: templates/main.html:138 templates/News/box_news.html:2
-#: templates/News/incontent_news.html:3 templates/News/list.html:6
-#: templates/News/one.html:8
-msgid "News"
-msgstr "Новости"
+#: templates/main.html:163 templates/Institute/box_news.html:2
+#: templates/Institute/list.html:6 templates/Institute/one.html:8
+msgid "Institute"
+msgstr "Институты"
 
-#: templates/main.html:141 templates/main.html.py:165 templates/main.html:177
+#: templates/main.html:176 templates/Persons/box_news.html:2
+#: templates/Persons/incontent_news.html:3 templates/Persons/list.html:6
+#: templates/Persons/one.html:8
+msgid "Person"
+msgstr "Персоналии"
+
+#: templates/main.html:179 templates/main.html.py:191 templates/main.html:220
+#: templates/main.html.py:258
 msgid "All News"
 msgstr "Все новости"
 
-#: templates/main.html:142 templates/main.html.py:166 templates/main.html:178
+#: templates/main.html:180 templates/main.html.py:192 templates/main.html:221
+#: templates/main.html.py:259
 msgid "Last News"
 msgstr "Свежие новости"
 
-#: templates/main.html:153
-#, fuzzy
-msgid "All Articles"
-msgstr "Все новости"
+#: templates/main.html:188
+msgid "gallery"
+msgstr ""
 
-#: templates/main.html:162 templates/tag.html:7
+#: templates/main.html:201
+msgid "telephone"
+msgstr ""
+
+#: templates/main.html:204
+msgid "Business Telephones"
+msgstr ""
+
+#: templates/main.html:205
+msgid "Home Phone"
+msgstr ""
+
+#: templates/main.html:206
+msgid "Mobile Phones"
+msgstr ""
+
+#: templates/main.html:207
+msgid "Emergency Phones"
+msgstr ""
+
+#: templates/main.html:230
+msgid "Information"
+msgstr "Информация"
+
+#: templates/main.html:234 templates/Publications/incontent.html:3
+msgid "Articles"
+msgstr "Статьи"
+
+#: templates/main.html:242 templates/Transport/list.html:6
+#: templates/Transport/one.html:8
+msgid "Transport"
+msgstr "Транспорт"
+
+#: templates/main.html:245
+msgid "Bus"
+msgstr "Автобус"
+
+#: templates/main.html:246
+msgid "Train"
+msgstr "Поезд"
+
+#: templates/main.html:255 templates/tag.html:7
 #: templates/Links/box_links.html:2 templates/Links/incontent_links.html:4
 #: templates/Links/list.html:6 templates/Links/one.html:7
 #: templates/Links/one.html.py:21
 msgid "Links"
 msgstr "Ссылки"
 
-#: templates/main.html:174
-msgid "personalee"
-msgstr ""
-
-#: templates/main.html:219
-msgid "Tags list"
-msgstr "Список категорий"
-
-#: templates/main.html:238 templates/main.html.py:243
+#: templates/main.html:319
 msgid "Weather in Slatino"
 msgstr "Слатино: погода"
 
-#: templates/main.html:242
-msgid "informer.weather.in.ua/ru"
-msgstr "informer.weather.in.ua/ru"
-
-#: templates/main.html:256
+#: templates/main.html:334
 msgid "LiveInternet: The number of viewings and visitors for 24 hours is shown"
 msgstr "LiveInternet: число просмотров и посетителей за 24 часа"
 
-#: templates/main.html:261
+#: templates/main.html:339
 msgid "LiveInternet: The number of viewings and visitors is shown"
 msgstr "LiveInternet: число просмотров и посетителей"
 
-#: templates/main.html:329
+#: templates/main.html:405
 msgid "Copyright &copy; 2008 DC & WW | All Rights Reserved"
 msgstr "Copyright &copy; 2008 DC & WW | Все права защищены"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Design by"
 msgstr "Дизайн"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Designer Homepage"
 msgstr "http://1234.info/"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Modified by"
 msgstr "Модифицировано"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Powered by"
 msgstr ""
 
@@ -235,12 +331,12 @@ msgid "List of links with information about Slatino"
 msgstr "Список ссылок с информацией о Слатино"
 
 #: templates/tag.html:53 templates/Links/list.html:41
-#: templates/News/list.html:40 templates/Personalee/list.html:42
+#: templates/Telephone/list.html:38 templates/Transport/list.html:40
 msgid "Month clicker"
 msgstr ""
 
 #: templates/tag.html:54 templates/Links/list.html:42
-#: templates/News/list.html:41 templates/Personalee/list.html:43
+#: templates/Telephone/list.html:39 templates/Transport/list.html:41
 msgid "Month clicker table"
 msgstr ""
 
@@ -249,59 +345,207 @@ msgstr ""
 msgid "Tags"
 msgstr "Список категорий"
 
-#: templates/News/list.html:13
-#, fuzzy
-msgid "List News Slatino"
-msgstr "Свежие новости"
+#: templates/Institute/list.html:13
+msgid "List Institute"
+msgstr "Список институтов"
 
-#: templates/News/list.html:20
-#, fuzzy
-msgid "List News"
-msgstr "Свежие новости"
+#: templates/Institute/list.html:22
+msgid "Adress:"
+msgstr "Адресс:"
 
-#: templates/Personalee/box_news.html:2
-#: templates/Personalee/incontent_news.html:3 templates/Personalee/list.html:6
-#: templates/Personalee/one.html:8
-msgid "Personalee"
-msgstr ""
+#: templates/Institute/list.html:23
+msgid "Working time:"
+msgstr "Время работы:"
 
-#: templates/Personalee/list.html:13
-#, fuzzy
-msgid "List Personalee Slatino"
-msgstr "Свежие новости"
+#: templates/Institute/one.html:23
+msgid "Working time"
+msgstr "Время работы:"
 
-#: templates/Personalee/list.html:20
-msgid "List Personalee"
-msgstr ""
+#: templates/Institute/one.html:24
+msgid "Email adress"
+msgstr "Email адресс"
 
-#: templates/Personalee/list.html:28
-msgid "God_rogd__:"
-msgstr ""
+#: templates/Institute/one.html:25 templates/Persons/one.html:30
+msgid "Phone"
+msgstr "Телефон"
 
-#: templates/Personalee/list.html:29
-msgid "Phone_____:"
-msgstr ""
+#: templates/Institute/one.html:26
+msgid "Adress"
+msgstr "Адресс"
 
-#: templates/Personalee/list.html:30
-msgid "Description_:"
-msgstr ""
+#: templates/Persons/list.html:13
+msgid "Persons list"
+msgstr "Список персоналий"
 
-#: templates/Personalee/list.html:31
+#: templates/Persons/list.html:28
 msgid "Tag_______:"
 msgstr ""
 
-#: templates/registration/registration_form.html:6
-msgid "Registration"
+#: templates/Publications/one.html:15
+msgid "Publication Slatino"
+msgstr "Слатино: погода"
+
+#: templates/Publications/past_image.html:12
+msgid "Past image"
+msgstr ""
+
+#: templates/Telephone/list.html:6
+msgid "Telephone"
+msgstr ""
+
+#: templates/Telephone/list.html:13
+#, fuzzy
+msgid "List Telephone Slatino"
+msgstr "Свежие новости"
+
+#: templates/Telephone/list.html:20
+msgid "List Telephone"
+msgstr ""
+
+#: templates/Transport/list.html:13
+#, fuzzy
+msgid "List Transport Slatino"
+msgstr "Свежие новости"
+
+#: templates/Transport/list.html:20
+msgid "List Transport"
+msgstr ""
+
+#: templates/profiles/create_profile.html:3
+#: templates/profiles/edit_profile.html:3
+msgid "Edit Profile"
+msgstr "Редактировать профайл"
+
+#: templates/profiles/create_profile.html:6
+msgid "Create contact info for"
+msgstr "Изменить информацию для"
+
+#: templates/profiles/create_profile.html:27
+#: templates/profiles/edit_profile.html:31
+msgid "Update"
+msgstr "Обновить"
+
+#: templates/profiles/edit_profile.html:6
+msgid "Edit contact info for"
+msgstr "Изменить информацию для"
+
+#: templates/profiles/profile_detail.html:3
+msgid "Profile details"
+msgstr "Подробная информация"
+
+#: templates/profiles/profile_detail.html:6
+msgid "profile details"
+msgstr "подробная информация"
+
+#: templates/profiles/profile_detail.html:21
+msgid "Last Login"
+msgstr "Предыдущая активность"
+
+#: templates/profiles/profile_detail.html:22
+msgid "Member since"
+msgstr "Участник с"
+
+#: templates/profiles/profile_list.html:2
+msgid "List Profile"
+msgstr "Список профайлов"
+
+#: templates/registration/activate.html:3
+msgid "Activation form"
+msgstr "Форма активации"
+
+#: templates/registration/activate.html:6
+msgid "Activate"
+msgstr "Активация"
+
+#: templates/registration/activate.html:10
+msgid "Hello"
+msgstr "Привет"
+
+#: templates/registration/activate.html:11
+msgid "Activation key is not valid, try to login or register again"
+msgstr ""
+"Ключ активации недействителен, попробуйте войти или зарегистрироваться снова"
+
+#: templates/registration/activate.html:11
+msgid "P.S. Activation link is valid for 1 day"
+msgstr "P.S. Ссылка активации действительна 1 день"
+
+#: templates/registration/activate.html:11
+#: templates/registration/activation_complete.html:11
+msgid "account"
+msgstr "аккаунт"
+
+#: templates/registration/activation_complete.html:3
+msgid "Activation"
+msgstr "Активация"
+
+#: templates/registration/activation_complete.html:6
+msgid "Activation complete"
+msgstr "Завершение активации"
+
+#: templates/registration/activation_complete.html:10
+msgid "Congratulations"
+msgstr "Поздравления"
+
+#: templates/registration/activation_complete.html:11
+msgid "You have activated your account."
+msgstr "Вы удачно активировали аккаунт."
+
+#: templates/registration/login.html:11
+msgid ", you are already logged."
+msgstr ", Вы уже вошли."
+
+#: templates/registration/login.html:12
+msgid "However, you can always"
+msgstr "Однако, Вы всегда можете"
+
+#: templates/registration/login.html:12
+msgid "logout"
+msgstr "выйти"
+
+#: templates/registration/login.html:31
+msgid "Sign In"
+msgstr "Войти"
+
+#: templates/registration/login.html:35
+msgid "Forgot your password?"
+msgstr "Забыли пароль?"
+
+#: templates/registration/login.html:36
+msgid "Don't have an account?"
+msgstr "Нету аккаунта?"
+
+#: templates/registration/login.html:36
+msgid "Sign up now"
+msgstr "Зарегистрируйся"
+
+#: templates/registration/logout.html:3 templates/registration/logout.html:6
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/registration/logout.html:10
+msgid "Thanks for spending some time with us. We will wait for you again."
+msgstr "Спасибо, что зашли. Будем ждать Вас снова."
+
+#: templates/registration/registration_complete.html:3
+#: templates/registration/registration_complete.html:6
+msgid "Regitration complete"
+msgstr "Завершение регистрации"
+
+#: templates/registration/registration_complete.html:10
+msgid ""
+"You have registered. Confirmation code\n"
+"sent to your e-mail. Simply click on the link\n"
+"to complete the registration and activate your account."
+msgstr ""
+"Вы зарегистрированны. Код подтверждения\n"
+"выслан Вам на e-mail. Просто нажмите на ссылку,\n"
+"чтобы зашершить регистрацию и активировать Ваш аккаунт."
+
+#: templates/registration/registration_form.html:3
+msgid "Registration form"
+msgstr "Форма регистрации"
+
+#: templates/registration/registration_form.html:22
+msgid "Register"
 msgstr "Регистрация"
-
-#: supercaptcha/settings.py:39
-msgid "The code you entered is wrong."
-msgstr "Вы ввели неверный код"
-
-#: forms.py:10
-msgid "No robots here"
-msgstr "Защита от роботов"
-
-#: default_settings.py:143
-msgid "Refresh code"
-msgstr "Обновить код"

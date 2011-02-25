@@ -1,9 +1,9 @@
 {% extends "main.html" %}{% load i18n %}
 
-{% block title %} - Edit Profile{% endblock %}
+{% block title %} {% trans 'Edit Profile' %}{% endblock %}
 
 {% block content_title %}
-<h1 class="pagetitle">Edit contact info for {{ user }}</h1>
+<h1 class="pagetitle">{% trans 'Edit contact info for' %} {{ user }}</h1>
 {% endblock %}
 
 {% block content_main %}
@@ -28,7 +28,7 @@
       </tr>
     {% endfor %}
 </table>
-    <input type="submit" name="submit" value="Update" id="submit">
+    <input type="submit" name="submit" value="{% trans 'Update' %}" id="submit">
 </form>
 </div></div>
 

@@ -4,7 +4,6 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.http import Http404, HttpResponseRedirect
 from django.forms import ModelForm
-
 from slatino.apps.Publications.models import Publication, PublicationPhoto
 
 publication_last_count = settings.PUBLICATION_LAST_COUNT or 5

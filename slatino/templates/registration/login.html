@@ -1,15 +1,15 @@
 {% extends "main.html" %}{% load i18n %}
 
-{% block title %}-Login{% endblock title %}
+{% block title %} {% trans 'Login' %}{% endblock title %}
 
 {% block content_title %}
-<h1 class="pagetitle">Login!</h1>
+<h1 class="pagetitle">{% trans 'Login' %}!</h1>
 {% endblock %}
 
 {% block content_main %}
 {% if user.is_authenticated %}
-{{ user.username }}, you are already logged.
-However, you can always <a href="{% url auth_logout %}">logout</a>.<br/><br/>
+{{ user.username }}{% trans ', you are already logged.' %}
+{% trans 'However, you can always' %} <a href="{% url auth_logout %}">{% trans 'logout' %}</a>.<br/><br/>
 {% else %}
 
 {% if form.non_field_errors %}
@@ -28,12 +28,12 @@ However, you can always <a href="{% url auth_logout %}">logout</a>.<br/><br/>
             {{ field }}
         </div>
     {% endfor %}
-        <input type="submit" value="Sign In" />
+        <input type="submit" value="{% trans 'Sign In' %}" />
 </form>
 
 <ul>
-<LI><a href="{% url auth_password_reset %}">Forgot your password?</a>
-<LI>Don't have an account? <a href="{% url registration_register %}">Sign up now</a>
+<LI><a href="{% url auth_password_reset %}">{% trans 'Forgot your password?' %}</a>
+<LI>{% trans "Don't have an account?" %} <a href="{% url registration_register %}">{% trans 'Sign up now' %}</a>
 </ul>
 {% endif %}
 

@@ -121,10 +121,10 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
           <ul>
             {% if user.is_authenticated %}
               <li><a href="{% url profiles_create_profile %}">{{ user.username }}</a></li>
-              <li><a href="{% url auth_logout %}">Sign Out</a></li>
+              <li><a href="{% url auth_logout %}">{% trans 'Sign Out' %}</a></li>
             {% else %}
-              <li><a href="{% url auth_login %}">Login</a></li>
-              <li><a href="{% url registration_register %}">Registration</a></li>
+              <li><a href="{% url auth_login %}">{% trans 'Login' %}</a></li>
+              <li><a href="{% url registration_register %}">{% trans 'Registration' %}</a></li>
             {% endif %}
           </ul>
         </div>

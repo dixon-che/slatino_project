@@ -1,14 +1,14 @@
-{% extends "main.html" %}
+{% extends "main.html" %}{% load i18n %}
 
-{% block title %}-Activation form{% endblock %}
+{% block title %} {% trans 'Activation form' %}{% endblock %}
 
 {% block content_title %}
-    <h1 class="pagetitle">Activate!</h1>
+    <h1 class="pagetitle">{% trans 'Activate' %}!</h1>
 {% endblock %}
 
 {% block content_main %}
-Hello!<br/>
-Activation key is not valid, try to login or register again.<br/>P.S. Activation link is valid for 1 day.<br/><a href="{% url auth_login %}">Login </a>account.
+{% trans 'Hello' %}!<br/>
+{% trans 'Activation key is not valid, try to login or register again' %}.<br/>{% trans 'P.S. Activation link is valid for 1 day' %}.<br/><a href="{% url auth_login %}">{% trans 'Login' %} </a>{% trans 'account' %}.
 <br/>
 {% endblock %}
 
