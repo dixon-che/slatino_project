@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-25 08:55-0600\n"
+"POT-Creation-Date: 2011-02-25 11:10-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: default_settings.py:45
 msgid "English"
-msgstr "Англиский"
+msgstr "Английский"
 
 #: default_settings.py:46
 msgid "Russion"
@@ -58,13 +58,12 @@ msgid "Phone number"
 msgstr "Номер телефона"
 
 #: apps/Institute/views.py:24
-#, fuzzy
 msgid "Last institute"
-msgstr "Свежие новости"
+msgstr ""
 
 #: apps/Links/views.py:10
 msgid "All links"
-msgstr "Все ссылки"
+msgstr ""
 
 #: apps/Persons/views.py:23
 #, fuzzy
@@ -215,7 +214,7 @@ msgstr "Информация о жизни поселка Слатино"
 
 #: templates/main.html:142
 msgid "More details"
-msgstr "..больше"
+msgstr "Детальней"
 
 #: templates/main.html:163 templates/Institute/box_news.html:2
 #: templates/Institute/list.html:6 templates/Institute/one.html:8
@@ -349,17 +348,13 @@ msgstr "Список категорий"
 msgid "List Institute"
 msgstr "Список институтов"
 
-#: templates/Institute/list.html:22
-msgid "Adress:"
-msgstr "Адресс:"
+#: templates/Institute/list.html:22 templates/Institute/one.html:26
+msgid "Adress"
+msgstr ""
 
-#: templates/Institute/list.html:23
-msgid "Working time:"
-msgstr "Время работы:"
-
-#: templates/Institute/one.html:23
+#: templates/Institute/list.html:23 templates/Institute/one.html:23
 msgid "Working time"
-msgstr "Время работы:"
+msgstr "Время работы"
 
 #: templates/Institute/one.html:24
 msgid "Email adress"
@@ -369,21 +364,13 @@ msgstr "Email адресс"
 msgid "Phone"
 msgstr "Телефон"
 
-#: templates/Institute/one.html:26
-msgid "Adress"
-msgstr "Адресс"
-
 #: templates/Persons/list.html:13
 msgid "Persons list"
-msgstr "Список персоналий"
+msgstr "Персоналии"
 
 #: templates/Persons/list.html:28
 msgid "Tag_______:"
 msgstr ""
-
-#: templates/Publications/one.html:15
-msgid "Publication Slatino"
-msgstr "Слатино: погода"
 
 #: templates/Publications/past_image.html:12
 msgid "Past image"
@@ -394,9 +381,8 @@ msgid "Telephone"
 msgstr ""
 
 #: templates/Telephone/list.html:13
-#, fuzzy
 msgid "List Telephone Slatino"
-msgstr "Свежие новости"
+msgstr ""
 
 #: templates/Telephone/list.html:20
 msgid "List Telephone"
@@ -418,7 +404,7 @@ msgstr "Редактировать профайл"
 
 #: templates/profiles/create_profile.html:6
 msgid "Create contact info for"
-msgstr "Изменить информацию для"
+msgstr "Добавить информацию для"
 
 #: templates/profiles/create_profile.html:27
 #: templates/profiles/edit_profile.html:31
@@ -451,7 +437,7 @@ msgstr "Список профайлов"
 
 #: templates/registration/activate.html:3
 msgid "Activation form"
-msgstr "Форма активации"
+msgstr "Активация"
 
 #: templates/registration/activate.html:6
 msgid "Activate"
@@ -463,17 +449,16 @@ msgstr "Привет"
 
 #: templates/registration/activate.html:11
 msgid "Activation key is not valid, try to login or register again"
-msgstr ""
-"Ключ активации недействителен, попробуйте войти или зарегистрироваться снова"
+msgstr "Ключ активации недействителен, попробуйте войти или зарегистрироваться снова"
 
 #: templates/registration/activate.html:11
-msgid "P.S. Activation link is valid for 1 day"
-msgstr "P.S. Ссылка активации действительна 1 день"
+msgid "P.S. Activation link is valid for 2 days"
+msgstr "P.S. Ссылка активации действительна 2 дня"
 
 #: templates/registration/activate.html:11
 #: templates/registration/activation_complete.html:11
 msgid "account"
-msgstr "аккаунт"
+msgstr "на аккаунт"
 
 #: templates/registration/activation_complete.html:3
 msgid "Activation"
@@ -544,7 +529,7 @@ msgstr ""
 
 #: templates/registration/registration_form.html:3
 msgid "Registration form"
-msgstr "Форма регистрации"
+msgstr "Регистрации"
 
 #: templates/registration/registration_form.html:22
 msgid "Register"

@@ -19,8 +19,8 @@
         <div class="column1-unit list">
           <h1>{% if institute.institute_image %}<img class="right" src="{{ institute.institute_image|thumbnail:'120x90' }}"></a>{% endif %}
           <a href="{{ institute.get_absolute_url }}">{{ institute.name }}</a><br></h1>
-          <p>{% trans 'Adress:' %} {{ institute.adres|safe }}<br>
-          {% trans 'Working time:' %} {{ institute.work_time }}</p>
+          <p>{% trans 'Adress' %}: {{ institute.adres|safe }}<br>
+          {% trans 'Working time' %}: {{ institute.work_time }}</p>
 {% comment %}
           <p><a href="{{ institute.get_institute_image_url }}" target="_blank"><img src="{{ institute.institute_image|thumbnail }}" /></a></p>
 {% endcomment %}

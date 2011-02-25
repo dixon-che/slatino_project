@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-07 09:22-0500\n"
+"POT-Creation-Date: 2011-02-25 11:11-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,90 +16,131 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: default_settings.py:36
+#: default_settings.py:45
 msgid "English"
 msgstr ""
 
-#: default_settings.py:37
+#: default_settings.py:46
 msgid "Russion"
 msgstr "Русский"
 
-#: default_settings.py:38
+#: default_settings.py:47
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: Articles/models.py:18
-msgid "Date published"
-msgstr ""
-
-#: Articles/models.py:19
-msgid "Order"
-msgstr ""
-
-#: Articles/models.py:24 Articles/models.py:68
+#: default_settings.py:140
 msgid "Article"
+msgstr "Стаття"
+
+#: default_settings.py:141 templates/main.html:217 templates/main.html.py:233
+#: templates/Institute/incontent_news.html:3
+msgid "News"
+msgstr "Новини"
+
+#: default_settings.py:142
+msgid "Blogpost"
 msgstr ""
 
-#: Articles/models.py:25 Articles/models.py:69
-#: Articles/templates/Articles/box.html:2
-#: Articles/templates/Articles/incontent.html:3
-#: Articles/templates/Articles/list.html:5
-#: Articles/templates/Articles/one.html:8 templates/main.html:150
-msgid "Articles"
+#: default_settings.py:145
+msgid "Refresh code"
+msgstr "Поновити код"
+
+#: forms.py:11
+msgid "No robots here"
+msgstr "Захист від роботів"
+
+#: apps/Institute/models.py:16
+msgid "Phone numbers must be in +380XXXXXXXXX format."
+msgstr "Номер телефону повинен бути у форматі +380XXXXXXXX"
+
+#: apps/Institute/models.py:32
+msgid "Phone number"
+msgstr "Номер телефону"
+
+#: apps/Institute/views.py:24
+msgid "Last institute"
 msgstr ""
 
-#: Articles/views.py:15 templates/main.html:154
-#, fuzzy
-msgid "Last Articles"
-msgstr "Останні новини"
-
-#: Articles/views.py:34
-#, fuzzy
-msgid "List Articles"
-msgstr "Останні новини"
-
-#: Articles/templates/Articles/list.html:4
-#: Articles/templates/Articles/one.html:7 templates/main.html:101
-#: templates/main.html.py:133 templates/main.html:193 templates/tag.html:6
-#: templates/Links/list.html:5 templates/Links/one.html:6
-#: templates/News/list.html:5 templates/News/one.html:7
-#: templates/Personalee/list.html:5 templates/Personalee/one.html:7
-msgid "Home"
-msgstr "Головна"
-
-#: Articles/templates/Articles/list.html:12
-#, fuzzy
-msgid "List Articles Slatino"
-msgstr "Останні новини"
-
-#: Articles/templates/Articles/one.html:15
-#, fuzzy
-msgid "Article Slatino"
-msgstr "Слатине"
-
-#: Articles/templates/Articles/past_image.html:12
-msgid "Past image"
-msgstr ""
-
-#: Articles/templates/Articles/past_image.html:13
-msgid "Upload images"
-msgstr ""
-
-#: Links/views.py:13
+#: apps/Links/views.py:10
 msgid "All links"
-msgstr "Усі посилання"
-
-#: News/views.py:24
-#, fuzzy
-msgid "Last news"
-msgstr "Останні новини"
-
-#: Personalee/views.py:23
-msgid "Last personalee"
 msgstr ""
 
-#: templates/main.html:20 templates/main.html.py:27 templates/main.html:73
-#: templates/Links/one.html:14
+#: apps/Persons/views.py:23
+#, fuzzy
+msgid "Last person"
+msgstr "Останні новини"
+
+#: apps/Profile/models.py:8
+msgid "Photo"
+msgstr "Фото"
+
+#: apps/Profile/models.py:9 templates/profiles/profile_detail.html:15
+msgid "First name"
+msgstr "Ім’я"
+
+#: apps/Profile/models.py:10 templates/profiles/profile_detail.html:16
+msgid "Last name"
+msgstr "Прізвище"
+
+#: apps/Profile/models.py:11 templates/profiles/profile_detail.html:17
+msgid "Date of birth"
+msgstr "Дата народження"
+
+#: apps/Profile/models.py:12 templates/profiles/profile_detail.html:18
+msgid "Sex"
+msgstr "Стать"
+
+#: apps/Profile/models.py:12
+msgid "Male"
+msgstr "Чоловік"
+
+#: apps/Profile/models.py:12
+msgid "Female"
+msgstr "Жінка"
+
+#: apps/Profile/models.py:13 templates/Persons/list.html:23
+#: templates/profiles/profile_detail.html:19
+msgid "Occupation"
+msgstr "Рід занять"
+
+#: apps/Profile/models.py:14 templates/main.html:114
+#: templates/profiles/profile_detail.html:20
+msgid "About"
+msgstr "Докладніше"
+
+#: apps/Publications/models.py:17
+msgid "Date published"
+msgstr "Дата публікації"
+
+#: apps/Publications/models.py:18
+msgid "Order"
+msgstr "Порядок"
+
+#: apps/Publications/models.py:23 apps/Publications/models.py:77
+msgid "Publication"
+msgstr "Публікація"
+
+#: apps/Publications/models.py:24 apps/Publications/models.py:78
+#: templates/Publications/list.html:5 templates/Publications/one.html:8
+msgid "Publications"
+msgstr "Публікації"
+
+#: apps/Publications/views.py:17
+msgid "Last information"
+msgstr "Остання інформація"
+
+#: apps/Publications/views.py:21
+#, fuzzy, python-format
+msgid "Last %s"
+msgstr "Останні новини"
+
+#: apps/Publications/views.py:41
+#, fuzzy
+msgid "List "
+msgstr "Останні новини"
+
+#: templates/main.html:20 templates/main.html.py:30 templates/main.html:85
+#: templates/main.html.py:301 templates/Links/one.html:14
 msgid "Slatino"
 msgstr "Слатине"
 
@@ -109,120 +150,174 @@ msgstr "Усе про Слатине, Слатинський портал"
 
 #: templates/main.html:22
 msgid "SLATINO, Slatino, pgt Slatino"
-msgstr ""
+msgstr "Слатине"
 
-#: templates/main.html:71 templates/main.html.py:73 templates/main.html:101
+#: templates/main.html:83 templates/main.html.py:85 templates/main.html:113
 msgid "Go to Start page"
 msgstr "До початкової"
 
-#: templates/main.html:74
-#, fuzzy
-msgid "Slatino portal"
+#: templates/main.html:86
+msgid "Social portal"
 msgstr "Слатине"
 
-#: templates/main.html:102
+#: templates/main.html:113 templates/main.html.py:157 templates/main.html:275
+#: templates/tag.html:6 templates/Institute/list.html:5
+#: templates/Institute/one.html:7 templates/Links/list.html:5
+#: templates/Links/one.html:6 templates/Persons/list.html:5
+#: templates/Persons/one.html:7 templates/Publications/list.html:4
+#: templates/Publications/one.html:7 templates/Telephone/list.html:5
+#: templates/Transport/list.html:5 templates/Transport/one.html:7
+msgid "Home"
+msgstr "Головна"
+
+#: templates/main.html:114
 msgid "Get to know who we are"
 msgstr "Поцікавитись про нас"
 
-#: templates/main.html:102
-msgid "About"
-msgstr "Про проект"
-
-#: templates/main.html:103
+#: templates/main.html:115
 msgid "Get in touch with us"
 msgstr "Я хочу з вами!"
 
-#: templates/main.html:103
+#: templates/main.html:115
 msgid "Contact"
 msgstr "Контакти"
 
-#: templates/main.html:104
+#: templates/main.html:116
 msgid "Get an overview of website"
 msgstr "Загальний огляд сайту"
 
-#: templates/main.html:104
+#: templates/main.html:116
 msgid "Sitemap"
 msgstr "Навігатор"
 
-#: templates/main.html:116
+#: templates/main.html:124
+msgid "Sign Out"
+msgstr "Вийти"
+
+#: templates/main.html:126 templates/registration/activate.html:11
+#: templates/registration/activation_complete.html:11
+#: templates/registration/login.html:3 templates/registration/login.html:6
+msgid "Login"
+msgstr "Вхід"
+
+#: templates/main.html:127 templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Реєстрація"
+
+#: templates/main.html:139
 msgid "Events &bull; People &bull; History"
 msgstr "Події &bull; Персоналії &bull; Історія"
 
-#: templates/main.html:117
+#: templates/main.html:140
 msgid "The information on a life of settlement Slatino"
 msgstr "Інформація про життя Слатине"
 
-#: templates/main.html:119
+#: templates/main.html:142
 msgid "More details"
-msgstr "..більше"
+msgstr "Детальніше"
 
-#: templates/main.html:138 templates/News/box_news.html:2
-#: templates/News/incontent_news.html:3 templates/News/list.html:6
-#: templates/News/one.html:8
-msgid "News"
-msgstr "Що нового?"
+#: templates/main.html:163 templates/Institute/box_news.html:2
+#: templates/Institute/list.html:6 templates/Institute/one.html:8
+msgid "Institute"
+msgstr "Інститути"
 
-#: templates/main.html:141 templates/main.html.py:165 templates/main.html:177
+#: templates/main.html:176 templates/Persons/box_news.html:2
+#: templates/Persons/incontent_news.html:3 templates/Persons/list.html:6
+#: templates/Persons/one.html:8
+msgid "Person"
+msgstr "Особистість"
+
+#: templates/main.html:179 templates/main.html.py:191 templates/main.html:220
+#: templates/main.html.py:258
 msgid "All News"
 msgstr "Усі новини"
 
-#: templates/main.html:142 templates/main.html.py:166 templates/main.html:178
+#: templates/main.html:180 templates/main.html.py:192 templates/main.html:221
+#: templates/main.html.py:259
 msgid "Last News"
 msgstr "Останні новини"
 
-#: templates/main.html:153
-#, fuzzy
-msgid "All Articles"
-msgstr "Усі новини"
+#: templates/main.html:188
+msgid "gallery"
+msgstr ""
 
-#: templates/main.html:162 templates/tag.html:7
+#: templates/main.html:201
+msgid "telephone"
+msgstr ""
+
+#: templates/main.html:204
+msgid "Business Telephones"
+msgstr ""
+
+#: templates/main.html:205
+msgid "Home Phone"
+msgstr ""
+
+#: templates/main.html:206
+msgid "Mobile Phones"
+msgstr ""
+
+#: templates/main.html:207
+msgid "Emergency Phones"
+msgstr ""
+
+#: templates/main.html:230
+msgid "Information"
+msgstr "Інформація"
+
+#: templates/main.html:234 templates/Publications/incontent.html:3
+msgid "Articles"
+msgstr "Статті"
+
+#: templates/main.html:242 templates/Transport/list.html:6
+#: templates/Transport/one.html:8
+msgid "Transport"
+msgstr "Транспорт"
+
+#: templates/main.html:245
+msgid "Bus"
+msgstr "Автобус"
+
+#: templates/main.html:246
+msgid "Train"
+msgstr "Поїзд"
+
+#: templates/main.html:255 templates/tag.html:7
 #: templates/Links/box_links.html:2 templates/Links/incontent_links.html:4
 #: templates/Links/list.html:6 templates/Links/one.html:7
 #: templates/Links/one.html.py:21
 msgid "Links"
 msgstr "Посилання"
 
-#: templates/main.html:174
-msgid "personalee"
-msgstr ""
-
-#: templates/main.html:219
-msgid "Tags list"
-msgstr "За категоріями"
-
-#: templates/main.html:238 templates/main.html.py:243
+#: templates/main.html:319
 msgid "Weather in Slatino"
 msgstr "Прогноз погоди"
 
-#: templates/main.html:242
-msgid "informer.weather.in.ua/ru"
-msgstr ""
-
-#: templates/main.html:256
+#: templates/main.html:334
 msgid "LiveInternet: The number of viewings and visitors for 24 hours is shown"
 msgstr "LiveInternet: Число переглядів та відвідувачів за 24 години"
 
-#: templates/main.html:261
+#: templates/main.html:339
 msgid "LiveInternet: The number of viewings and visitors is shown"
 msgstr "LiveInternet: Число переглядів та відвідувачів"
 
-#: templates/main.html:329
+#: templates/main.html:405
 msgid "Copyright &copy; 2008 DC & WW | All Rights Reserved"
 msgstr "Copyright &copy; 2008 DC & WW | Усі права захищено"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Design by"
 msgstr "Дизайн"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Designer Homepage"
 msgstr "http://1234.info/"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Modified by"
 msgstr "Модифіковано"
 
-#: templates/main.html:330
+#: templates/main.html:406
 msgid "Powered by"
 msgstr ""
 
@@ -235,12 +330,12 @@ msgid "List of links with information about Slatino"
 msgstr "Перелік посилань на тематичну інформацію"
 
 #: templates/tag.html:53 templates/Links/list.html:41
-#: templates/News/list.html:40 templates/Personalee/list.html:42
+#: templates/Telephone/list.html:38 templates/Transport/list.html:40
 msgid "Month clicker"
 msgstr ""
 
 #: templates/tag.html:54 templates/Links/list.html:42
-#: templates/News/list.html:41 templates/Personalee/list.html:43
+#: templates/Telephone/list.html:39 templates/Transport/list.html:41
 msgid "Month clicker table"
 msgstr ""
 
@@ -249,59 +344,193 @@ msgstr ""
 msgid "Tags"
 msgstr "За категоріями"
 
-#: templates/News/list.html:13
-#, fuzzy
-msgid "List News Slatino"
-msgstr "Останні новини"
+#: templates/Institute/list.html:13
+msgid "List Institute"
+msgstr "Список інститутів"
 
-#: templates/News/list.html:20
-#, fuzzy
-msgid "List News"
-msgstr "Останні новини"
-
-#: templates/Personalee/box_news.html:2
-#: templates/Personalee/incontent_news.html:3 templates/Personalee/list.html:6
-#: templates/Personalee/one.html:8
-msgid "Personalee"
+#: templates/Institute/list.html:22 templates/Institute/one.html:26
+msgid "Adress"
 msgstr ""
 
-#: templates/Personalee/list.html:13
-#, fuzzy
-msgid "List Personalee Slatino"
-msgstr "Останні новини"
+#: templates/Institute/list.html:23 templates/Institute/one.html:23
+msgid "Working time"
+msgstr "Час роботи"
 
-#: templates/Personalee/list.html:20
-msgid "List Personalee"
-msgstr ""
+#: templates/Institute/one.html:24
+msgid "Email adress"
+msgstr "Email адреса"
 
-#: templates/Personalee/list.html:28
-msgid "God_rogd__:"
-msgstr ""
+#: templates/Institute/one.html:25 templates/Persons/one.html:30
+msgid "Phone"
+msgstr "Телефон"
 
-#: templates/Personalee/list.html:29
-msgid "Phone_____:"
-msgstr ""
+#: templates/Persons/list.html:13
+msgid "Persons list"
+msgstr "Особистості"
 
-#: templates/Personalee/list.html:30
-msgid "Description_:"
-msgstr ""
-
-#: templates/Personalee/list.html:31
+#: templates/Persons/list.html:28
 msgid "Tag_______:"
 msgstr ""
 
-#: registration/forms.py:96
-msgid "This email address is already in use. Please supply a different email address."
-msgstr "Ця адреса електронної пошти вже використовується. Будь ласка, введіть іншу адресу."
+#: templates/Publications/past_image.html:12
+msgid "Past image"
+msgstr ""
 
-#: supercaptcha/settings.py:39
-msgid "The code you entered is wrong."
-msgstr "Ви невірно ввели код"
+#: templates/Telephone/list.html:6
+msgid "Telephone"
+msgstr ""
 
-#: forms.py:10
-msgid "No robots here"
-msgstr "Захист від роботів"
+#: templates/Telephone/list.html:13
+msgid "List Telephone Slatino"
+msgstr ""
 
-#: default_settings.py:143
-msgid "Refresh code"
-msgstr "Поновити код"
+#: templates/Telephone/list.html:20
+msgid "List Telephone"
+msgstr ""
+
+#: templates/Transport/list.html:13
+#, fuzzy
+msgid "List Transport Slatino"
+msgstr "Останні новини"
+
+#: templates/Transport/list.html:20
+msgid "List Transport"
+msgstr ""
+
+#: templates/profiles/create_profile.html:3
+#: templates/profiles/edit_profile.html:3
+msgid "Edit Profile"
+msgstr "Редагування профайлу"
+
+#: templates/profiles/create_profile.html:6
+msgid "Create contact info for"
+msgstr "Додати інформацію для"
+
+#: templates/profiles/create_profile.html:27
+#: templates/profiles/edit_profile.html:31
+msgid "Update"
+msgstr "Поновити"
+
+#: templates/profiles/edit_profile.html:6
+msgid "Edit contact info for"
+msgstr "Змінити контактні дані для"
+
+#: templates/profiles/profile_detail.html:3
+msgid "Profile details"
+msgstr "Детальніше"
+
+#: templates/profiles/profile_detail.html:6
+msgid "profile details"
+msgstr "детальніше"
+
+#: templates/profiles/profile_detail.html:21
+msgid "Last Login"
+msgstr "Останні новини"
+
+#: templates/profiles/profile_detail.html:22
+msgid "Member since"
+msgstr "Учасник з"
+
+#: templates/profiles/profile_list.html:2
+msgid "List Profile"
+msgstr "Список профайлів"
+
+#: templates/registration/activate.html:3
+msgid "Activation form"
+msgstr "Активація"
+
+#: templates/registration/activate.html:6
+msgid "Activate"
+msgstr "Активація"
+
+#: templates/registration/activate.html:10
+msgid "Hello"
+msgstr "Привіт"
+
+#: templates/registration/activate.html:11
+msgid "Activation key is not valid, try to login or register again"
+msgstr "Ключ активації не дійсний, спробуйте увійти або зареєструватися заново"
+
+#: templates/registration/activate.html:11
+msgid "P.S. Activation link is valid for 2 days"
+msgstr "P.S. Посилання для активації дійсне 2 дні"
+
+#: templates/registration/activate.html:11
+#: templates/registration/activation_complete.html:11
+msgid "account"
+msgstr "на акаунт"
+
+#: templates/registration/activation_complete.html:3
+msgid "Activation"
+msgstr "Активація"
+
+#: templates/registration/activation_complete.html:6
+msgid "Activation complete"
+msgstr "Завершення активації"
+
+#: templates/registration/activation_complete.html:10
+msgid "Congratulations"
+msgstr "Вітаємо"
+
+#: templates/registration/activation_complete.html:11
+msgid "You have activated your account."
+msgstr "Ви активували Ваш акаунт"
+
+#: templates/registration/login.html:11
+msgid ", you are already logged."
+msgstr ", Ви вже увійшли."
+
+#: templates/registration/login.html:12
+msgid "However, you can always"
+msgstr "Але, ви завжди можете"
+
+#: templates/registration/login.html:12
+msgid "logout"
+msgstr "вийти"
+
+#: templates/registration/login.html:31
+msgid "Sign In"
+msgstr "Увійти"
+
+#: templates/registration/login.html:35
+msgid "Forgot your password?"
+msgstr "Забули пароль?"
+
+#: templates/registration/login.html:36
+msgid "Don't have an account?"
+msgstr "Немає акаунту?"
+
+#: templates/registration/login.html:36
+msgid "Sign up now"
+msgstr "Зареєструйся"
+
+#: templates/registration/logout.html:3 templates/registration/logout.html:6
+msgid "Logout"
+msgstr "Вийти"
+
+#: templates/registration/logout.html:10
+msgid "Thanks for spending some time with us. We will wait for you again."
+msgstr "Дякуємо, що зайшли. Будемо чекати на Вас знову."
+
+#: templates/registration/registration_complete.html:3
+#: templates/registration/registration_complete.html:6
+msgid "Regitration complete"
+msgstr "Завершення реєстрації"
+
+#: templates/registration/registration_complete.html:10
+msgid ""
+"You have registered. Confirmation code\n"
+"sent to your e-mail. Simply click on the link\n"
+"to complete the registration and activate your account."
+msgstr ""
+"Ви зареєстровані. Код підтвердження\n"
+"висланий Вам e-mail. Просто натисніть на посилання,\n"
+"щоб завершити реєстрацію та активувати Ваш акаунт."
+
+#: templates/registration/registration_form.html:3
+msgid "Registration form"
+msgstr "Реєстрація"
+
+#: templates/registration/registration_form.html:22
+msgid "Register"
+msgstr "Реєстрація"
