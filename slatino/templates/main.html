@@ -239,11 +239,11 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
 		  <!-- Navigation item -->
           <ul>
-            <li><a href="/transport/">{% trans 'Transport' %}<!--[if IE 7]><!--></a><!--<![endif]-->
+            <li><a href="/">{% trans 'Transport' %}<!--[if IE 7]><!--></a><!--<![endif]-->
               <!--[if lte IE 6]><table><tr><td><![endif]-->
                 <ul>
-                  <li><a href="publication/view/raspisanie-avtobusov/">{% trans 'Bus' %}</a></li>
-                  <li><a href="publication/view/raspisanie-elektropoezdov/">{% trans 'Train' %}</a></li>
+                  <li><a href="{% url raspisanie-avtobusov%}">{% trans 'Bus' %}</a></li>
+                  <li><a href="{% url raspisanie-elektropoezdov %}">{% trans 'Train' %}</a></li>
                 </ul>
               <!--[if lte IE 6]></td></tr></table></a><![endif]-->
             </li>
