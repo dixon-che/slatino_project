@@ -1,6 +1,6 @@
 from django.db import models
-from tagsfield.models import Tag
-from tagsfield import fields
+from slatino.apps.Tagsfield.models import Tag
+from slatino.apps.Tagsfield import fields
 
 
 class Person(models.Model):
