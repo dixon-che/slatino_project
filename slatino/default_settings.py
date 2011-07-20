@@ -123,7 +123,7 @@ INSTALLED_APPS = (
     'slatino.apps.Publications',
     'slatino.apps.Transport',
     'slatino.apps.Profile',
-    'tagsfield',
+    'slatino.apps.Tagsfield',
     'registration',
 )
 

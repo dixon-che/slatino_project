@@ -1,6 +1,7 @@
 libs/*
 .svn
 *.pyc
+env
 *~
 slatino/slatino_test
 slatino/settings.py

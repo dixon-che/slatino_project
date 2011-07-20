@@ -6,8 +6,8 @@ from django.forms import ValidationError
 from django.forms.fields import CharField as formCharField
 from django.utils.encoding import smart_unicode
 from django.conf import settings
-from tagsfield.models import Tag
-from tagsfield import fields
+from slatino.apps.Tagsfield.models import Tag
+from slatino.apps.Tagsfield import fields
 from slatino.apps.Persons.models import Person
 
 
