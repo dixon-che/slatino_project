@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^$', "slatino.views.index"),
+    url(r'^auth/', include('publicauth.urls')),
     (r'^robots\.txt$', "slatino.views.robots"),
     #(r'^news/', include('slatino.News.urls')),
     (r'^publication/', include('slatino.apps.Publications.urls')),
