@@ -1,6 +1,8 @@
 Django==1.3
+django-annoying
 
 
+-e hg+http://bitbucket.org/offline/django-publicauth#egg=django-publicauth
 -e hg+http://bitbucket.org/ubernostrum/django-registration#egg=django-registration
 -e hg+http://bitbucket.org/ubernostrum/django-profiles#egg=django-profiles
 -e hg+http://bitbucket.org/barbuza/supercaptcha#egg=supercaptcha

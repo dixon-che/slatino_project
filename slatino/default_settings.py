@@ -93,11 +93,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     )
 
 MIDDLEWARE_CLASSES = (
+    
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'annoying.middlewares.RedirectMiddleware',
 )
 
 ROOT_URLCONF = 'slatino.urls'
@@ -115,6 +118,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.admin',
     'django.contrib.sites',
+    'django.contrib.messages',
     'slatino.apps.Links',
     'slatino.apps.Gallery',
     'slatino.apps.Persons',
@@ -125,6 +129,7 @@ INSTALLED_APPS = (
     'slatino.apps.Profile',
     'slatino.apps.Tagsfield',
     'registration',
+    'publicauth',
 )
 
 AUTH_PROFILE_MODULE = 'Profile.UserProfile'
@@ -133,6 +138,11 @@ PUBLICATION_LAST_COUNT = 5
 PUBLICATION_PER_PAGE = 10
 
 ACCOUNT_ACTIVATION_DAYS = 2
+
+AUTHENTICATION_BACKENDS = ( 'publicauth.PublicBackend',)
+VKONTAKTE_APP_ID = 2417923
+VKONTAKTE_API_KEY = "XXXX"
+VKONTAKTE_SECRET_KEY = "eZUSJg2WnvsXWIx4lt6Q"
 
 TAGS_URL = "/tag/%s/"
 
