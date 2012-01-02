@@ -127,9 +127,10 @@ INSTALLED_APPS = (
     'slatino.apps.Publications',
     'slatino.apps.Transport',
     'slatino.apps.Profile',
-    'slatino.apps.Tagsfield',
-    'registration',
-    'publicauth',
+    #'slatino.apps.Tagsfield',
+    #'registration',
+    #'publicauth',
+    'tagsfield',
 )
 
 AUTH_PROFILE_MODULE = 'Profile.UserProfile'

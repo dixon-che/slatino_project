@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 from slatino.apps.Persons.models import Person
 
 
-from slatino.apps.Tagsfield.models import Tag
-from slatino.apps.Tagsfield import fields
+from tagsfield.models import Tag
+from tagsfield import fields
 
 
 class Phone(models.Model):

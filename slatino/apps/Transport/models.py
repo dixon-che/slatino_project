@@ -1,6 +1,7 @@
 from django.db import models
-from slatino.apps.Tagsfield.models import Tag
-from slatino.apps.Tagsfield import fields
+
+from tagsfield.models import Tag
+from tagsfield import fields
 
 
 class Transport(models.Model):

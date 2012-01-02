@@ -5,8 +5,9 @@ from django.utils import translation
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
 from slatino.apps.Publications.utils import get_cache_file_url
-from slatino.apps.Tagsfield.models import Tag
-from slatino.apps.Tagsfield import fields
+
+from tagsfield.models import Tag
+from tagsfield import fields
 
 
 class Publication(models.Model):
